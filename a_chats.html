@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Чаты</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto flex-lg-wrap">
+            <li class="nav-item ">
+              <a class="nav-link" href="/a_employees.html">Сотрудники </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Клиенты</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Все заказы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Все загрузки</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Избранное</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Каталог</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Статьи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Отзывы</a>
+            </li>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Коммуникации<span class="sr-only">(current)</span>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item active" href="#">Чаты</a>
+                <a class="dropdown-item" href="#">Обратная связь</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Статистика</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Финансы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Справочная информация</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      
+    <h1 >Чаты</h1>
+    <ol class="breadcrumb bg-white">
+        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+        <li class="breadcrumb-item active">Чаты</li>
+    </ol>
+
+    <div class="container mx-auto my-5">
+        <div>Поиск</div>
+    <form class="container mx-auto border border-info p-3">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputDatefrom">Дата добавления (от)</label>
+            <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputDateto">Дата добавления (до)</label>
+            <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputMonth">Месяц</label>
+            <select class="custom-select" id="inputMonth">
+              <option selected>Выберите месяц...</option>
+              <option value="1">Январь</option>
+              <option value="2">Февраль</option>
+              <option value="3">Март</option>
+              <option value="4">Апрель</option>
+              <option value="5">Май</option>
+              <option value="6">Июнь</option>
+              <option value="7">Июль</option>
+              <option value="8">Август</option>
+              <option value="9">Сентябрь</option>
+              <option value="10">Октябрь</option>
+              <option value="11">Ноябрь</option>
+              <option value="12">Декабрь</option>
+            </select>
+          </div>
+ 
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputID">ID заказа</label>
+              <input type="text" class="form-control" id="inputID" placeholder="ID">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputName">Название заказа</label>
+              <input type="tel" class="form-control" id="inputName" placeholder="Название заказа">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputPos">Тип заказа</label>
+              <select class="custom-select" id="inputPos">
+                <option selected>Выберите тип заказа...</option>
+                <option value="1">Оригинальная разработка</option>
+                <option value="2">Доработка</option>
+                <option value="3">Покупка</option>
+              </select>
+            </div>
+   
+          </div>
+        
+          <div class="form-row">
+            <div class="form-group col-md-4 my-auto py-3">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck">
+                <label class="custom-control-label" for="customCheck">Непрочитанные в чате</label>
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputCl">Клиент</label>
+              <input type="text" class="form-control" id="inputCl" placeholder="Клиент">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputPos">Сортировка</label>
+              <select class="custom-select" id="inputPos">
+                <option selected>Сортировать по...</option>
+                <option value="1">Все</option>
+                <option value="2">&#8657 по ID заказа</option>
+                <option value="3">&#8657 по ФИО клиента</option>
+                <option value="4">&#8659 по ФИО клиента</option>
+                <option value="5">&#8657 по кол-ву непрочитанных</option>
+                <option value="6">&#8659 по кол-ву непрочитанных</option>
+              </select>
+            </div>
+
+   
+          </div>
+
+        <!-- <div class="form-group">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox"> Check me out
+            </label>
+          </div>
+        </div> -->
+        <div class="form-row justify-content-between my-3">
+          <button type="button" class="btn btn-secondary">Отменить</button>
+      <!-- </form> -->
+      <button type="button" class="btn btn-secondary btn-lg">Поиск</button>
+    </div>
+  </form>
+      </div>
+
+
+    <section class="container mx-auto">
+    <div class="card-deck 1d-flex 1flex-row  align-self-center 1flex-wrap  ">
+        <div class=" col-md-6 col-lg-4 mb-3  pr-0 pl-0">
+            <div class="card">
+                
+                <div class="card-header">
+                    <div class="float-right badge badge-secondary">2</div>
+                    <a href="#!" class="card-link"><h3>Грузоперевозки по городу нашему родному Иркутску сладкому</h3></a> 
+                </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a id = "phone">Настольное приложение</a></li>
+                    <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
+                    <li class="list-group-item"><a title="Почта" href="a_client_personal_data.html">Чат: <span class="badge badge-danger p-2">(200/2)</span></a></li>
+                  </ul>
+                  <div class="pt-2 text-truncate">
+                    <div class="font-weight-bold">Администратор:</div>
+                    Привет! Создайте горизонтальные формы с помощью сеток, добавив класс .row к 
+                    группам форм и используя классы .col-*-* для задания ширины ваших надписей и элементов контроля.
+                     Обязательно добавьте класс .col-form-label также и в ваши 
+                     для того, чтобы они приобрели вертикальное центрирование относительно
+                      связанных с ними элементов контроля форм.
+                  </div>
+          </div>
+        </div>
+        </div>
+        <div class=" col-md-6 col-lg-4 mb-3 pr-0 pl-0">
+            <div class="card">
+                <div class="card-header">
+                  <div class="float-right badge badge-secondary">2</div>
+                    <a href="#!" class="card-link"><h3>Кафе - самое лучшее на планете!</h3></a> 
+                </div>
+                <div class="card-body">
+                  <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><a id = "phone">Оригинальная разработка</a></li>
+                      <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
+                      <li class="list-group-item"><a title="Почта" href="a_client_personal_data.html">Чат: <span class="badge badge-info p-2">(200/0)</span></a></li>
+                    </ul>
+                    <div class="pt-2 text-truncate">
+                      <div class="font-weight-bold">Клиент:</div>
+                      Привет! Создайте горизонтальные формы с помощью сеток, добавив класс .row к 
+                      группам форм и используя классы .col-*-* для задания ширины ваших надписей и элементов контроля.
+                       Обязательно добавьте класс .col-form-label также и в ваши 
+                       для того, чтобы они приобрели вертикальное центрирование относительно
+                        связанных с ними элементов контроля форм.
+                    </div>
+            </div>
+        </div>
+        </div>
+        <div class=" col-md-6 col-lg-4 mb-3 pr-0 pl-0">
+          <div class="card">
+              <div class="card-header">
+                <div class="float-right badge badge-secondary">2</div>
+                  <a href="#!" class="card-link"><h3>Кафе - самое лучшее на планете!</h3></a> 
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a id = "phone">Оригинальная разработка</a></li>
+                    <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
+                    <li class="list-group-item"><a title="Почта" href="a_client_personal_data.html">Чат: <span class="badge badge-info p-2">(200/0)</span></a></li>
+                  </ul>
+                  <div class="pt-2 text-truncate">
+                    <div class="font-weight-bold">Администратор:</div>
+                    Привет! Создайте горизонтальные формы с помощью сеток, добавив класс .row к 
+                    группам форм и используя классы .col-*-* для задания ширины ваших надписей и элементов контроля.
+                     Обязательно добавьте класс .col-form-label также и в ваши 
+                     для того, чтобы они приобрели вертикальное центрирование относительно
+                      связанных с ними элементов контроля форм.
+                  </div>
+          </div>
+      </div>
+      </div>
+      <div class=" col-md-6 col-lg-4 mb-3 pr-0 pl-0">
+        <div class="card">
+            <div class="card-header">
+              <div class="float-right badge badge-secondary">2</div>
+                <a href="#!" class="card-link"><h3>Кафе - самое лучшее на планете!</h3></a> 
+            </div>
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><a id = "phone">Оригинальная разработка</a></li>
+                  <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
+                  <li class="list-group-item"><a title="Почта" href="a_client_personal_data.html">Чат: <span class="badge badge-info p-2">(200/0)</span></a></li>
+                </ul>
+                <div class="pt-2 text-truncate">
+                  <div class="font-weight-bold">Администратор:</div>
+                  Привет! Создайте горизонтальные формы с помощью сеток, добавив класс .row к 
+                  группам форм и используя классы .col-*-* для задания ширины ваших надписей и элементов контроля.
+                   Обязательно добавьте класс .col-form-label также и в ваши 
+                   для того, чтобы они приобрели вертикальное центрирование относительно
+                    связанных с ними элементов контроля форм.
+                </div>
+        </div>
+    </div>
+    </div>
+    <div class=" col-md-6 col-lg-4 mb-3 pr-0 pl-0">
+      <div class="card">
+          <div class="card-header">
+            <div class="float-right badge badge-secondary">2</div>
+              <a href="#!" class="card-link"><h3>Кафе - самое лучшее на планете!</h3></a> 
+          </div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a id = "phone">Оригинальная разработка</a></li>
+                <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
+                <li class="list-group-item"><a title="Почта" href="a_client_personal_data.html">Чат: <span class="badge badge-info p-2">(200/0)</span></a></li>
+              </ul>
+              <div class="pt-2 text-truncate">
+                <div class="font-weight-bold">Администратор:</div>
+                Привет! Создайте горизонтальные формы с помощью сеток, добавив класс .row к 
+                группам форм и используя классы .col-*-* для задания ширины ваших надписей и элементов контроля.
+                 Обязательно добавьте класс .col-form-label также и в ваши 
+                 для того, чтобы они приобрели вертикальное центрирование относительно
+                  связанных с ними элементов контроля форм.
+              </div>
+      </div>
+  </div>
+  </div>
+  <div class=" col-md-6 col-lg-4 mb-3 pr-0 pl-0">
+    <div class="card">
+        <div class="card-header">
+          <div class="float-right badge badge-secondary">2</div>
+            <a href="#!" class="card-link"><h3>Кафе - самое лучшее на планете!</h3></a> 
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a id = "phone">Оригинальная разработка</a></li>
+              <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
+              <li class="list-group-item"><a title="Почта" href="a_client_personal_data.html">Чат: <span class="badge badge-info p-2">(200/0)</span></a></li>
+            </ul>
+            <div class="pt-2 text-truncate">
+              <div class="font-weight-bold">Администратор:</div>
+              Привет! Создайте горизонтальные формы с помощью сеток, добавив класс .row к 
+              группам форм и используя классы .col-*-* для задания ширины ваших надписей и элементов контроля.
+               Обязательно добавьте класс .col-form-label также и в ваши 
+               для того, чтобы они приобрели вертикальное центрирование относительно
+                связанных с ними элементов контроля форм.
+            </div>
+    </div>
+</div>
+</div>
+        </div>
+        </div>
+
+        <nav class="my-5">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#!" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#!">1</a></li>
+              <li class="page-item active"><a class="page-link" href="#!">2</a></li>
+              <li class="page-item"><a class="page-link" href="#!">3</a></li>
+              <li class="page-item"><a class="page-link" href="#!">4</a></li>
+              <li class="page-item d-none d-sm-block"><a class="page-link" href="#!">5</a></li>
+              <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
+              <li class="page-item"><a class="page-link" href="#!">19</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#!" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+    </section>
+
+      </div>
+
+    <script src="js/jquery.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

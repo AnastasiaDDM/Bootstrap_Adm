@@ -1,0 +1,12 @@
+.button_like {
+    font-size: 350%;
+    cursor: pointer;
+    color: lightgrey;
+    vertical-align: middle;
+}
+.button_like:hover {
+    color: rgb(217, 117, 108);
+}
+.button_like:active {
+    color: rgb(217, 117, 108);
+}

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Клиенты</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto flex-lg-wrap">
+            <li class="nav-item">
+              <a class="nav-link" href="/a_employees.html">Сотрудники </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Клиенты<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Все заказы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Все загрузки</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Избранное</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Каталог</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Статьи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Отзывы</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Коммуникации
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Чаты</a>
+                <a class="dropdown-item" href="#">Обратная связь</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Статистика</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Финансы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Справочная информация</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      
+    <h1>Клиенты</h1>
+    <ol class="breadcrumb bg-white">
+        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+        <li class="breadcrumb-item active">Клиенты</li>
+    </ol>
+
+    <div class="container mx-auto my-5">
+      <div class="text-right"><button type="button" class="btn btn-primary btn-lg">Добавить нового</button></div>
+        <div>Поиск</div>
+    <form class="container mx-auto border border-info p-3">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputID">ID клиента</label>
+            <input type="text" class="form-control" id="inputID" placeholder="ID">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputDatefrom">Дата добавления (от)</label>
+            <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputDateto">Дата добавления (до)</label>
+            <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
+          </div>
+ 
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputFIO">ФИО клиента</label>
+              <input type="text" class="form-control" id="inputFIO" placeholder="ФИО">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputTel">Номер телефона</label>
+              <input type="tel" class="form-control" id="inputTel" placeholder="">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputTel">Электронная почта</label>
+              <input type="email" class="form-control" id="inputTel" placeholder="Адрес эл.почты">
+            </div>
+   
+          </div>
+        
+          <div class="form-row">
+            <div class="form-group col-md-4 my-auto py-3">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck">
+                <label class="custom-control-label" for="customCheck">Непрочитанные в чате</label>
+              </div>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputTel">Заказ</label>
+              <input type="tel" class="form-control" id="inputTel" placeholder="Наименование/ID заказа">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputPos">Сортировка</label>
+              <select class="custom-select" id="inputPos">
+                <option selected>Сортировать по...</option>
+                <option value="1">Все</option>
+                <option value="2">Популярное</option>
+                <option value="3">&#8657 по ФИО</option>
+                <option value="4">&#8659 по ФИО</option>
+                <option value="5">&#8657 по кол-ву заказов</option>
+                <option value="6">&#8659 по кол-ву заказов</option>
+              </select>
+            </div>
+
+   
+          </div>
+
+        <!-- <div class="form-group">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox"> Check me out
+            </label>
+          </div>
+        </div> -->
+        <div class="form-row justify-content-between my-3">
+            <button type="button" class="btn btn-secondary">Отменить</button>
+        </form>
+        <button type="button" class="btn btn-secondary btn-lg">Поиск</button>
+    </form>
+        </div>
+
+    </div>
+
+
+    <section class="container mx-auto">
+    <div class="card-deck 1d-flex 1flex-row  align-self-center 1flex-wrap  ">
+        <div class=" col-md-6 col-lg-4 mb-3  pr-0 pl-0">
+            <div class="card">
+                
+                <div class="card-header">
+                    <div class="float-right badge badge-secondary rounded-circle">2</div>
+                    <a href="#!" class="card-link"><h3>Потапов С.И.</h3></a> 
+                </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
+                    <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
+                    <li class="list-group-item">Программист</li>
+                    <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
+                  </ul>
+          </div>
+        </div>
+        </div>
+        <div class=" col-md-6 col-lg-4 mb-3 pr-0 pl-0">
+            <div class="card">
+                <div class="card-header">
+                    <div class="float-right badge badge-secondary rounded-circle">2</div>
+                    <a href="#!" class="card-link"><h3>Илларионов С.И.</h3></a> 
+                </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
+                    <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
+                    <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
+                  </ul>
+          </div>
+        </div>
+        </div>
+        <div class=" col-md-6 col-lg-4 mb-3 pr-0 pl-0">
+            <div class="card">
+                <div class="card-header">
+                    <div class="float-right badge badge-secondary rounded-circle">2</div>
+                    <a href="#!" class="card-link"><h3>Светлодобронравов С.И.</h3></a> 
+                </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
+                    <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
+                    <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
+                  </ul>
+          </div>
+        </div>
+        </div>
+        <div class=" col-md-6 col-lg-4 mb-3 pr-0 pl-0">
+            <div class="card">
+                <div class="card-header">
+                    <div class="float-right badge badge-secondary rounded-circle">2</div>
+                    <a href="#!" class="card-link"><h3>Петроградоперевозников С.И.</h3></a> 
+                </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
+                    <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
+                    <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
+                  </ul>
+          </div>
+        </div>
+        </div>
+        
+        </div>
+        </div>
+
+        <nav class="my-5">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#!" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#!">1</a></li>
+              <li class="page-item active"><a class="page-link" href="#!">2</a></li>
+              <li class="page-item"><a class="page-link" href="#!">3</a></li>
+              <li class="page-item"><a class="page-link" href="#!">4</a></li>
+              <li class="page-item d-none d-sm-block"><a class="page-link" href="#!">5</a></li>
+              <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
+              <li class="page-item"><a class="page-link" href="#!">19</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#!" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+    </section>
+
+      </div>
+
+    <script src="js/jquery.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
