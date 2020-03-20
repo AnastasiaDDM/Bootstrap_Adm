@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
   </head>
-  <body class="11mx-1" style="max-width: 1400px; margin:auto;">
+  <body class="cont_all">
     <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,8 +65,11 @@
       </nav>
 
       
-    <h1 >Каталог</h1>
-    <ol class="breadcrumb bg-white">
+      <div class="d-flex flex-row">
+        <h1>Каталог</h1>     
+        <div class="ml-3"><button type="button" class="btn btn-outline-primary btn-lg">Добавить нового</button></div>
+      </div>
+    <ol class="breadcrumb bg-white  pl-0">
         <li class="breadcrumb-item"><a href="#">Главная</a></li>
         <li class="breadcrumb-item active">Каталог</li>
     </ol>
@@ -74,18 +77,8 @@
 
 <div class="d-sm-flex flex-sm-row">
 
-<div class="1col-12 col-sm-4 col-lg-2 pr-sm-0 pb-3">
-  <div class="border border-info p-1 collapse show bg-light" role="tabpanel" id="find_form">
-  <div class="form-group">
-    <label for="inputMonth">Показывать по</label>
-    <select class="custom-select" id="inputMonth">
-      <option selected>Выберите...</option>
-      <option value="1">4</option>
-      <option value="2">6</option>
-      <option value="3">10</option>
-      <option value="4">12</option>
-    </select>
-  </div>
+<div class="col-sm-4 col-lg-3 pr-sm-0 pb-3 pl-0 pr-0 pr-sm-1">
+  <div class="border border-info p-2 collapse show bg-light" role="tabpanel" id="find_form">
 
   <div class="form-group">
     <label for="inputID">Наименование ПО</label>
@@ -113,16 +106,18 @@
     </div>
   </div>
 
-  <div class="d-flex flex-row">
-    <div class="form-group w-50">
-      <label for="inputID">Цена от</label>
-      <input type="text" class="form-control" id="inputID" placeholder="От">
+  <div class="d-flex flex-md-row flex-row flex-sm-column">
+    <div class="form-group col-md-6 px-0 pr-2 pr-sm-0 pr-md-2">
+      <label for="inputName">Цена от</label>
+      <input class="form-control" type="number" min="0" id="example-number-input" placeholder="0">
     </div>
-    <div class="form-group w-50">
-      <label for="inputID">Цена до</label>
-      <input type="text" class="form-control" id="inputID" placeholder="До">
-    </div>
+    <div class="form-group col-md-6 p-0">
+      <label for="inputPos">Цена до</label>
+      <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="0">
   </div>
+    </div>
+
+
 
   <div class="form-group  my-auto py-3">
     <div class="custom-control custom-checkbox">
@@ -254,26 +249,38 @@
     </div>
   </div>
 
+
+
+  <div class="form-group mt-4">
+    <div class="d-flex flex-row flex-md-row flex-sm-column justify-content-between text-sm-center">
+        <button type="button" class="btn btn-outline-secondary py-1">Очистить</button>
+
+    <button type="button" class="btn btn-outline-info btn-lg px-5 px-md-4 mt-0 mt-sm-3 mt-md-0">Поиск</button>
+  </div>
+</div>
+
+
+
 </div>
 </div>
 
 
-    <div class="1col-12 col-sm-8 col-lg-10 px-0">
-    <div class="container mx-auto mb-5 ">
+    <div class="col-sm-8 col-lg-9 px-0">
+    <div class="container mx-auto mb-3 pr-0 pl-0 pl-sm-2">
       <!-- <a class="btn btn-primary mb-1" data-toggle="collapse" href="#find_form" aria-expanded="false" aria-controls="collapseExample">
         Доп.поиск
       </a> -->
-    <form class="container mx-auto border border-info p-3 bg-light">
+    <form class="mx-auto border border-info p-2 bg-light">
         <div class="form-row">
-          <div class="form-group col-md-4">
+          <div class="form-group col-lg-4 col-sm-6">
             <label for="inputDatefrom">Дата добавления (от)</label>
             <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
           </div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-lg-4 col-sm-6">
             <label for="inputDateto">Дата добавления (до)</label>
             <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
           </div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-lg-4">
             <label for="inputMonth">Месяц</label>
             <select class="custom-select" id="inputMonth">
               <option selected>Выберите месяц...</option>
@@ -294,10 +301,30 @@
  
         </div>
         <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-lg-4">
               <label for="inputID">Автор ПО</label>
               <input type="text" class="form-control" id="inputID" placeholder="ФИО/ID автора">
             </div>
+
+            <div class="col-lg-4  d-sm-flex flex-sm-row">
+              <div class="form-group col-sm-6 px-0 pr-sm-2">
+                <label for="inputName">Заказы (от)</label>
+                <input class="form-control" type="number" min="0" id="example-number-input" placeholder="0">
+              </div>
+              <div class="form-group col-sm-6 p-0">
+                <label for="inputPos">Заказы (до)</label>
+                <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="0">
+            </div>
+              </div>
+
+
+              <div class="form-group col-lg-4 my-auto pt-3">
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" id="customCheck">
+                  <label class="custom-control-label" for="customCheck">Видимые на сайте</label>
+                </div>
+              </div>
+<!-- 
             <div class="form-group col-md-4">
               <label for="inputName">Кол-во заказов (от)</label>
               <input class="form-control" type="number" min="0" id="example-number-input" placeholder="0">
@@ -306,54 +333,57 @@
               <label for="inputPos">Кол-во заказов (до)</label>
               <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="0">
             </div>
-   
+    -->
           </div>
         
-          <div class="form-row">
-            <div class="form-group col-md-4 my-auto py-3">
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck">
-                <label class="custom-control-label" for="customCheck">Видимые на сайте</label>
-              </div>
-            </div>
-            <div class="form-group col-md-4">
-              <!-- <label for="inputCl">Клиент</label>
-              <input type="text" class="form-control" id="inputCl" placeholder="Клиент"> -->
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputPos">Сортировка</label>
-              <select class="custom-select" id="inputPos">
-                <option selected>Сортировать по...</option>
-                <option value="1">Все</option>
-                <option value="2">&#8657 по ID заказа</option>
-                <option value="3">&#8657 по ФИО клиента</option>
-                <option value="4">&#8659 по ФИО клиента</option>
-                <option value="5">&#8657 по кол-ву непрочитанных</option>
-                <option value="6">&#8659 по кол-ву непрочитанных</option>
-              </select>
-            </div>
-
-   
+          <div class="form-group mt-4 mt-lg-0">
+            <div class="d-flex flex-row justify-content-between mt-3">
+                <button type="button" class="btn btn-outline-secondary py-1">Очистить</button>
+    
+            <button type="button" class="btn btn-outline-info btn-lg px-5">Поиск</button>
           </div>
+        </div>
 
-        <!-- <div class="form-group">
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox"> Check me out
-            </label>
-          </div>
-        </div> -->
-        <div class="form-row justify-content-between my-3">
-            <button type="button" class="btn btn-secondary">Отменить</button>
-        <!-- </form> -->
-        <button type="button" class="btn btn-secondary btn-lg">Поиск</button>
-      </div>
     </form>
         </div>
 
 
-    <section class="container mx-auto">
-    <div class="card-deck 1d-flex 1flex-row  align-self-center 1flex-wrap  ">
+        
+        <div class="container-md mx-auto mb-5 pr-0 pl-0 pl-sm-2">
+          <form class="mx-auto border border-info p-2 bg-light">
+            <div class="form-row">
+              <div class="form-group col-sm-4 mb-0">
+                <select class="custom-select" id="inputPos">
+                  <option selected>Сортировать по...</option>
+                  <option value="1">Все</option>
+                  <option value="2">&#8657 по ID заказа</option>
+                  <option value="3">&#8657 по ФИО клиента</option>
+                  <option value="4">&#8659 по ФИО клиента</option>
+                  <option value="5">&#8657 по кол-ву непрочитанных</option>
+                  <option value="6">&#8659 по кол-ву непрочитанных</option >
+                </select>
+              </div>
+            <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
+              <select class="custom-select" id="inputMonth">
+                <option selected>Показывать по...</option>
+                <option value="1">4</option>
+                <option value="2">6</option>
+                <option value="3">10</option>
+                <option value="4">12</option>
+              </select>
+            </div>
+            <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
+                <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
+            </div>
+          </div>
+          </form>
+        </div>
+
+        
+
+
+    <section class="mx-auto pl-0 pl-sm-2">
+    <div class="card-deck align-self-center ">
 
 
       <div class=" col-lg-6 col-xl-4 mb-3 px-0">
@@ -364,8 +394,7 @@
             <div class="badge badge-secondary">2</div>
           </div>
 
-          <a href="#!" class="card-link"><h3>Грузоперевозки по городу нашему родному Иркутску сладкому</h3></a> 
-          <a href="#!" class="card-link"><h6 class="card-subtitle mb-2 1text-muted">Настольное приложение</h6></a>
+          <a href="#!" class="card-link"><h2 class="h4">Грузоперевозки по городу нашему родному Иркутску сладкому</h2></a> 
       </div>
       
         <div class="">
@@ -375,20 +404,19 @@
 
         <div class="card-body">
           <ul class = "card-text pl-2">
-            <li class="software_description_marker">Для: <a href="#!" class="card-link">Грузоперевозки</a> 
-            <li class="software_description_marker">Контроль доходов и расходов
-            <li class="software_description_marker">Контроль  количества продуктов и запасов
-            <li class="software_description_marker">Мониторинг деятельности компании
-            <li class="software_description_marker">Контроль деятельности работников
-            <li class="software_description_marker">И многое другое...
+            <li>Настольное приложение
+            <li>Для: Грузоперевозки 
+            <li>Контроль доходов и расходов
+            <li>Контроль  количества продуктов и запасов
+            <li>Мониторинг деятельности компании
+            <li>Контроль деятельности работников
+            <li>И многое другое...
           </ul>
           
           <div class="d-flex flex-row justify-content-between">
             <div class="font-weight-bold font-italic">500 p.</div>
-            <a href="#!" class="btn btn-primary w-50">Приобрести</a>
-            <div >
-              <i class="fa fa-heart button_like" aria-hidden="true"></i>
-            </div>
+            <span class="float-right badge badge-info p-2">Платное</span>
+   
           </div>
 
         </div>
@@ -415,39 +443,38 @@
 
 
 
-
-
-    
 
     <div class=" col-lg-6 col-xl-4 mb-3 px-0">
       <div class="card">
         <div class="card-header">
-          <div class="float-right badge badge-secondary">2</div>
-          <a href="#!" class="card-link"><h3>Грузоперевозки по городу нашему родному Иркутску сладкому</h3></a> 
-          <a href="#!" class="card-link"><h6 class="card-subtitle mb-2 1text-muted">Настольное приложение</h6></a>
+          <div class="float-right ">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <div class="badge badge-secondary">2</div>
+          </div>
+
+          <a href="#!" class="card-link"><h2 class="h4">Кафе</h2></a> 
       </div>
       
         <div class="">
           <!-- <img class="card-img-top" src="images/computer.jpg" alt="Card image cap"> -->
-          <img src="images/code.jpg" class="img-fluid" alt="Responsive image">
+          <img src="images/business.jpg" class="img-fluid">
         </div>
 
         <div class="card-body">
           <ul class = "card-text pl-2">
-            <li class="software_description_marker">Для: <a href="#!" class="card-link">Грузоперевозки</a> 
-            <li class="software_description_marker">Контроль доходов и расходов
-            <li class="software_description_marker">Контроль  количества продуктов и запасов
-            <li class="software_description_marker">Мониторинг деятельности компании
-            <li class="software_description_marker">Контроль деятельности работников
-            <li class="software_description_marker">И многое другое...
+            <li>Сайт 
+            <li>Для: Грузоперевозки 
+            <li>Контроль доходов и расходов
+            <li>Контроль  количества продуктов и запасов
+            <li>Мониторинг деятельности компании
+            <li>Контроль деятельности работников
+            <li>И многое другое...
           </ul>
           
           <div class="d-flex flex-row justify-content-between">
-            <div class="font-weight-bold font-italic">500 p.</div>
-            <a href="#!" class="btn btn-primary w-50">Приобрести</a>
-            <div >
-              <i class="fa fa-heart button_like" aria-hidden="true"></i>
-            </div>
+            <div class="font-weight-bold font-italic">500 000 p.</div>
+            <span class="float-right badge badge-info p-2">Платное</span>
+   
           </div>
 
         </div>
@@ -459,105 +486,42 @@
             <a class ="mr-1" href="URL">#Доходы
             </a>  
             <a class ="mr-1" href="URL">#ПО ПК
-            </a>  
-            <a class ="mr-1" href="URL">#Бизнес
-            </a>  
-            <a class ="mr-1" href="URL">#Кафе
-            </a>  
-            <a class ="mr-1" href="URL">#Гастропаб
-            </a>
-            <a class ="mr-1" href="URL">#Платно
-            </a>  </small>
+            </a>   </small>
         </div>
       </div>
     </div>
 
-    
-
-    <div class=" col-lg-6 col-xl-4 mb-3  px-0">
+    <div class=" col-lg-6 col-xl-4 mb-3 px-0">
       <div class="card">
         <div class="card-header">
-          <div class="float-right badge badge-secondary ">219</div>
-          <a href="#!" class="card-link"><h3>Кафе</h3></a> 
-          <a href="#!" class="card-link"><h6 class="card-subtitle mb-2 1text-muted">Настольное приложение</h6></a>
-      </div>
-      
-        <div class="">
-          <!-- <img class="card-img-top" src="images/computer.jpg" alt="Card image cap"> -->
-          <img src="images/cafe.jpg" class="img-fluid" alt="Responsive image">
-        </div>
-
-        <div class="card-body">
-          <ul class = "card-text pl-2">
-            <li class="software_description_marker">Для: <a href="#!" class="card-link">Кафе</a> 
-            <li class="software_description_marker">Контроль доходов и расходов
-            <li class="software_description_marker">Контроль  количества продуктов и запасов
-            <li class="software_description_marker">Мониторинг деятельности компании
-            <li class="software_description_marker">Контроль деятельности работников
-            <li class="software_description_marker">И многое другое...
-          </ul>
-          
-          <div class="d-flex flex-row justify-content-between">
-            <div class="font-weight-bold font-italic d-none">500 p.</div>
-            <a href="#!" class="btn btn-primary w-50">Скачать</a>
-            <div >
-              <i class="fa fa-heart button_like" aria-hidden="true"></i>
-            </div>
+          <div class="float-right ">
+            <i class="fa fa-eye d-none" aria-hidden="true"></i>
+            <div class="badge badge-secondary">2</div>
           </div>
 
-        </div>
-
-        <div class="card-footer">
-          <small class="text-muted"> <span>
-            <a class ="mr-1" href="URL">#Платно
-            </a>  
-            <a class ="mr-1" href="URL">#Доходы
-            </a>  
-            <a class ="mr-1" href="URL">#ПО ПК
-            </a>  
-            <a class ="mr-1" href="URL">#Бизнес
-            </a>  
-            <a class ="mr-1" href="URL">#Кафе
-            </a>  
-            <a class ="mr-1" href="URL">#Гастропаб
-            </a>
-            <a class ="mr-1" href="URL">#Платно
-            </a>  </small>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class=" col-lg-6 col-xl-4 mb-3  px-0">
-      <div class="card">
-        <div class="card-header">
-          <div class="float-right badge badge-secondary ">219</div>
-          <a href="#!" class="card-link"><h3>Кафе</h3></a> 
-          <a href="#!" class="card-link"><h6 class="card-subtitle mb-2 1text-muted">Настольное приложение</h6></a>
+          <a href="#!" class="card-link"><h2 class="h4">Грузоперевозки</h2></a> 
       </div>
       
         <div class="">
           <!-- <img class="card-img-top" src="images/computer.jpg" alt="Card image cap"> -->
-          <img src="images/business.jpg" class="img-fluid" alt="Responsive image">
+          <img src="images/cafe.jpg" class="img-fluid">
         </div>
 
         <div class="card-body">
           <ul class = "card-text pl-2">
-            <li class="software_description_marker">Для: <a href="#!" class="card-link">Кафе</a> 
-            <li class="software_description_marker">Контроль доходов и расходов
-            <li class="software_description_marker">Контроль  количества продуктов и запасов
-            <li class="software_description_marker">Мониторинг деятельности компании
-            <li class="software_description_marker">Контроль деятельности работников
-            <li class="software_description_marker">И многое другое...
+            <li>Настольное приложение
+            <li>Для: Грузоперевозки 
+            <li>Контроль доходов и расходов
+            <li>Контроль  количества продуктов и запасов
+            <li>Мониторинг деятельности компании
+            <li>Контроль деятельности работников
+            <li>И многое другое...
           </ul>
           
           <div class="d-flex flex-row justify-content-between">
-            <div class="font-weight-bold font-italic d-none">500 p.</div>
-            <a href="#!" class="btn btn-primary w-50">Скачать</a>
-            <div >
-              <i class="fa fa-heart button_like" aria-hidden="true"></i>
-            </div>
+            <div class="font-weight-bold font-italic d-none ">500 p.</div>
+            <span class="float-right badge badge-info p-2">Бесплатное</span>
+   
           </div>
 
         </div>
@@ -585,13 +549,15 @@
 
 
 
-
-    <div class=" col-lg-6 col-xl-4 mb-3  px-0">
+    <div class=" col-lg-6 col-xl-4 mb-3 px-0">
       <div class="card">
         <div class="card-header">
-          <div class="float-right badge badge-secondary ">219</div>
-          <a href="#!" class="card-link"><h3>Кафе</h3></a> 
-          <a href="#!" class="card-link"><h6 class="card-subtitle mb-2 1text-muted">Настольное приложение</h6></a>
+          <div class="float-right ">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <div class="badge badge-secondary">2</div>
+          </div>
+
+          <a href="#!" class="card-link"><h2 class="h4">Грузоперевозки по городу нашему родному Иркутску сладкому</h2></a> 
       </div>
       
         <div class="">
@@ -601,20 +567,19 @@
 
         <div class="card-body">
           <ul class = "card-text pl-2">
-            <li class="software_description_marker">Для: <a href="#!" class="card-link">Кафе</a> 
-            <li class="software_description_marker">Контроль доходов и расходов
-            <li class="software_description_marker">Контроль  количества продуктов и запасов
-            <li class="software_description_marker">Мониторинг деятельности компании
-            <li class="software_description_marker">Контроль деятельности работников
-            <li class="software_description_marker">И многое другое...
+            <li>Настольное приложение
+            <li>Для: Грузоперевозки 
+            <li>Контроль доходов и расходов
+            <li>Контроль  количества продуктов и запасов
+            <li>Мониторинг деятельности компании
+            <li>Контроль деятельности работников
+            <li>И многое другое...
           </ul>
           
           <div class="d-flex flex-row justify-content-between">
-            <div class="font-weight-bold font-italic d-none">500 p.</div>
-            <a href="#!" class="btn btn-primary w-50">Скачать</a>
-            <div >
-              <i class="fa fa-heart button_like" aria-hidden="true"></i>
-            </div>
+            <div class="font-weight-bold font-italic">1 500 p.</div>
+            <span class="float-right badge badge-info p-2">Лицензионное</span>
+   
           </div>
 
         </div>
@@ -638,7 +603,6 @@
         </div>
       </div>
     </div>
-
 
         </div>
 

@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fa/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
   </head>
-  <body>
+  <body class="cont_all">
     <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +22,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/a_employees.html">Сотрудники </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href="a_clients.html">Клиенты</a>
             </li>
             <li class="nav-item">
@@ -31,16 +33,32 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="a_fa">Избранное</a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a class="nav-link" href="a_catalog.html">Каталог</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="a_articles.html">Статьи</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Отзывы</a>
+            </li> -->
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Клиентская часть
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Клиенты</a>
+                <a class="dropdown-item" href="a_orders.html">Все заказы</a>
+                <a class="dropdown-item" href="a_downloads.html">Все загрузки</a>
+                <a class="dropdown-item" href="a_fa">Избранное</a>
+                <a class="dropdown-item" href="#">Отзывы</a>
+              </div>
             </li>
+
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Коммуникации
@@ -48,19 +66,31 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Чаты</a>
                 <a class="dropdown-item" href="#">Обратная связь</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
               </div>
             </li>
+
+            
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Статистика
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Статистика</a>
+                <a class="dropdown-item" href="#">Финансы</a>
+              </div>
+            </li>
+
+<!-- 
             <li class="nav-item">
                 <a class="nav-link" href="#">Статистика</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Финансы</a>
-            </li>
+            </li> -->
             <li class="nav-item dropdown active">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Доп.опции
+                Справочники
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Справочная информация</a>
@@ -71,42 +101,92 @@
         </div>
       </nav>
 
-      
-    <h1>Авторы</h1>
-    <ol class="breadcrumb bg-white">
+      <div class="d-flex flex-row">
+        <h1>Авторы</h1>     
+        <div class="ml-3"><button type="button" class="btn btn-outline-primary btn-lg">Добавить нового</button></div>
+      </div>
+   
+    <ol class="breadcrumb bg-white pl-0">
         <li class="breadcrumb-item"><a href="#">Главная</a></li>
         <li class="breadcrumb-item active">Авторы</li>
     </ol>
 
-    <div class="container mx-auto my-5">
-        <div class="text-right"><button type="button" class="btn btn-primary btn-lg">Добавить нового</button></div>
-        <div>Поиск</div>
-    <form class="container mx-auto border border-info p-3">
+    <div class="container-md mx-auto mb-3 px-0">
+    
+        <div class="form-group d-flex flex-row my-3 px-0 flex-wrap flex-md-nowrap">
+          <!-- <label for="inputFIO">ФИО автора</label> -->
+          <input type="text" class="form-control col-xl-7 col-md-6 col-9" id="inputFIO" placeholder="Введите ФИО/ID автора">
+          <button type="button" class="btn btn-outline-info col-xl-3 col-md-2 col-3 h-auto">Поиск</button>
+
+        
+            <button type="button" class="col-xl-2 btn btn-outline-info col-md-4 col-12 mt-2 mt-md-0" data-toggle="collapse" href="#find_form" aria-expanded="false" aria-controls="collapseExample">Расширенный поиск</button>
+
+          
+
+
+        </div>
+      
+    <form class="mx-auto border border-info p-2 bg-light collapse" role="tabpanel" id="find_form">
         <div class="form-row">
-          <div class="form-group col-md-4">
-            <label for="inputID">ID автора</label>
-            <input type="text" class="form-control" id="inputID" placeholder="ID">
+          <div class="col-lg-4  d-sm-flex flex-sm-row">
+            <div class="form-group col-sm-6 px-0 pr-sm-2">
+              <label for="inputID">ID автора</label>
+              <input type="text" class="form-control" id="inputID" placeholder="ID">
+            </div>
+            <div class="form-group col-sm-6 p-0">
+              <label for="inputTel">Номер телефона</label>
+              <input type="tel" class="form-control" id="inputTel" placeholder="">
+            </div>
           </div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-lg-4">
+            <label for="inputFIO">ФИО автора</label>
+            <input type="text" class="form-control" id="inputFIO" placeholder="ФИО">
+          </div>
+          <div class="col-lg-4  d-sm-flex flex-sm-row">
+            <div class="form-group col-sm-6 px-0 pr-sm-2">
+              <label for="inputDatefrom">Дата добавления (от)</label>
+              <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
+            </div>
+            <div class="form-group col-sm-6 p-0">
+              <label for="inputDateto">Дата добавления (до)</label>
+            <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
+          </div>
+            </div>
+         
+          <!-- <div class="form-group col-md-4">
             <label for="inputDatefrom">Дата добавления (от)</label>
             <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
           </div>
           <div class="form-group col-md-4">
             <label for="inputDateto">Дата добавления (до)</label>
             <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
-          </div>
+          </div> -->
  
         </div>
         <div class="form-row">
-            <div class="form-group col-md-4">
+            <!-- <div class="form-group col-md-4">
               <label for="inputFIO">ФИО автора</label>
               <input type="text" class="form-control" id="inputFIO" placeholder="ФИО">
+            </div> -->
+            <!-- <div class="1form-group col-md-4  d-flex flex-row">
+              <div class="form-group col-3 pl-0">
+                <label for="inputID">ID ПО</label>
+                <input type="text" class="form-control" id="inputID" placeholder="ID ПО">
+              </div>
+              <div class="form-group col-9 p-0">
+                <label for="inputTel">Наименование ПО</label>
+                <input type="tel" class="form-control" id="inputTel" placeholder="Наменование ПО">
+              </div>
+            </div> -->
+            <div class="form-group col-lg-4 col-sm-6">
+              <label for="inputOrdfrom">ID ПО</label>
+              <input type="text" class="form-control" id="inputOrdfrom" placeholder="ID ПО">
             </div>
-            <div class="form-group col-md-4">
-              <label for="inputTel">Номер телефона</label>
-              <input type="tel" class="form-control" id="inputTel" placeholder="">
+            <div class="form-group col-lg-4 col-sm-6">
+              <label for="inputOrdfrom">Название ПО</label>
+              <input type="text" class="form-control" id="inputOrdfrom" placeholder="Название ПО">
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-lg-4">
               <label for="inputPos">Вид ПО</label>
               <select class="custom-select" id="inputPos">
                 <option selected>Выберите вид...</option>
@@ -117,16 +197,21 @@
             </div>
    
           </div>
-        
+
+          <div class="form-group">
+        <div class="d-flex flex-row justify-content-between mt-3">
+            <button type="button" class="btn btn-outline-secondary py-1">Очистить</button>
+
+        <button type="button" class="btn btn-outline-info btn-lg px-5">Поиск</button>
+      </div>
+    </div>
+    </form>
+        </div>
+
+        <div class="container-md mx-auto mb-5 px-0">
+        <form class="mx-auto border border-info p-2 bg-light">
           <div class="form-row">
-            <div class="form-group col-md-4">
-              <label for="inputOrdfrom">ПО</label>
-              <input type="text" class="form-control" id="inputOrdfrom" placeholder="Название/ID ПО">
-            </div>
-            <div class="form-group col-md-4">     
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputPos">Сортировка</label>
+            <div class="form-group col-sm-4 mb-0">
               <select class="custom-select" id="inputPos">
                 <option selected>Сортировать по...</option>
                 <option value="1">Все</option>
@@ -137,34 +222,35 @@
                 <option value="6">&#8659 по кол-ву заказов</option>
               </select>
             </div>
-
-   
+          <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
+            <select class="custom-select" id="inputMonth">
+              <option selected>Показывать по...</option>
+              <option value="1">4</option>
+              <option value="2">6</option>
+              <option value="3">10</option>
+              <option value="4">12</option>
+            </select>
           </div>
-
-        <!-- <div class="form-group">
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox"> Check me out
-            </label>
+          <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
+              <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
           </div>
-        </div> -->
-        <div class="form-row justify-content-between my-3">
-            <button type="button" class="btn btn-secondary">Отменить</button>
-        <!-- </form> -->
-        <button type="button" class="btn btn-secondary btn-lg">Поиск</button>
-      </div>
-    </form>
         </div>
+        </form>
+      </div>
 
 
-    <section class="container mx-auto">
-    <div class="card-deck 1d-flex 1flex-row  align-self-center 1flex-wrap  ">
-        <div class=" col-md-6 col-lg-4 mb-3  pr-0 pl-0">
+ 
+
+
+
+    <section class="mx-auto">
+    <div class="card-deck align-self-center">
+        <div class="col-md-6 col-lg-4 mb-3  pr-0 pl-0">
             <div class="card">
                 
                 <div class="card-header">
                     <div class="float-right badge badge-secondary">2</div>
-                    <a href="#!" class="card-link"><h3>Потапов С.И.</h3></a> 
+                    <a href="#!" class="card-link"><h2 class="h4">Потапов С.И.</h2></a> 
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -180,7 +266,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="float-right badge badge-secondary">2</div>
-                    <a href="#!" class="card-link"><h3>Илларионов С.И.</h3></a> 
+                    <a href="#!" class="card-link"><h2 class="h4">Илларионов С.И.</h2></a> 
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -196,7 +282,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="float-right badge badge-secondary">2</div>
-                    <a href="#!" class="card-link"><h3>Светлодобронравов С.И.</h3></a> 
+                    <a href="#!" class="card-link"><h2 class="h4">Светлодобронравов С.И.</h2></a> 
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -212,7 +298,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="float-right badge badge-secondary">2</div>
-                    <a href="#!" class="card-link"><h3>Петроградоперевозников С.И.</h3></a> 
+                    <a href="#!" class="card-link"><h2 class="h4">Петроградоперевозников С.И.</h2></a> 
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -228,7 +314,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="float-right badge badge-secondary">2</div>
-                    <a href="#!" class="card-link"><h3>Илларионов С.И.</h3></a> 
+                    <a href="#!" class="card-link"><h2 class="h4">Илларионов С.И.</h2></a> 
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -244,23 +330,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="float-right badge badge-secondary">2</div>
-                    <a href="#!" class="card-link"><h3>Илларионов С.И.</h3></a> 
-                </div>
-            <div class="card-body">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
-                    <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
-                    <li class="list-group-item">Программист</li>
-                    <li class="list-group-item">ПО: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
-                  </ul>
-          </div>
-        </div>
-        </div>
-        <div class=" col-md-6 col-lg-4 mb-3 pr-0 pl-0">
-            <div class="card">
-                <div class="card-header">
-                    <div class="float-right badge badge-secondary">2</div>
-                    <a href="#!" class="card-link"><h3>Илларионов С.И.</h3></a> 
+                    <a href="#!" class="card-link"><h2 class="h4">Илларионов С.И.</h2></a> 
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
