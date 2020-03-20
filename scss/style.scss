@@ -1,0 +1,15 @@
+
+@import "_adm_style.scss";
+
+
+
+
+
+#main {
+    $width: 3em !global;
+    width: $width;
+  }
+  
+  #sidebar {
+    width: $width;
+  }

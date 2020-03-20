@@ -17,26 +17,26 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto flex-lg-wrap">
-            <li class="nav-item active">
-              <a class="nav-link" href="/a_employees.html">Сотрудники <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="/a_employees.html">Сотрудники </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Клиенты</a>
+              <a class="nav-link" href="a_clients.html">Клиенты</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Все заказы</a>
+                <a class="nav-link" href="a_orders.html">Все заказы</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Все загрузки</a>
+                <a class="nav-link" href="a_downloads.html">Все загрузки</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Избранное</a>
+                <a class="nav-link" href="a_fa">Избранное</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Каталог</a>
+                <a class="nav-link" href="a_catalog.html">Каталог</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Статьи</a>
+                <a class="nav-link" href="a_articles.html">Статьи</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Отзывы</a>
@@ -58,18 +58,24 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Финансы</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Справочная информация</a>
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Доп.опции
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Справочная информация</a>
+                <a class="dropdown-item active" href="#">Авторы<span class="sr-only">(current)</span></a>
+              </div>
             </li>
           </ul>
         </div>
       </nav>
 
       
-    <h1>Сотрудники</h1>
+    <h1>Авторы</h1>
     <ol class="breadcrumb bg-white">
         <li class="breadcrumb-item"><a href="#">Главная</a></li>
-        <li class="breadcrumb-item active">Сотрудники</li>
+        <li class="breadcrumb-item active">Авторы</li>
     </ol>
 
     <div class="container mx-auto my-5">
@@ -78,7 +84,7 @@
     <form class="container mx-auto border border-info p-3">
         <div class="form-row">
           <div class="form-group col-md-4">
-            <label for="inputID">ID сотрудника</label>
+            <label for="inputID">ID автора</label>
             <input type="text" class="form-control" id="inputID" placeholder="ID">
           </div>
           <div class="form-group col-md-4">
@@ -93,7 +99,7 @@
         </div>
         <div class="form-row">
             <div class="form-group col-md-4">
-              <label for="inputFIO">ФИО сотрудника</label>
+              <label for="inputFIO">ФИО автора</label>
               <input type="text" class="form-control" id="inputFIO" placeholder="ФИО">
             </div>
             <div class="form-group col-md-4">
@@ -101,12 +107,12 @@
               <input type="tel" class="form-control" id="inputTel" placeholder="">
             </div>
             <div class="form-group col-md-4">
-              <label for="inputPos">Должность</label>
+              <label for="inputPos">Вид ПО</label>
               <select class="custom-select" id="inputPos">
-                <option selected>Выберите должность...</option>
-                <option value="1">Программист</option>
-                <option value="2">Бэкенд-программист</option>
-                <option value="3">Фронтенд-разработчик</option>
+                <option selected>Выберите вид...</option>
+                <option value="1">Настольное приложение</option>
+                <option value="2">Сайт</option>
+                <option value="3">Мобильное приложение</option>
               </select>
             </div>
    
@@ -114,12 +120,10 @@
         
           <div class="form-row">
             <div class="form-group col-md-4">
-              <label for="inputOrdfrom">Кол-во заказов (от)</label>
-              <input  type="number" min="0" class="form-control" id="inputOrdfrom" placeholder="Кол-во заказов (от)">
+              <label for="inputOrdfrom">ПО</label>
+              <input type="text" class="form-control" id="inputOrdfrom" placeholder="Название/ID ПО">
             </div>
-            <div class="form-group col-md-4">
-                <label for="inputOrdto">Кол-во заказов (до)</label>
-                <input  type="number" min="0" class="form-control" id="inputOrdto" placeholder="Кол-во заказов (до)">
+            <div class="form-group col-md-4">     
             </div>
             <div class="form-group col-md-4">
               <label for="inputPos">Сортировка</label>
@@ -167,7 +171,7 @@
                     <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
                     <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
                     <li class="list-group-item">Программист</li>
-                    <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
+                    <li class="list-group-item">ПО: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
                   </ul>
           </div>
         </div>
@@ -183,7 +187,7 @@
                     <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
                     <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
                     <li class="list-group-item">Программист</li>
-                    <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
+                    <li class="list-group-item">ПО: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
                   </ul>
           </div>
         </div>
@@ -199,7 +203,7 @@
                     <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
                     <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
                     <li class="list-group-item">Программист</li>
-                    <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
+                    <li class="list-group-item">ПО: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
                   </ul>
           </div>
         </div>
@@ -215,7 +219,7 @@
                     <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
                     <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
                     <li class="list-group-item">Программист</li>
-                    <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
+                    <li class="list-group-item">ПО: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
                   </ul>
           </div>
         </div>
@@ -231,7 +235,7 @@
                     <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
                     <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
                     <li class="list-group-item">Программист</li>
-                    <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
+                    <li class="list-group-item">ПО: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
                   </ul>
           </div>
         </div>
@@ -247,7 +251,7 @@
                     <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
                     <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
                     <li class="list-group-item">Программист</li>
-                    <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
+                    <li class="list-group-item">ПО: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
                   </ul>
           </div>
         </div>
@@ -263,7 +267,7 @@
                     <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
                     <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
                     <li class="list-group-item">Программист</li>
-                    <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
+                    <li class="list-group-item">ПО: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
                   </ul>
           </div>
         </div>
