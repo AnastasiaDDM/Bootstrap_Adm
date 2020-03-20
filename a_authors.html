@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Шаблон Bootstrap 101</title>
+    <title>Авторы</title>
     <!-- Bootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -118,18 +118,20 @@
 
     <div class="container-md mx-auto mb-3 px-0">
     
-        <div class="form-group d-flex flex-row my-3 px-0 flex-wrap flex-md-nowrap">
-          <!-- <label for="inputFIO">ФИО автора</label> -->
-          <input type="text" class="form-control col-xl-7 col-md-6 col-9" id="inputFIO" placeholder="Введите ФИО/ID автора">
-          <button type="button" class="btn btn-outline-info col-xl-3 col-md-2 col-3 h-auto">Поиск</button>
 
-        
-            <button type="button" class="col-xl-2 btn btn-outline-info col-md-4 col-12 mt-2 mt-md-0" data-toggle="collapse" href="#find_form" aria-expanded="false" aria-controls="collapseExample">Расширенный поиск</button>
-
-          
-
-
+      <div class="bord_radius mb-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Введите Наименование/ID ПО"
+           aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+          <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-info" type="button">Поиск</button>
+            <button class="btn btn-outline-info d-md-block d-none" data-toggle="collapse" 
+            href="#find_form" aria-expanded="false" aria-controls="collapseExample" type="button">Расширенный поиск</button>
+          </div>
         </div>
+        <button type="button" class="d-block d-md-none col-xl-2 btn btn-outline-info col-md-4 col-12 mt-2 mt-md-0" 
+        data-toggle="collapse" href="#find_form" aria-expanded="false" aria-controls="collapseExample">Расширенный поиск</button>
+      </div>
       
     <form class="mx-auto border border-info p-2 bg-light collapse" role="tabpanel" id="find_form">
         <div class="form-row">

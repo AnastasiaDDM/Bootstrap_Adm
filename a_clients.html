@@ -68,26 +68,47 @@
       </nav>
 
       
-    <h1>Клиенты</h1>
-    <ol class="breadcrumb bg-white">
+      <div class="d-flex flex-row flex-wrap">
+        <h1>Клиенты</h1>     
+        <div class="ml-3"><button type="button" class="btn btn-outline-primary btn-lg">Добавить нового</button></div>
+      </div>
+
+    <ol class="breadcrumb bg-white pl-0">
         <li class="breadcrumb-item"><a href="#">Главная</a></li>
         <li class="breadcrumb-item active">Клиенты</li>
     </ol>
 
-    <div class="container mx-auto my-5">
-      <div class="text-right"><button type="button" class="btn btn-primary btn-lg">Добавить нового</button></div>
-        <div>Поиск</div>
-    <form class="container mx-auto border border-info p-3">
-        <div class="form-row">
-          <div class="form-group col-md-4">
+    <div class="container-md mx-auto mb-3 px-0">
+
+
+      
+      <div class="bord_radius mb-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Введите ФИО/ID клиента"
+           aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+          <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-info" type="button">Поиск</button>
+            <button class="btn btn-outline-info d-md-block d-none" data-toggle="collapse" 
+            href="#find_form" aria-expanded="false" aria-controls="collapseExample" type="button">Расширенный поиск</button>
+          </div>
+        </div>
+        <button type="button" class="d-block d-md-none col-xl-2 btn btn-outline-info col-md-4 col-12 mt-2 mt-md-0" 
+        data-toggle="collapse" href="#find_form" aria-expanded="false" aria-controls="collapseExample">Расширенный поиск</button>
+      </div>
+
+
+
+    <form class="mx-auto border border-info p-2  bg-light collapse" role="tabpanel" id="find_form">
+        <div class="form-row"> 
+          <div class="form-group col-sm-4">
             <label for="inputID">ID клиента</label>
             <input type="text" class="form-control" id="inputID" placeholder="ID">
           </div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-sm-4">
             <label for="inputDatefrom">Дата добавления (от)</label>
             <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
           </div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-sm-4">
             <label for="inputDateto">Дата добавления (до)</label>
             <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
           </div>
@@ -98,11 +119,11 @@
               <label for="inputFIO">ФИО клиента</label>
               <input type="text" class="form-control" id="inputFIO" placeholder="ФИО">
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-4 col-sm-6">
               <label for="inputTel">Номер телефона</label>
               <input type="tel" class="form-control" id="inputTel" placeholder="">
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-4 col-sm-6">
               <label for="inputTel">Электронная почта</label>
               <input type="email" class="form-control" id="inputTel" placeholder="Адрес эл.почты">
             </div>
@@ -110,28 +131,27 @@
           </div>
         
           <div class="form-row">
-            <div class="form-group col-md-4 my-auto py-3">
+            <div class="form-group col-md-4 col-sm-6 my-auto py-3">
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="customCheck">
                 <label class="custom-control-label" for="customCheck">Непрочитанные в чате</label>
               </div>
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-4 col-sm-6">
               <label for="inputTel">Заказ</label>
               <input type="tel" class="form-control" id="inputTel" placeholder="Наименование/ID заказа">
             </div>
-            <div class="form-group col-md-4">
-              <label for="inputPos">Сортировка</label>
-              <select class="custom-select" id="inputPos">
-                <option selected>Сортировать по...</option>
-                <option value="1">Все</option>
-                <option value="2">Популярное</option>
-                <option value="3">&#8657 по ФИО</option>
-                <option value="4">&#8659 по ФИО</option>
-                <option value="5">&#8657 по кол-ву заказов</option>
-                <option value="6">&#8659 по кол-ву заказов</option>
-              </select>
+
+            <div class="col-md-4 d-sm-flex flex-sm-row">
+              <div class="form-group col-sm-6 px-0 pr-sm-2">
+                <label for="inputName">Заказы (от)</label>
+                <input class="form-control" type="number" min="0" id="example-number-input" placeholder="0">
+              </div>
+              <div class="form-group col-sm-6 p-0">
+                <label for="inputPos">Заказы (до)</label>
+                <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="0">
             </div>
+              </div>
 
    
           </div>
@@ -143,24 +163,58 @@
             </label>
           </div>
         </div> -->
-        <div class="form-row justify-content-between my-3">
-            <button type="button" class="btn btn-secondary">Отменить</button>
-        </form>
-        <button type="button" class="btn btn-secondary btn-lg">Поиск</button>
+        <div class="form-group">
+          <div class="d-flex flex-row justify-content-between mt-3">
+              <button type="button" class="btn btn-outline-secondary py-1">Очистить</button>
+  
+          <button type="button" class="btn btn-outline-info btn-lg px-5">Поиск</button>
+        </div>
+      </div>
     </form>
         </div>
 
-    </div>
+        <div class="container-md mx-auto mb-5 px-0">
+        <form class="mx-auto border border-info p-2 bg-light">
+          <div class="form-row">
+            <div class="form-group col-sm-4 mb-0">
+              <select class="custom-select" id="inputPos">
+                <option selected>Сортировать по...</option>
+                <option value="1">Все</option>
+                <option value="2">Популярное</option>
+                <option value="3">&#8657 по ФИО</option>
+                <option value="4">&#8659 по ФИО</option>
+                <option value="5">&#8657 по кол-ву заказов</option>
+                <option value="6">&#8659 по кол-ву заказов</option>
+              </select>
+            </div>
+          <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
+            <select class="custom-select" id="inputMonth">
+              <option selected>Показывать по...</option>
+              <option value="1">4</option>
+              <option value="2">6</option>
+              <option value="3">10</option>
+              <option value="4">12</option>
+            </select>
+          </div>
+          <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
+              <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
+          </div>
+        </div>
+        </form>
+      </div>
 
 
-    <section class="container mx-auto">
+
+
+
+    <section class="mx-auto">
     <div class="card-deck 1d-flex 1flex-row  align-self-center 1flex-wrap  ">
         <div class=" col-md-6 col-lg-4 mb-3  pr-0 pl-0">
             <div class="card">
                 
                 <div class="card-header">
                     <div class="float-right badge badge-secondary rounded-circle">2</div>
-                    <a href="#!" class="card-link"><h3>Потапов С.И.</h3></a> 
+                    <a href="#!" class="card-link"><h2 class="h4">Потапов С.И.</h2></a> 
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -176,7 +230,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="float-right badge badge-secondary rounded-circle">2</div>
-                    <a href="#!" class="card-link"><h3>Илларионов С.И.</h3></a> 
+                    <a href="#!" class="card-link"><h2 class="h4">Потапов С.И.</h2></a> 
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -191,7 +245,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="float-right badge badge-secondary rounded-circle">2</div>
-                    <a href="#!" class="card-link"><h3>Светлодобронравов С.И.</h3></a> 
+                    <a href="#!" class="card-link"><h2 class="h4">Потапов С.И.</h2></a> 
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
@@ -206,7 +260,7 @@
             <div class="card">
                 <div class="card-header">
                     <div class="float-right badge badge-secondary rounded-circle">2</div>
-                    <a href="#!" class="card-link"><h3>Петроградоперевозников С.И.</h3></a> 
+                    <a href="#!" class="card-link"><h2 class="h4">Потапов С.И.</h2></a> 
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">

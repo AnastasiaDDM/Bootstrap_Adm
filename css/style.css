@@ -23,6 +23,26 @@
   padding: 0em 1em;
 }
 
+@media (max-width: 762px) {
+  .bord_radius {
+    border-radius: .25rem;
+  }
+}
+
+@media (max-width: 762px) {
+  .bord_radius > .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .bord_radius_sm > .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+  }
+}
+
 #main {
   width: 3em;
 }
