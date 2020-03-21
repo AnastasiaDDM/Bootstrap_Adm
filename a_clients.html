@@ -82,20 +82,19 @@
 
 
       
-      <div class="bord_radius mb-2">
+      <div class="bord_radius_sm mb-2">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Введите ФИО/ID клиента"
            aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
           <div class="input-group-append" id="button-addon4">
             <button class="btn btn-outline-info" type="button">Поиск</button>
-            <button class="btn btn-outline-info d-md-block d-none" data-toggle="collapse" 
+            <button class="btn btn-outline-info d-sm-block d-none" data-toggle="collapse" 
             href="#find_form" aria-expanded="false" aria-controls="collapseExample" type="button">Расширенный поиск</button>
           </div>
         </div>
-        <button type="button" class="d-block d-md-none col-xl-2 btn btn-outline-info col-md-4 col-12 mt-2 mt-md-0" 
+        <button type="button" class="d-block d-sm-none col-xl-2 btn btn-outline-info col-sm-4 col-12 mt-2 mt-sm-0" 
         data-toggle="collapse" href="#find_form" aria-expanded="false" aria-controls="collapseExample">Расширенный поиск</button>
       </div>
-
 
 
     <form class="mx-auto border border-info p-2  bg-light collapse" role="tabpanel" id="find_form">
@@ -172,43 +171,52 @@
       </div>
     </form>
         </div>
-
         <div class="container-md mx-auto mb-5 px-0">
-        <form class="mx-auto border border-info p-2 bg-light">
-          <div class="form-row">
-            <div class="form-group col-sm-4 mb-0">
-              <select class="custom-select" id="inputPos">
-                <option selected>Сортировать по...</option>
-                <option value="1">Все</option>
-                <option value="2">Популярное</option>
-                <option value="3">&#8657 по ФИО</option>
-                <option value="4">&#8659 по ФИО</option>
-                <option value="5">&#8657 по кол-ву заказов</option>
-                <option value="6">&#8659 по кол-ву заказов</option>
+          <form class="mx-auto border border-info p-2 bg-light">
+            <div class="form-row">
+              <div class="form-group col-sm-4 mb-0">
+                <select class="custom-select" id="inputPos">
+                  <option selected>Сортировать по...</option>
+                  <option value="1">Все</option>
+                  <option value="2">Популярное</option>
+                  <option value="3">&#8657 по ФИО</option>
+                  <option value="4">&#8659 по ФИО</option>
+                  <option value="5">&#8657 по кол-ву заказов</option>
+                  <option value="6">&#8659 по кол-ву заказов</option>
+                </select>
+              </div>
+            <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
+              <select class="custom-select" id="inputMonth">
+                <option selected>Показывать по...</option>
+                <option value="1">4</option>
+                <option value="2">6</option>
+                <option value="3">10</option>
+                <option value="4">12</option>
               </select>
             </div>
-          <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
-            <select class="custom-select" id="inputMonth">
-              <option selected>Показывать по...</option>
-              <option value="1">4</option>
-              <option value="2">6</option>
-              <option value="3">10</option>
-              <option value="4">12</option>
-            </select>
-          </div>
-          <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
+            <!-- <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0 form-row">
+                <input class="form-control col-9" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
+                <button type="button" class="btn btn-secondary col-3">Ок</button>
+            </div> -->
+
+            <div class="input-group col-sm-4 mb-0 mt-2 mt-sm-0 ">
               <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
+              <div class="input-group-append">
+                <button type="button" class="btn btn-info">Ок</button>
+              </div>
+            </div>
+
+
           </div>
+          </form>
         </div>
-        </form>
-      </div>
 
 
 
 
 
     <section class="mx-auto">
-    <div class="card-deck 1d-flex 1flex-row  align-self-center 1flex-wrap  ">
+    <div class="card-deck align-self-center">
         <div class=" col-md-6 col-lg-4 mb-3  pr-0 pl-0">
             <div class="card">
                 
@@ -218,9 +226,8 @@
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
-                    <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
-                    <li class="list-group-item">Программист</li>
+                    <li class="list-group-item"><a id = "phone" class= "card-link" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
+                    <li class="list-group-item"><a title="Почта" class= "card-link" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
                     <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
                   </ul>
           </div>
@@ -234,8 +241,8 @@
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
-                    <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
+                    <li class="list-group-item"><a id = "phone" class= "card-link" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
+                    <li class="list-group-item"><a title="Почта" class= "card-link" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
                     <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
                   </ul>
           </div>
@@ -249,8 +256,8 @@
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
-                    <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
+                    <li class="list-group-item"><a id = "phone" class= "card-link" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
+                    <li class="list-group-item"><a title="Почта" class= "card-link" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
                     <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
                   </ul>
           </div>
@@ -264,8 +271,8 @@
                 </div>
             <div class="card-body">
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a id = "phone" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
-                    <li class="list-group-item"><a title="Почта" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
+                    <li class="list-group-item"><a id = "phone" class= "card-link" href = "tel:+7 (924)8793741">+7(904)-234-35-87</a></li>
+                    <li class="list-group-item"><a title="Почта" class= "card-link" href="mailto: potapovsv@mail.eu">potapovsv@mail.eu</a></li>
                     <li class="list-group-item">Заказы: <span class="badge badge-info p-2">3</span> <button type="button" class="float-right btn btn-outline-info">Подробнее</button></li>
                   </ul>
           </div>

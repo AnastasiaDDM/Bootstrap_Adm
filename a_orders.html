@@ -66,19 +66,19 @@
 
       
     <h1 >Заказы</h1>
-    <ol class="breadcrumb bg-white">
+    <ol class="breadcrumb bg-white pl-0">
         <li class="breadcrumb-item"><a href="#">Главная</a></li>
         <li class="breadcrumb-item active">Все заказы</li>
     </ol>
 
-    <div class="container mx-auto my-5">
-    <form class="container mx-auto border border-info p-3">
+    <div class="container-md mx-auto mb-3 px-0">
+    <form class="mx-auto border border-info p-2 bg-light">
         <div class="form-row">
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-4 col-sm-6">
             <label for="inputDatefrom">Дата обращения (от)</label>
             <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
           </div>
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-4  col-sm-6">
             <label for="inputDateto">Дата обращения (до)</label>
             <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
           </div>
@@ -103,11 +103,11 @@
  
         </div>
         <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-4  col-sm-6">
               <label for="inputID">Клиент</label>
               <input type="text" class="form-control" id="inputID" placeholder="ФИО/ID клиента">
             </div>
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-4  col-sm-6">
               <label for="inputTel">Номер телефона</label>
               <input type="tel" class="form-control" id="inputTel" placeholder="">
             </div>
@@ -122,63 +122,85 @@
    
           </div>
         
-          <div class="form-row">
-            <div class="form-group col-md-4 my-auto py-3">
-              <!-- <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="customCheck">
-                <label class="custom-control-label" for="customCheck">Непрочитанные в чате</label>
-              </div> -->
-            </div>
-            <div class="form-group col-md-4">
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputPos">Сортировка</label>
-              <select class="custom-select" id="inputPos">
-                <option selected>Сортировать по...</option>
-                <option value="1">Все</option>
-                <option value="2">&#8657 по ID заказа</option>
-                <option value="3">&#8657 по ФИО клиента</option>
-                <option value="4">&#8659 по ФИО клиента</option>
-                <option value="5">&#8657 по кол-ву непрочитанных</option>
-                <option value="6">&#8659 по кол-ву непрочитанных</option>
-              </select>
-            </div>
-
-   
+          <div class="form-group">
+            <div class="d-flex flex-row justify-content-between mt-3">
+                <button type="button" class="btn btn-outline-secondary py-1">Очистить</button>
+    
+            <button type="button" class="btn btn-outline-info btn-lg px-5">Поиск</button>
           </div>
-
-        <!-- <div class="form-group">
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="form-check-input" type="checkbox"> Check me out
-            </label>
-          </div>
-        </div> -->
-        <div class="form-row justify-content-between my-3">
-          <button type="button" class="btn btn-secondary">Отменить</button>
-      <!-- </form> -->
-      <button type="button" class="btn btn-secondary btn-lg">Поиск</button>
-    </div>
+        </div>
   </form>
       </div>
 
 
-    <section class="container mx-auto">
-    <div class="card-deck 1d-flex 1flex-row  align-self-center 1flex-wrap  ">
-        <div class=" col-md-6 col-lg-6 mb-3  pr-0 pl-0">
+
+      <div class="container-md mx-auto mb-5 px-0">
+        <form class="mx-auto border border-info p-2 bg-light">
+          <div class="form-row">
+            <div class="form-group col-sm-4 mb-0">
+              <select class="custom-select" id="inputPos">
+                <option selected>Сортировать по...</option>
+                <option value="1">Все</option>
+                <option value="2">Популярное</option>
+                <option value="3">&#8657 по ФИО</option>
+                <option value="4">&#8659 по ФИО</option>
+                <option value="5">&#8657 по кол-ву заказов</option>
+                <option value="6">&#8659 по кол-ву заказов</option>
+              </select>
+            </div>
+          <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
+            <select class="custom-select" id="inputMonth">
+              <option selected>Показывать по...</option>
+              <option value="1">4</option>
+              <option value="2">6</option>
+              <option value="3">10</option>
+              <option value="4">12</option>
+            </select>
+          </div>
+          <!-- <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0 form-row">
+              <input class="form-control col-9" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
+              <button type="button" class="btn btn-secondary col-3">Ок</button>
+          </div> -->
+
+          <div class="input-group col-sm-4 mb-0 mt-2 mt-sm-0 ">
+            <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-outline-info">Ок</button>
+            </div>
+          </div>
+
+
+        </div>
+        </form>
+      </div>
+
+
+
+
+    <section class="mx-auto">
+    <div class="card-deck align-self-center">
+        <div class="col-md-6 col-xl-4 mb-3  pr-0 pl-0">
             <div class="card"> 
                 <div class="card-header">
                     <div class="float-right badge badge-secondary">2</div>
-                    <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h3>Грузоперевозки</h3></a> 
-                    <a href="#!" class="card-link"><span class="card-subtitle mb-2 1text-muted">Сайт</span></a>
+                    <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h2 class="h4">Грузоперевозки</h2></a> 
+
+
+                    <div class="float-right">
+                      <i class="fas fa-pencil-alt orders_i" title="Доработка ПО" aria-hidden="true">
+                      </i>
+                    </div>
+
+
+                    <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
                 </div>
-                <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right 1badge 1badge-light 1p-1">
+                <!-- <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right">
                   <i class="fas fa-pencil-alt orders_i" title="Доработка ПО" aria-hidden="true">
                   </i>
-                </div></div>
-                <div class="d-lg-flex flex-lg-row"> 
-                  <div class="col-lg-6 1float-right 1w-50 p-1">
-                      <ul class="list-group list-group-flush">              
+                </div></div> -->
+                <div class="d-sm-flex flex-sm-row flex-md-column flex-lg-row"> 
+                  <div class="col-sm-7 col-lg-7 col-md-12 p-1">
+                      <ul class="list-group list-group-flush li_padding_02em">              
                         <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
                           <li class="list-group-item">
                             <div>Дата заказа: <a >20.03.2020 11:45</a></div>
@@ -190,11 +212,9 @@
                         </ul>
                 </div>
 
+            <div class="col-sm-5 col-lg-5 col-md-12 1mb-3 1align-self-end pr-0 pl-0">
+              <div class="alert alert-success m-0 rounded-0 pl-1" role="alert"> Состояние: <a>Оплачено</a></div>
 
-
-
-
-            <div class="col-lg-6  align-self-end m-lg-1">
                 <ul class="list-group list-group-flush bg-light p-1">              
                   <div class="my-1">Внесено: <span class="font-weight-bold">10 000</span></div>
                   <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
@@ -208,19 +228,124 @@
       </div>
         </div>
         </div>
-        <div class=" col-md-6 col-lg-6 mb-3  pr-0 pl-0">
+
+
+
+        <div class="col-md-6 col-xl-4 mb-3  pr-0 pl-0">
           <div class="card"> 
               <div class="card-header">
                   <div class="float-right badge badge-secondary">2</div>
-                  <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h3>Грузоперевозки</h3></a> 
-                  <a href="#!" class="card-link"><span class="card-subtitle mb-2 1text-muted">Сайт</span></a>
+                  <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h2 class="h4">Грузоперевозки самые лучшие на всем белом и черном свете</h2></a> 
+
+
+                  <div class="float-right">
+                    <i class="fas fa-magic orders_i" title="Оригинальная разработка" aria-hidden="true">
+                    </i>
+                  </div>
+
+
+                  <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
               </div>
-              <div class="alert alert-danger m-0" role="alert">Состояние: <a>Не оплачено</a><div class="float-right 1badge 1badge-light 1p-1">
+              <!-- <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right">
+                <i class="fas fa-pencil-alt orders_i" title="Доработка ПО" aria-hidden="true">
+                </i>
+              </div></div> -->
+              <div class="d-sm-flex flex-sm-row flex-md-column flex-lg-row"> 
+                <div class="col-sm-7 col-lg-7 col-md-12 p-1">
+                    <ul class="list-group list-group-flush li_padding_02em">              
+                      <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
+                        <li class="list-group-item">
+                          <div>Дата заказа: <a >20.03.2020 11:45</a></div>
+                          <div>Дата покупки: <a >20.03.2020 11:45</a></div>
+                          <div>Дата завершения: <a >20.03.2020 11:45</a></div>
+                        </li>
+                        <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
+                        <li class="list-group-item">ПО: <a title="Почта" href="a_software.html"> Грузовики</a></li>
+                      </ul>
+              </div>
+
+          <div class="col-sm-5 col-lg-5 col-md-12 1mb-3 1align-self-end pr-0 pl-0">
+            <div class="alert alert-danger m-0 rounded-0 pl-1" role="alert">Состояние: <a>Не оплачено</a></div>
+
+            <ul class="list-group list-group-flush bg-light p-1">              
+              <div class="my-1">Внесено: <span class="font-weight-bold">0</span></div>
+              <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
+              <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">20 000</span></div>
+              <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
+              </ul>
+        </div>
+
+    </div>
+      </div>
+      </div>
+
+
+
+
+
+
+        <div class="col-md-6 col-xl-4 mb-3  pr-0 pl-0">
+          <div class="card"> 
+              <div class="card-header">
+                  <div class="float-right badge badge-secondary">2</div>
+                  <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h2 class="h4">Грузоперевозки</h2></a> 
+                  <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
+              </div>
+              <!-- <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right">
+                <i class="fas fa-pencil-alt orders_i" title="Доработка ПО" aria-hidden="true">
+                </i>
+              </div></div> -->
+              <div class="d-lg-flex flex-lg-row"> 
+                <div class="col-lg-7 p-1">
+                    <ul class="list-group list-group-flush">              
+                      <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
+                        <li class="list-group-item">
+                          <div>Дата заказа: <a >20.03.2020 11:45</a></div>
+                          <div>Дата покупки: <a >20.03.2020 11:45</a></div>
+                          <div>Дата завершения: <a >20.03.2020 11:45</a></div>
+                        </li>
+                        <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
+                        <li class="list-group-item">ПО: <a title="Почта" href="a_software.html"> Грузовики</a></li>
+                      </ul>
+              </div>
+
+    
+
+
+
+          <div class="col-md-5 1mb-3 align-self-end pr-0 pl-0">
+            <div class="alert alert-danger m-0" role="alert">Состояние: <a>Не оплачено</a><div class="float-right">
+              <i class="fa fa-magic orders_i" title="Оригинальная разработка" aria-hidden="true">
+              </i>
+            </div></div>
+            <ul class="list-group list-group-flush bg-light p-1">              
+              <div class="my-1">Внесено: <span class="font-weight-bold">0</span></div>
+              <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
+              <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">20 000</span></div>
+              <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
+              </ul>
+        </div>
+
+    </div>
+      </div>
+      </div>
+
+
+
+
+        <div class="col-md-6 col-xl-4 mb-3  pr-0 pl-0">
+          <div class="card"> 
+              <div class="card-header">
+                  <div class="float-right badge badge-secondary">2</div>
+                  <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h2 class="h4">Грузоперевозки</h2></a> 
+                  <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
+              </div>
+              <div class="alert alert-danger m-0" role="alert">Состояние: <a>Не оплачено</a><div class="float-right">
                 <i class="fa fa-magic orders_i" title="Оригинальная разработка" aria-hidden="true">
                 </i>
               </div></div>
               <div class="d-lg-flex flex-lg-row"> 
-                <div class="col-lg-6 1float-right 1w-50 p-1">
+                <div class="col-lg-6 p-1">
                     <ul class="list-group list-group-flush">              
                       <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
                         <li class="list-group-item">
@@ -243,27 +368,25 @@
                 <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
                 <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">20 000</span></div>
                 <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
-
-
                 </ul>
         </div>
 
     </div>
       </div>
       </div>
-      <div class=" col-md-6 col-lg-6 mb-3  pr-0 pl-0">
+      <div class="col-md-6 col-xl-4 mb-3  pr-0 pl-0">
         <div class="card"> 
             <div class="card-header">
                 <div class="float-right badge badge-secondary">2</div>
-                <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h3>Грузоперевозки</h3></a> 
-                <a href="#!" class="card-link"><span class="card-subtitle mb-2 1text-muted">Сайт</span></a>
+                <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h2 class="h4">Грузоперевозки</h2></a> 
+                <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
             </div>
-            <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right 1badge 1badge-light 1p-1">
+            <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right">
               <i class="fas fa-cart-plus orders_i" title="Купленные ПО" aria-hidden="true">
               </i>
             </div></div>
             <div class="d-lg-flex flex-lg-row"> 
-              <div class="col-lg-6 1float-right 1w-50 p-1">
+              <div class="col-lg-6 p-1">
                   <ul class="list-group list-group-flush">              
                     <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
                       <li class="list-group-item">
@@ -294,19 +417,19 @@
   </div>
     </div>
     </div>
-    <div class=" col-md-6 col-lg-6 mb-3  pr-0 pl-0">
+    <div class="col-md-6 col-lg-4 mb-3  pr-0 pl-0">
       <div class="card"> 
           <div class="card-header">
               <div class="float-right badge badge-secondary">2</div>
               <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h3>Грузоперевозки</h3></a> 
-              <a href="#!" class="card-link"><span class="card-subtitle mb-2 1text-muted">Сайт</span></a>
+              <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
           </div>
-          <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right 1badge 1badge-light 1p-1">
+          <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right">
             <i class="fas fa-pencil-alt orders_i" title="Доработка ПО" aria-hidden="true">
             </i>
           </div></div>
           <div class="d-lg-flex flex-lg-row"> 
-            <div class="col-lg-6 1float-right 1w-50 p-1">
+            <div class="col-lg-6">
                 <ul class="list-group list-group-flush">              
                   <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
                     <li class="list-group-item">

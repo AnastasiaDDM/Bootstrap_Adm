@@ -43,6 +43,10 @@
   }
 }
 
+.li_padding_02em > li {
+  padding: .2em;
+}
+
 #main {
   width: 3em;
 }
