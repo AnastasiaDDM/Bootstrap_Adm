@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Шаблон Bootstrap 101</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fa/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+  </head>
+  <body  class="cont_all">
+    <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto flex-lg-wrap">
+            <li class="nav-item active">
+              <a class="nav-link" href="/a_employees.html">Сотрудники <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Клиенты</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Все заказы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Все загрузки</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Избранное</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Каталог</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Статьи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Отзывы</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Коммуникации
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Чаты</a>
+                <a class="dropdown-item" href="#">Обратная связь</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Статистика</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Финансы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Справочная информация</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      
+    <h1>Сотрудники</h1>
+    <ol class="breadcrumb bg-white">
+        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+        <li class="breadcrumb-item active">Сотрудники</li>
+    </ol>
+
+    <div class="container mx-auto my-5">
+        <div>Поиск</div>
+    <form class="container mx-auto border border-info p-3">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputID">ID сотрудника</label>
+            <input type="text" class="form-control" id="inputID" placeholder="ID">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputDatefrom">Дата добавления (от)</label>
+            <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputDateto">Дата добавления (до)</label>
+            <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
+          </div>
+ 
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputFIO">ФИО сотрудника</label>
+              <input type="text" class="form-control" id="inputFIO" placeholder="ФИО">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputTel">Номер телефона</label>
+              <input type="tel" class="form-control" id="inputTel" placeholder="">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputPos">Должность</label>
+              <select class="custom-select" id="inputPos">
+                <option selected>Выберите должность...</option>
+                <option value="1">Программист</option>
+                <option value="2">Бэкенд-программист</option>
+                <option value="3">Фронтенд-разработчик</option>
+              </select>
+            </div>
+   
+          </div>
+        
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="inputOrdfrom">Кол-во заказов (от)</label>
+              <input type="text" class="form-control" id="inputOrdfrom" placeholder="Кол-во заказов (от)">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputOrdto">Кол-во заказов (до)</label>
+                <input type="text" class="form-control" id="inputOrdto" placeholder="Кол-во заказов (до)">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputPos">Сортировка</label>
+              <select class="custom-select" id="inputPos">
+                <option selected>Сортировать по...</option>
+                <option value="1">Все</option>
+                <option value="2">Популярное</option>
+                <option value="3">&#8657 по ФИО</option>
+                <option value="4">&#8659 по ФИО</option>
+                <option value="5">&#8657 по кол-ву заказов</option>
+                <option value="6">&#8659 по кол-ву заказов</option>
+              </select>
+            </div>
+
+   
+          </div>
+
+        <!-- <div class="form-group">
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox"> Check me out
+            </label>
+          </div>
+        </div> -->
+        <div class="form-row justify-content-between my-3">
+            <button type="button" class="btn btn-secondary">Отменить</button>
+        </form>
+        <button type="button" class="btn btn-secondary btn-lg">Поиск</button>
+    </form>
+        </div>
+
+    </div>
+
+
+    <section class="container-md mx-auto">
+ 
+      <div class="mb-4 d-flex flex-row">
+        <span class="align-self-center">
+          ПО, о котором создано обсуждение: 
+        </span>
+        <a href="/software.html" class="ml-2 text-break"> <h2 class="h3">Автоматизированное кафе</h2>
+
+        </a>
+      </div>
+
+
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+              <div class="font-weight-bold">Иванов М.Л.</div>
+      
+            </div>
+            
+            <div>
+              <div class="">20.01.2020</div>
+      
+            </div> 
+      
+      
+      
+        </div>
+          <div class="mt-3">
+
+            Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! 
+          </div>
+
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+
+        
+              <a data-toggle="collapse" 
+              href="#ul_1" aria-expanded="false" aria-controls="collapseExample" class="">Комментарии (10)
+              </a>
+      
+            </div>
+            
+            <div>
+              <a href="#" class="">Ответить
+              </a>
+      
+            </div> 
+      
+      
+      
+        </div>
+
+
+          <ul class="list-group collapse" role="tabpanel" id="ul_1">
+            <li class="list-group-item">
+              <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+                <div>
+                  <div class="font-weight-bold">Иванов М.Л.</div>
+          
+                </div>
+                
+                <div>
+                  <div class="">20.01.2020</div>
+          
+                </div> 
+          
+          
+          
+            </div>
+              <div class="mt-3">
+    
+                Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! 
+              </div>
+              </li>
+            <li class="list-group-item">
+              <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+                <div>
+                  <div class="font-weight-bold">Иванов М.Л.</div>
+          
+                </div>
+                
+                <div>
+                  <div class="">20.01.2020</div>
+          
+                </div> 
+          
+          
+          
+            </div>
+              <div class="mt-3">
+    
+                Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! 
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+                <div>
+                  <div class="font-weight-bold">Иванов М.Л.</div>
+          
+                </div>
+                
+                <div>
+                  <div class="">20.01.2020</div>
+          
+                </div> 
+          
+          
+          
+            </div>
+              <div class="mt-3">
+    
+                Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! 
+              </div>
+            </li>
+          </ul>
+
+
+
+          </li>
+        <li class="list-group-item">
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+              <div class="font-weight-bold">Иванов М.Л.</div>
+      
+            </div>
+            
+            <div>
+              <div class="">20.01.2020</div>
+      
+            </div> 
+      
+      
+      
+        </div>
+          <div class="mt-3">
+
+            Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! 
+          </div>
+
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+
+        
+              <a data-toggle="collapse" 
+              href="#ul_2" aria-expanded="false" aria-controls="collapseExample" class="">Комментарии (10)
+              </a>
+      
+            </div>
+            
+            <div>
+              <a href="#">Ответить
+              </a>
+      
+            </div> 
+      
+      
+      
+        </div>
+
+
+          <ul class="list-group collapse" role="tabpanel" id="ul_2">
+            <li class="list-group-item bg-light">
+              <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+                <div>
+                  <div class="font-weight-bold">Иванов М.Л.</div>
+          
+                </div>
+                
+                <div>
+                  <div class="">20.01.2020</div>
+          
+                </div> 
+          
+          
+          
+            </div>
+              <div class="mt-3">
+    
+                Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! 
+              </div>
+              </li>
+            <li class="list-group-item bg-light">
+              <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+                <div>
+                  <div class="font-weight-bold">Иванов М.Л.</div>
+          
+                </div>
+                
+                <div>
+                  <div class="">20.01.2020</div>
+          
+                </div> 
+          
+          
+          
+            </div>
+              <div class="mt-3">
+    
+                Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! Спасибо вам! 
+              </div>
+            </li>
+            <li class="list-group-item bg-light">
+              <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+                <div>
+                  <div class="font-weight-bold">Иванов М.Л.</div>
+          
+                </div>
+                
+                <div>
+                  <div class="">20.01.2020</div>
+          
+                </div> 
+          
+          
+          
+            </div>
+              <div class="mt-3">
+    
+                Замечательная программа! Не могу нарадоваться! Жду доработки, 
+                которую предложила, и тогда приложение станет совершенно идеальным 
+                для меня! 
+              </div>
+            </li>
+          </ul>
+
+
+        </li>
+        <li class="list-group-item">
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+              <div class="font-weight-bold">Иванов М.Л.</div>
+      
+            </div>
+            
+            <div>
+              <div class="">20.01.2020</div>
+      
+            </div> 
+      
+      
+      
+        </div>
+          <div class="mt-3">
+
+            Замечательная программа! Не могу нарадоваться! 
+          </div>
+
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+
+        
+              <a data-toggle="collapse" 
+              href="#ul_3" aria-expanded="false" aria-controls="collapseExample" class="">Комментарии (0)
+              </a>
+      
+            </div>
+            
+            <div>
+              <a href="#" class="">Ответить
+              </a>
+      
+            </div> 
+      
+      
+      
+        </div>
+        </li>
+      </ul>
+
+
+
+
+      <div class="flex_row flex_space-between">
+        <!-- <div class=""><a href="#" class="button_show-more">Я тоже хочу оставить отзыв</a></div> -->
+      </div>
+
+      <div class="padding_top_2em">
+        <!-- <div class="pos_center padding_top_2em"><h2>Обсуждения данного продукта</h2></div> -->
+        <div class="margin_top_3em">      
+
+          <div class=" flex_column pos_center w_50_sm margin_top_3em">     
+            <!-- Форма комментария -->
+            <h3>Ваше мнение
+            </h3>
+
+            <div class="1collapse mt-3 col-md-7 mx-auto" id="collapseExample">
+              <div class="card card-body bg-light mb-4">
+                
+                <div class="form-group mx-auto mt-3 w-100">
+                  <label for="inputID" class="font-weight-bold">Старый пароль</label>
+                  <input type="password" class="form-control" id="inputID">
+                </div>
+          
+                <div class="form-group mx-auto mt-3 w-100">
+                  <label for="inputID" class="font-weight-bold">Новый пароль</label>
+                  <input type="password" class="form-control" id="inputID">
+                </div>
+          
+                <div class="form-group mx-auto mt-3 w-100">
+                  <label for="inputID" class="font-weight-bold">Повторите пароль</label>
+                  <input type="password" class="form-control" id="inputID">
+                </div>
+          
+                <div class="d-flex flex-row mt-3 w-100 mx-auto justify-content-between">
+                  <div>
+                    <button type="button" class="btn btn-outline-danger mt-2 mx-0 py-1">Отменить</button>
+            
+                  </div>
+                  
+                  <div>
+                    <button type="button" class="btn btn-outline-info  mt-2 py-1">Сохранить</button>
+            
+                  </div> 
+            
+            
+            
+              </div>
+          
+          
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+      </div>
+
+    <script src="js/jquery.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
