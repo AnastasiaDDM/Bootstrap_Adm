@@ -91,23 +91,23 @@
     </ul>
 
 
-    <section class="container  my-5">
+    <section class="container-sm px-0 my-5">
    
       <div class="mx-auto d-md-flex flex-row">
-      <div class="col-md-6 col-lg-5 mx-auto">
-      <div class="form-group 1col-sm-4 mx-auto mt-3">
+      <div class="col-md-6 col-lg-5 mx-auto px-0 px-md-2">
+      <div class="form-group mx-auto mt-3">
         <label for="inputID" class="font-weight-bold">ID</label>
         <input type="text" class="form-control bg-white" readonly id="inputID" value="3">
       </div>
-      <div class="form-group 1col-sm-4 mx-auto mt-3">
+      <div class="form-group mx-auto mt-3">
         <label for="inputID" class="font-weight-bold">ФИО</label>
         <input type="text" class="form-control bg-white" readonly id="inputID"  value="Иванов Илларион Исаакович">
       </div>
-      <div class="form-group 1col-sm-4 mx-auto mt-3">
+      <div class="form-group mx-auto mt-3">
         <label for="inputID" class="font-weight-bold">Должность</label>
         <input type="text" class="form-control bg-white" readonly id="inputID"  value="Программист">
       </div>
-      <div class="form-group 1col-sm-4 mx-auto">
+      <div class="form-group mx-auto">
         <label for="inputID" class="font-weight-bold">Оплата труда</label>
         <input type="text" class="form-control bg-white" readonly id="inputID"  value="Повременная">
 
@@ -126,21 +126,30 @@
       </div>
     </div>
 
-      <div class="col-md-6 col-lg-5 mx-auto">
-      <div class="form-group 1col-sm-4 mx-auto mt-3">
+      <div class="col-md-6 col-lg-5 mx-auto px-0 px-md-2">
+      <div class="form-group mx-auto mt-3">
         <label for="inputID" class="font-weight-bold">Телефон</label>
-        <input type="tel" class="form-control bg-white" readonly id="inputID" href = "tel:+7 (924)8793741" value="8(904)-232-44-55">
-        <a id = "phone" class= "form-control bg-white card-link" readonly href = "tel:+7 (924)8793741">+7(904)-234-35-87</a>
+        <div class="d-flex flex-row">
+          <input type="tel" class="form-control bg-white" readonly id="inputID" href = "tel:+7 (924)8793741" value="8(904)-232-44-55">
+          <a id = "phone" class= "card-link ml-2 align-self-center" readonly href = "tel:+7 (924)8793741"> <i class="fas fa-phone-volume orders_i"></i></a>
+        </div>
+
       </div>
-      <div class="form-group 1col-sm-4 mx-auto  mt-3">
+      <div class="form-group mx-auto  mt-3">
         <label for="inputID" class="font-weight-bold">Запасной телефон</label>
-        <input type="tel" class="form-control bg-white" readonly id="inputID"  value="8(988)-233-44-55">
+        <div class="d-flex flex-row">
+          <input type="tel" class="form-control bg-white" readonly id="inputID" href = "tel:+7 (924)8793741" value="8(922)-222-44-55">
+          <a id = "phone" class= "card-link ml-2 align-self-center" readonly href = "tel:+7 (922)2223741"> <i class="fas fa-phone-volume orders_i"></i></a>
+        </div>
       </div>
-      <div class="form-group 1col-sm-4 mx-auto  mt-3">
+      <div class="form-group mx-auto  mt-3">
         <label for="inputID" class="font-weight-bold">Электронная почта</label>
-        <input type="email" class="form-control bg-white" readonly id="inputID"  value="ivanoooov@mail.ru">
+        <div class="d-flex flex-row">
+          <input type="email" class="form-control bg-white" readonly id="inputID"  value="ivanoooov@mail.ru">
+          <a id = "phone" class= "card-link ml-2 align-self-center" readonly href="mailto: ivanoooov@mail.ru"> <i class="fas fa-envelope-open-text orders_i"></i></a>
+        </div>
       </div>
-      <div class="form-group 1col-sm-4 mx-auto  mt-3">
+      <div class="form-group mx-auto  mt-3">
         <label for="inputID" class="font-weight-bold">Дата рождения</label>
         <input type="text" class="form-control bg-white" readonly id="inputID"  value="10.10.2000">
       </div>
@@ -153,13 +162,13 @@
 
   <div class="form-group">
     <div class="d-sm-flex flex-row mt-3">
-      <div class="col-md-6 col-lg-5 text-center text-sm-left mx-auto">
+      <div class="col-md-6 col-lg-5 text-center text-sm-left mx-auto px-0 px-md-2">
         <button type="button" class="btn btn-outline-danger mt-2 py-1 btn-lg"><i class="fas fa-user-minus mr-2"></i> Удалить</button>
 
       </div>
       
-      <div class="col-md-6 col-lg-5 text-center text-sm-right mx-auto">
-        <button type="button" class="btn btn-outline-info  mt-2 py-1 btn-lg px-4"><i class="fas fa-user-edit mr-2"></i> Изменить</button>
+      <div class="col-md-6 col-lg-5 text-center text-sm-right mx-auto px-0 px-md-2">
+        <button type="button" class="btn btn-outline-info  mt-2 py-1 btn-lg px-4"><i class="fas fa-user-edit mr-2"></i> Редактировать</button>
 
       </div> 
 
