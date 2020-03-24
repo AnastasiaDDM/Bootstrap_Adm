@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Статистика</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fa/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+  </head>
+  <body  class="cont_all">
+    <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto flex-lg-wrap">
+            <li class="nav-item active">
+              <a class="nav-link" href="/a_employees.html">Сотрудники <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Клиенты</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Все заказы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Все загрузки</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Избранное</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Каталог</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Статьи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Отзывы</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Коммуникации
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Чаты</a>
+                <a class="dropdown-item" href="#">Обратная связь</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Статистика</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Финансы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Справочная информация</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      
+    <h1>Статистика</h1>
+    <ol class="breadcrumb bg-white">
+        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+        <li class="breadcrumb-item active">Статистика</li>
+    </ol>
+
+    <div class="container-md mx-auto mb-3 px-0">
+
+      <div class="bord_radius_sm mb-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Введите Наименование/ID заказа"
+           aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+          <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-info" type="button">Поиск</button>
+            <button class="btn btn-outline-info d-sm-block d-none" data-toggle="collapse" 
+            href="#find_form" aria-expanded="false" aria-controls="collapseExample" type="button">Расширенный поиск</button>
+          </div>
+        </div>
+        <button type="button" class="d-block d-sm-none col-xl-2 btn btn-outline-info col-sm-4 col-12 mt-2 mt-sm-0" 
+        data-toggle="collapse" href="#find_form" aria-expanded="false" aria-controls="collapseExample">Расширенный поиск</button>
+      </div>
+
+
+    <form class="mx-auto border border-info p-2 bg-light collapse" role="tabpanel" id="find_form">
+
+
+      <ul class="nav nav-pills nav-fill justify-content-center mt-2 mb-4 d-sm-flex flex-row flex-wrap">
+        <li class="nav-item bg-light col-12 col-md-3 px-0 px-sm-1 px-md-0 px-lg-1">
+          <a class="nav-link btn-outline-info active" data-toggle="collapse" 
+          href="#find_orders" aria-expanded="false" aria-controls="collapseExample">По заказам</a>
+        </li>
+        <li class="nav-item bg-light col-12 col-sm-6 mt-2 mt-md-0 col-md-3 px-0 px-sm-1 px-md-0 px-lg-1">
+          <a class="nav-link btn-outline-info" data-toggle="collapse" 
+          href="#find_workers" aria-expanded="false" aria-controls="collapseExample">По разработчикам</a>
+        </li>
+        <li class="nav-item bg-light col-12 col-sm-6 mt-2 mt-md-0 col-md-2 px-0 px-sm-1 px-md-0 px-lg-1">
+          <a class="nav-link btn-outline-info" data-toggle="collapse" 
+          href="#find_clients" aria-expanded="false" aria-controls="collapseExample">По клиентам</a>
+        </li>
+        <li class="nav-item bg-light col-12 col-sm-6 mt-2 mt-md-0 col-md-2 px-0 px-sm-1 px-md-0 px-lg-1">
+          <a class="nav-link btn-outline-info" data-toggle="collapse" 
+          href="#find_softwares" aria-expanded="false" aria-controls="collapseExample">По ПО</a>
+        </li>
+        <li class="nav-item bg-light col-12 col-sm-6 mt-2 mt-md-0 col-md-2 px-0 px-sm-1 px-md-0 px-lg-1">
+          <a class="nav-link btn-outline-info" data-toggle="collapse" 
+          href="#find_typesoft" aria-expanded="false" aria-controls="collapseExample">По виду ПО</a>
+        </li>
+      </ul>
+
+
+
+        <div class="form-row">
+
+          <div class="form-group col-lg-4">
+            <label for="inputID">ID заказа</label>
+            <input type="text" class="form-control" id="inputID" placeholder="ID">
+          </div>
+
+
+          <div class="col-lg-4  d-sm-flex flex-sm-row">
+            <div class="form-group col-sm-6 px-0 pr-sm-2">
+              <label for="inputDatefrom">Дата (от)</label>
+              <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
+            </div>
+            <div class="form-group col-sm-6 p-0">
+              <label for="inputDateto">Дата (до)</label>
+            <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
+          </div>
+            </div>
+
+          <div class="form-group col-lg-4">
+            <label for="inputMonth">Месяц</label>
+            <select class="custom-select" id="inputMonth">
+              <option selected>Выберите месяц...</option>
+              <option value="1">Январь</option>
+              <option value="2">Февраль</option>
+              <option value="3">Март</option>
+              <option value="4">Апрель</option>
+              <option value="5">Май</option>
+              <option value="6">Июнь</option>
+              <option value="7">Июль</option>
+              <option value="8">Август</option>
+              <option value="9">Сентябрь</option>
+              <option value="10">Октябрь</option>
+              <option value="11">Ноябрь</option>
+              <option value="12">Декабрь</option>
+            </select>
+          </div>
+ 
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4 ">
+              <label for="inputID">Название заказа</label>
+              <input type="text" class="form-control" id="inputID" placeholder="Название заказа">
+            </div>
+            <div class="form-group col-md-4 col-sm-6">
+              <label for="inputPos">Тип заказа</label>
+              <select class="custom-select" id="inputPos">
+                <option selected>Выберите тип...</option>
+                <option value="1">Оригинальная разработка</option>
+                <option value="2">Доработка</option>
+                <option value="2">Покупка</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4 col-sm-6">
+              <label for="inputPos2">Текущее состояние</label>
+              <select class="custom-select" id="inputPos2">
+                <option selected>Выберите состояние...</option>
+                <option value="1">Не обработано</option>
+                <option value="2">Обработано</option>
+              </select>
+            </div>
+   
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group col-md-4 ">
+              <label for="inputID">ID клиента</label>
+              <input type="text" class="form-control" id="inputID" placeholder="ID клиента">
+            </div>
+            <div class="form-group col-md-4 col-sm-6">
+              <label for="inputID">ФИО клиента</label>
+              <input type="text" class="form-control" id="inputID" placeholder="ФИО клиента">
+            </div>
+            <div class="form-group col-md-4 col-sm-6">
+              <label for="inputTel">Номер телефона</label>
+              <input type="tel" class="form-control" id="inputTel" placeholder="">
+            </div>
+   
+          </div>
+
+
+
+                  
+          <div class="form-row">
+            <div class="form-group col-md-4 ">
+              <label for="inputID">ID ПО</label>
+              <input type="text" class="form-control" id="inputID" placeholder="ID ПО">
+            </div>
+            <div class="form-group col-md-4 col-sm-6">
+              <label for="inputID">Наименование ПО</label>
+              <input type="text" class="form-control" id="inputID" placeholder="Наименование ПО">
+            </div>
+            <div class="form-group col-md-4 col-sm-6">
+              <label for="inputPos3">Вид ПО</label>
+              <select class="custom-select" id="inputPos3">
+                <option selected>Выберите вид ПО...</option>
+                <option value="1">Настольное приложение</option>
+                <option value="2">Сайт</option>
+                <option value="3">Мобильное приложение</option>
+              </select>
+            </div>
+   
+          </div>
+
+
+
+
+        
+          <div class="form-row">
+            <div class="form-group col-md-4 ">
+              <label for="inputID">ID разработчика</label>
+              <input type="text" class="form-control" id="inputID" placeholder="ID разработчика">
+            </div>
+            <div class="form-group col-md-4 col-sm-6">
+              <label for="inputID">ФИО разработчика</label>
+              <input type="text" class="form-control" id="inputID" placeholder="ФИО разработчика">
+            </div>
+            <div class="form-group col-md-4 col-sm-6">
+              <label for="inputPos3">Система оплаты</label>
+              <select class="custom-select" id="inputPos3">
+                <option selected>Выберите систему...</option>
+                <option value="1">Повременная</option>
+                <option value="2">Сдельно-попроектная</option>
+              </select>
+            </div>
+   
+          </div>
+
+
+          <div class="form-group">
+            <div class="d-flex flex-row justify-content-between mt-3">
+                <button type="button" class="btn btn-outline-secondary py-1">Очистить</button>
+    
+            <button type="button" class="btn btn-outline-info btn-lg px-5">Поиск</button>
+          </div>
+        </div>
+  </form>
+      </div>
+
+      <div class="container-md mx-auto mb-5 px-0">
+        <form class="mx-auto border border-info p-2 bg-light">
+          <div class="form-row">
+            <div class="form-group col-sm-4 mb-0">
+              <select class="custom-select" id="inputPos">
+                <option selected>Сортировать по...</option>
+                <option value="1">Все</option>
+                <option value="2">&#8657 по ID заказа</option>
+                <option value="3">&#8657 по ФИО клиента</option>
+                <option value="4">&#8659 по ФИО клиента</option>
+                <option value="5">&#8657 по кол-ву непрочитанных</option>
+                <option value="6">&#8659 по кол-ву непрочитанных</option>
+              </select>
+            </div>
+          <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
+            <select class="custom-select" id="inputMonth">
+              <option selected>Показывать по...</option>
+              <option value="1">4</option>
+              <option value="2">6</option>
+              <option value="3">10</option>
+              <option value="4">12</option>
+            </select>
+          </div>
+          <!-- <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0 form-row">
+              <input class="form-control col-9" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
+              <button type="button" class="btn btn-secondary col-3">Ок</button>
+          </div> -->
+
+          <div class="input-group col-sm-4 mb-0 mt-2 mt-sm-0 ">
+            <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
+            <div class="input-group-append">
+              <button type="button" class="btn btn-info">Ок</button>
+            </div>
+          </div>
+
+
+        </div>
+        </form>
+      </div>
+
+    <section class="container mx-auto">
+    
+
+
+
+    
+
+
+
+
+
+<div class="collapse show" role="tabpanel" id="find_orders">
+
+  <div class="col-sm-9 col-lg-7 pr-0 pl-0 my-5">
+    <ul class="list-group list-group-flush">              
+      <div class="my-2 h4">ИТОГО по плановой выручке: <span class="font-weight-bold pl-2">10 000</span> руб.</div>
+      <div class="my-2 h4">ИТОГО по фактической выручке: <span class="font-weight-bold pl-2">20 000 000 000</span> руб.</div>
+      <div class="my-2 h4">ИТОГО по прибыли: <span class="font-weight-bold pl-2">30 000</span> руб.</div>
+    </ul>
+</div>
+
+
+  <table class="table table-bordered table-responsive table-striped">
+    <caption class="pl-2">Статистика по заказам</caption>
+    <thead class="table-info">
+      <tr>
+        <th>#</th>
+        <th>#Заказ</th>
+        <th>Наименование заказа</th>
+        <th>Дата заказа</th>
+        <th>Плановая выручка</th>
+        <th>Фактическая выручка</th>
+        <th>Прибыль</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>#6</td>
+        <td>Грузоперевозки</td>
+        <td>20.01.2019</td>
+        <td>2 000</td>
+        <td>1 000</td>
+        <td>0</td>
+        
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>#62</td>
+        <td>Кафе</td>
+        <td>20.03.2019</td>
+        <td>1 000</td>
+        <td>2 400</td>
+        <td>1 400</td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>#2</td>
+        <td>Автоматизация кофеного бизнеса в горобе Иркутске и по Иркутской области</td>
+        <td>10.01.2029</td>
+        <td>22 000</td>
+        <td>15 000</td>
+        <td>0</td>
+        
+      </tr>
+    
+
+    </tbody>
+  </table>
+</div>
+    
+
+<div class="collapse" role="tabpanel" id="find_clients">
+  <table class="table table-bordered table-responsive table-striped">
+    <thead class="table-info">
+      <tr>
+        <th>#</th>
+        <th>#Клиента</th>
+        <th>ФИО</th>
+        <th>Покупки</th>
+        <th>Загрузки</th>
+        <th>Избранное</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>#6</td>
+        <td>Перевалов У.Р.</td>
+        <td>3</td>
+        <td>19</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>#62</td>
+        <td>Перевалов У.Р.</td>
+        <td>3</td>
+        <td>19</td>
+        <td>70</td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>#2</td>
+        <td>Перевалов У.Р.</td>
+        <td>31</td>
+        <td>49</td>
+        <td>10</td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+<div class="collapse" role="tabpanel" id="find_softwares">
+
+  <div class="col-sm-9 col-lg-7 pr-0 pl-0 my-5">
+      <div class="my-2 h4">ИТОГО: <span class="font-weight-bold pl-2">20 000 000 000</span> руб.</div>
+  </div>
+
+
+  <table class="table table-bordered table-responsive table-striped">
+    <thead class="table-info">
+      <tr>
+        <th>#</th>
+        <th>#ПО</th>
+        <th>Наименование</th>
+        <th>Покупки/Загрузки</th>
+        <th>Избранное</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>#16</td>
+        <td>По ресторанам, по ресторанам, по ресторанам</td>
+        <td>3</td>
+        <td>19</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>#63</td>
+        <td>Грузоперевозки</td>
+        <td>3</td>
+        <td>19</td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>#92</td>
+        <td>Образование</td>
+        <td>31</td>
+        <td>10</td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+<div class="collapse" role="tabpanel" id="find_typesoft">
+
+  <div class="col-sm-9 col-lg-7 pr-0 pl-0 my-5">
+    <div class="my-2 h4">ИТОГО: <span class="font-weight-bold pl-2">10 000 000</span> руб.</div>
+</div>
+
+  <table class="table table-bordered table-responsive table-striped">
+    <thead class="table-info">
+      <tr>
+        <th>#</th>
+        <th>Вид ПО</th>
+        <th>Покупки</th>
+        <th>Загрузки</th>
+        <th>Избранное</th>
+        <th>Выручка</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Настольное приложение</td>
+        <td>23</td>
+        <td>3</td>
+        <td>19</td>
+        <td>30 600</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Сайт</td>
+        <td>150</td>
+        <td>0</td>
+        <td>119</td>
+        <td>900 100</td> 
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Мобильное приложение</td>
+        <td>213</td>
+        <td>33</td>
+        <td>9</td>
+        <td>100 040</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+<div class="collapse" role="tabpanel" id="find_workers">
+
+  <div class="col-sm-9 col-lg-7 pr-0 pl-0 my-5">
+    <ul class="list-group list-group-flush">              
+      <div class="my-2 h4">Выплачено: <span class="font-weight-bold pl-2">20 000</span> руб.</div>
+      <div class="my-2 h4">Осталось: <span class="font-weight-bold pl-2">30 000</span> руб.</div>
+      <div class="my-2 h4">ИТОГО: <span class="font-weight-bold pl-2">50 000</span> руб.</div>
+    </ul>
+</div>
+
+  <table class="table table-bordered table-responsive table-striped">
+    <thead class="table-info">
+      <tr>
+        <th>#</th>
+        <th>#ID</th>
+        <th>ФИО разработчика</th>
+        <th>Заказы</th>
+        <th>Итого</th>
+        <th>Выплачено</th>
+        <th>Осталось</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>#6</td>
+        <td>Свердлов В.Р.</td>
+        <td>3</td>
+        <td>19 000</td>
+        <td>0</td>
+        <td>19 000</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>#62</td>
+        <td>Перевалов У.Р.</td>
+        <td>3</td>
+        <td>14 000</td>
+        <td>0</td>
+        <td>14 000</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>#2</td>
+        <td>Перевалов У.Р.</td>
+        <td>31</td>
+        <td>9 000</td>
+        <td>9 000</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+        <nav class="my-5">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link" href="#!" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#!">1</a></li>
+              <li class="page-item active"><a class="page-link" href="#!">2</a></li>
+              <li class="page-item"><a class="page-link" href="#!">3</a></li>
+              <li class="page-item"><a class="page-link" href="#!">4</a></li>
+              <li class="page-item d-none d-sm-block"><a class="page-link" href="#!">5</a></li>
+              <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
+              <li class="page-item"><a class="page-link" href="#!">19</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#!" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+
+        <div class="collapse mt-3 mb-5" id="collapseExample">
+          <div class="card card-body shadow-sm">
+           
+            <div class="d-flex 1flex-column flex-sm-row flex-md-column flex-xl-row justify-content-between flex-wrap">	
+
+
+
+              <div class="d-sm-flex flex-row 1flex-md-column flex-xl-row">
+
+                <div class="my-2 text-uppercase h4">Итого&nbsp;к&nbsp;оплате:</div>
+
+                <div class="d-flex flex-row 1flex-md-column flex-xl-row">
+                  <input type="text" class=" col-sm-9 form-control form-control-lg font-weight-bold ml-sm-3" id="inputID" value="30 000">
+                  <div class="my-2 text-uppercase h4 ml-1">руб.</div>
+                </div>
+
+
+
+
+              </div>
+
+              <!-- <div class="my-2 text-uppercase h4">Итого к оплате:            <input type="text" class="form-control font-weight-bold pl-5" id="inputID" value="Иванушка"></div> -->
+              
+              
+              <div class="1align-self-center mt-4 mt-sm-2 h4">20.03.2020 11:45</div>
+
+
+            </div>
+            <div class="d-flex flex-column flex-sm-row w-100 justify-content-between mt-5">
+              <button type="button" class="btn btn-outline-danger btn-lg px-4"><i class="fas fa-times mr-2"></i>Отменить</button> 
+              <button type="button" class="btn btn-outline-info btn-lg px-4 mt-3 mt-sm-0"><i class="fas fa-check mr-2"></i>Оплатить</button> 
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+    </section>
+
+      </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
