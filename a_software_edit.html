@@ -12,58 +12,68 @@
   </head>
   <body  class="cont_all">
     <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto flex-lg-wrap">
-            <li class="nav-item active">
-              <a class="nav-link" href="/a_employees.html">Сотрудники <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Клиенты</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Все заказы</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Все загрузки</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Избранное</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Каталог</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Статьи</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Отзывы</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Коммуникации
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Чаты</a>
-                <a class="dropdown-item" href="#">Обратная связь</a>
-              </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Статистика</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Финансы</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Справочная информация</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto flex-lg-wrap">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Работа с клиентами
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">            
+              <a class="dropdown-item" href="a_orders.html">Все заказы</a>
+              <a class="dropdown-item" href="a_downloads.html">Все загрузки</a>
+              <a class="dropdown-item" href="a_clients.html">Клиенты</a>
+              <a class="dropdown-item" href="a_favourites.html">Избранное</a>
+              <a class="dropdown-item" href="a_reviews.html">Отзывы</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="a_catalog.html">Каталог</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/a_employees.html">Сотрудники </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Коммуникации
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_chats.html">Чаты</a>
+              <a class="dropdown-item" href="a_feedback.html">Обратная связь</a>
+            </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="a_articles.html">Статьи</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Статистика
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_statistic.html">Статистика</a>
+              <a class="dropdown-item" href="a_finance.html">Финансы</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Справочники
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_area.html">Области применения</a>
+              <a class="dropdown-item" href="a_tag.html">Теги</a>
+              <a class="dropdown-item active" href="a_authors.html">Авторы<span class="sr-only">(current)</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
       
     <h1 class="text-break">Редактирование ПО</h1>
@@ -78,22 +88,12 @@
 
 
     <section class="container-md mx-auto my-5 px-0">
-      <div class="mt-3 col-md-9 mx-auto">
-        <div class="">
+      <div class="mt-3 col-lg-9 mx-auto px-0">
+        <div>
 
           <div class="custom-control custom-checkbox">
             <input type="checkbox" checked class="custom-control-input" id="customCheck">
             <label class="custom-control-label font-weight-bold h5" for="customCheck">Отображать на сайте</label>
-          </div>
-
-
-          <div class="mt-5">
-
-            <div class="mb-3">
-              Первоначальный файл: <div>Грузоперевозки.7zip</div>
-            </div>
-            <input type="file" id="files" name="files[]" multiple />
-            <output id="list"></output>
           </div>
 
 
@@ -103,23 +103,9 @@
           </div>
 
 
-          <!-- <div class="form-group mt-4">
-            <select class="custom-select" id="inputPos">
-              <option selected>Область применения...</option>
-              <option value="1">Все</option>
-              <option value="2">&#8657 по ID заказа</option>
-              <option value="3">&#8657 по ФИО клиента</option>
-              <option value="4">&#8659 по ФИО клиента</option>
-              <option value="5">&#8657 по кол-ву непрочитанных</option>
-              <option value="6">&#8659 по кол-ву непрочитанных</option >
-            </select>
-          </div> -->
-
-
-
           <div class="d-sm-flex flex-row justify-content-between mt-5">
-            <div class="col-5 pl-0" >
-              <div class="form-group 1col-md-4 1col-sm-6">
+            <div class="col-sm-5 px-0" >
+              <div class="form-group">
                 <label for="inputPos3">Вид ПО</label>
                 <select class="custom-select" id="inputPos3">
                   <option selected>Вид ПО...</option>
@@ -140,19 +126,7 @@
                 </select>
               </div>
 
-
-              <!-- <div class="form-group 1col-md-4 1col-sm-6">
-                <label for="inputPos3">Размер</label>
-                <select class="custom-select" id="inputPos3">
-                  <option selected>Размер...</option>
-                  <option value="1">Небольшой</option>
-                  <option value="2">Средний</option>
-                  <option value="3">Большой</option>
-                </select>
-              </div> -->
-
-              
-              <div class="form-group 1col-md-4 1col-sm-6">
+              <div class="form-group">
                 <label for="inputPos3">Ограничение доступа</label>
                 <select class="custom-select" id="inputPos3">
                   <option selected>Ограничение доступа...</option>
@@ -161,7 +135,7 @@
                 </select>
               </div>
 
-              <div class="form-group 1col-md-4 1col-sm-6">
+              <div class="form-group">
                 <label for="inputPos3">Доп. установки</label>
                 <select class="custom-select" id="inputPos3">
                   <option selected>Доп. установки...</option>
@@ -171,7 +145,7 @@
               </div>
 
 
-              <div class="form-group 1col-md-4 1col-sm-6">
+              <div class="form-group">
                 <label for="inputPos3">Установка ПО</label>
                 <select class="custom-select" id="inputPos3">
                   <option selected>Установка ПО...</option>
@@ -182,7 +156,7 @@
             </div>
 
 
-            <div class="col-5 pr-0">
+            <div class="col-sm-5 px-0">
             <div class=" form-row">
               <div class="form-group col-7">
                 <label for="inputPos3">Тип</label>
@@ -227,8 +201,12 @@
 
 
           <div class="form-group col-12 px-0">
-            <label for="inputID">ФИО/ID автора</label>
-            <input type="text" class="form-control" id="inputID" value="Петровский">
+            <label for="inputPos3">Автор</label>
+            <select class="custom-select" id="inputPos3">
+              <option selected>Автор...</option>
+              <option value="1">№5 Петров И.Д.</option>
+              <option value="2">№7 Иванов С.М.</option>
+            </select>
           </div>
 
           </div>
@@ -253,19 +231,19 @@
 
 
 
-          <div class="d-sm-flex flex-row justify-content-between mt-5">
-            <div class="col-5 pl-0 w-100">
-              <label for="inputID" class="font-weight-bold">Среднее описание для карточек ПО</label>
-              <textarea class="form-control"  rows="6" id="inputID">
+          <div class="d-md-flex flex-row justify-content-between mt-5">
+            <div class="col-md-5 px-0 w-100">
+              <label for="inputID" class="font-weight-bold">Среднее описание для карточек</label>
+              <textarea class="form-control pb-0" rows="8"  id="inputID">
   Замечательная программа! Не могу нарадоваться! Жду доработки, 
   которую предложила, и тогда приложение станет совершенно идеальным 
   для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться!
               </textarea>
             </div>
 
-            <div class="col-5 pl-0 w-100">
+            <div class="col-md-5 px-0 w-100 mt-5 mt-md-0">
               <div class="form-group col-12 px-0">
-                <label for="inputID">Заголовок для виджетов</label>
+                <label for="inputID" class="font-weight-bold">Заголовок для виджетов</label>
                 <input type="text" class="form-control" id="inputID" value="Автоматизируй кафе!">
               </div>
 
@@ -282,11 +260,23 @@
 
 
 
+ 
+ <div class="mt-5">
+  <div class="h4 pb-2">Загрузка файла</div>    
+  <div class="mb-3">
+    Первоначальный файл: <a class="ml-1" href="fffff">Грузоперевозки.7zip</a>
+  </div>
+  <input type="file" id="files" name="files[]" multiple />
+  <output id="list"></output>
+</div>
+
+
+
 
 <div>
         <div class="d-sm-flex flex-row mt-5 mb-2">
           <div class="h4">Картинки и фотографии для ПО</div>    
-          <div class="ml-0 ml-sm-3"><button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#ModalDownload">Добавить</button></div>
+          <div class="ml-0 ml-sm-3"><button type="button" class="btn btn-outline-primary w-100" data-toggle="modal" data-target="#ModalDownload">Добавить</button></div>
         </div>
 
 
@@ -450,82 +440,124 @@
       <div class="d-sm-flex flex-row mt-5 mb-2">
         <div class="h4">Область применения</div>    
         <div class="ml-0 ml-sm-3"><button type="button" 
-          class="btn btn-outline-primary" data-toggle="collapse" href="#newarea" aria-expanded="false"
+          class="btn btn-outline-primary w-100" data-toggle="collapse" href="#newarea" aria-expanded="false"
            aria-controls="collapseExample">Добавить</button></div>
       </div>
 
 
-      <div class=" form-row mt-3">
-        <div class="col-6"  id="">
-          <div class=" d-flex flex-row pr-3">
-            <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
+
+
+
+      <div class="d-flex flex-row flex-wrap mt-3">
+        <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+          <div class=" d-flex flex-row">
+            <select class="custom-select" id="inputPos3">
+              <option selected>Тег...</option>
+              <option selected value="1">Бесплатно</option>
+              <option value="2">Грузоперевозки</option>
+            </select>
             <div class="text-center">
               <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
             </div>
           </div>
         </div>
-        <div class="col-6"  id="">
-          <div class=" d-flex flex-row pl-3">
-            <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
+        <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+          <div class=" d-flex flex-row">
+            <select class="custom-select" id="inputPos3">
+              <option selected>Тег...</option>
+              <option selected value="1">Бесплатно</option>
+              <option value="2">Грузоперевозки</option>
+            </select>
             <div class="text-center">
               <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
             </div>
           </div>
         </div>
-    </div>
-
-    <div class=" form-row mt-3">
-      <div class="col-6"  id="">
-        <div class=" d-flex flex-row pr-3">
-          <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
-          <div class="text-center">
-            <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+        <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+          <div class=" d-flex flex-row">
+            <select class="custom-select" id="inputPos3">
+              <option selected>Тег...</option>
+              <option selected value="1">Бесплатно</option>
+              <option value="2">Грузоперевозки</option>
+            </select>
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-6"  id="">
-        <div class=" d-flex flex-row pl-3">
-          <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
-          <div class="text-center">
-            <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+        <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+          <div class=" d-flex flex-row">
+            <select class="custom-select" id="inputPos3">
+              <option selected>Тег...</option>
+              <option selected value="1">Бесплатно</option>
+              <option value="2">Грузоперевозки</option>
+            </select>
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+            </div>
           </div>
         </div>
-      </div>
-  </div>
-  
-  <div class=" form-row mt-3">
-    <div class="col-6"  id="">
-      <div class=" d-flex flex-row pr-3">
-        <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
-        <div class="text-center">
-          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+        <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+          <div class=" d-flex flex-row">
+            <select class="custom-select" id="inputPos3">
+              <option selected>Тег...</option>
+              <option selected value="1">Бесплатно</option>
+              <option value="2">Грузоперевозки</option>
+            </select>
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="col-6"  id="">
-      <div class=" d-flex flex-row pl-3">
-        <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
-        <div class="text-center">
-          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+        <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+          <div class=" d-flex flex-row">
+            <select class="custom-select" id="inputPos3">
+              <option selected>Тег...</option>
+              <option selected value="1">Бесплатно</option>
+              <option value="2">Грузоперевозки</option>
+            </select>
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-</div>
+        <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+          <div class=" d-flex flex-row">
+            <select class="custom-select" id="inputPos3">
+              <option selected>Тег...</option>
+              <option selected value="1">Бесплатно</option>
+              <option value="2">Грузоперевозки</option>
+            </select>
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+            </div>
+          </div>
+        </div>
 
-<div class=" form-row mt-3">
-  <div class="col-6 collapse"  id="newarea">
-  <div class=" d-flex flex-row pr-3">
-    <input type="text" class="form-control" id="inputID">
-    <div class="text-center">
-      <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="text-center">
-      <button type="button" class="btn btn-outline-success w-100"><i class="fas fa-check"></i></button>
-    </div>
-  </div>
-</div>
 
-</div>
+
+
+
+        <div class="col-sm-6 mb-3 mr-1_sm collapse"  id="newarea">
+          <div class=" d-flex flex-row">
+            <select class="custom-select" id="inputPos3">
+              <option selected>Область...</option>
+              <option value="1">Бесплатно</option>
+              <option value="2">Грузоперевозки</option>
+            </select>
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-success w-100"><i class="fas fa-check"></i></button>
+            </div>
+          </div>
+        </div>
+
+
+    </div>
+
+
 
 
 </div>
@@ -539,7 +571,7 @@
   <div class="d-sm-flex flex-row mt-5 mb-2">
     <div class="h4">Теги</div>    
     <div class="ml-0 ml-sm-3"><button type="button" 
-      class="btn btn-outline-primary" data-toggle="collapse" href="#newtag" aria-expanded="false"
+      class="btn btn-outline-primary w-100" data-toggle="collapse" href="#newtag" aria-expanded="false"
        aria-controls="collapseExample">Добавить</button></div>
   </div>
 
@@ -547,76 +579,100 @@
 
 
 
-
-  <div class=" form-row mt-3">
-    <div class="col-6"  id="">
-      <div class=" d-flex flex-row pr-3">
-        <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
+  <div class="d-flex flex-row flex-wrap mt-3">
+    <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+      <div class=" d-flex flex-row">
+        <select class="custom-select" id="inputPos3">
+          <option selected>Тег...</option>
+          <option selected value="1">Кафе</option>
+          <option value="2">Грузоперевозки</option>
+        </select>
         <div class="text-center">
           <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
         </div>
       </div>
     </div>
-    <div class="col-6"  id="">
-      <div class=" d-flex flex-row pl-3">
-        <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
+    <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+      <div class=" d-flex flex-row">
+        <select class="custom-select" id="inputPos3">
+          <option selected>Тег...</option>
+          <option selected value="1">Кафе</option>
+          <option value="2">Грузоперевозки</option>
+        </select>
         <div class="text-center">
           <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
         </div>
       </div>
     </div>
-</div>
-
-<div class=" form-row mt-3">
-  <div class="col-6"  id="">
-    <div class=" d-flex flex-row pr-3">
-      <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
-      <div class="text-center">
-        <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+    <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+      <div class=" d-flex flex-row">
+        <select class="custom-select" id="inputPos3">
+          <option selected>Тег...</option>
+          <option selected value="1">Кафе</option>
+          <option value="2">Грузоперевозки</option>
+        </select>
+        <div class="text-center">
+          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-6"  id="">
-    <div class=" d-flex flex-row pl-3">
-      <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
-      <div class="text-center">
-        <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+    <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+      <div class=" d-flex flex-row">
+        <select class="custom-select" id="inputPos3">
+          <option selected>Тег...</option>
+          <option selected value="1">Кафе</option>
+          <option value="2">Грузоперевозки</option>
+        </select>
+        <div class="text-center">
+          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class=" form-row mt-3">
-<div class="col-6"  id="">
-  <div class=" d-flex flex-row pr-3">
-    <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
-    <div class="text-center">
-      <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+    <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+      <div class=" d-flex flex-row">
+        <select class="custom-select" id="inputPos3">
+          <option selected>Тег...</option>
+          <option selected value="1">Кафе</option>
+          <option value="2">Грузоперевозки</option>
+        </select>
+        <div class="text-center">
+          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-<div class="col-6"  id="">
-  <div class=" d-flex flex-row pl-3">
-    <input type="text" class="form-control" id="inputID"  value="Грузоперевозки">
-    <div class="text-center">
-      <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+    <div class="col-sm-6 mb-3 mr-1_sm"  id="">
+      <div class=" d-flex flex-row">
+        <select class="custom-select" id="inputPos3">
+          <option selected>Тег...</option>
+          <option selected value="1">Кафе</option>
+          <option value="2">Грузоперевозки</option>
+        </select>
+        <div class="text-center">
+          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</div>
 
-<div class=" form-row mt-3">
-<div class="col-6 collapse"  id="newtag">
-<div class=" d-flex flex-row pr-3">
-<input type="text" class="form-control" id="inputID">
-<div class="text-center">
-  <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
-</div>
-<div class="text-center">
-  <button type="button" class="btn btn-outline-success w-100"><i class="fas fa-check"></i></button>
-</div>
-</div>
-</div>
+
+
+
+
+    <div class="col-sm-6 mb-3 mr-1_sm collapse"  id="newtag">
+      <div class=" d-flex flex-row">
+        <select class="custom-select" id="inputPos3">
+          <option selected>Тег...</option>
+          <option value="1">Кафе</option>
+          <option value="2">Грузоперевозки</option>
+        </select>
+        <div class="text-center">
+          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="text-center">
+          <button type="button" class="btn btn-outline-success w-100"><i class="fas fa-check"></i></button>
+        </div>
+      </div>
+    </div>
+
 
 </div>
 
@@ -837,12 +893,12 @@
 
           <div class="d-sm-flex flex-row my-4 w-100 mx-auto justify-content-between">
             <div class="text-center text-sm-left">
-              <button type="button" class="btn btn-outline-danger mt-2 py-1 btn-lg"><i class="fas fa-times mr-2"></i> Отменить</button>
+              <button type="button" class="btn btn-outline-danger w-100 mt-2 py-1 btn-lg"><i class="fas fa-times mr-2"></i> Отменить</button>
       
             </div>
             
             <div class="text-center text-sm-left">
-              <button type="button" class="btn btn-outline-success  mt-2 py-1 btn-lg px-4"><i class="fas fa-check mr-2"></i> Сохранить</button>
+              <button type="button" class="btn btn-outline-success w-100 mt-2 py-1 btn-lg px-4"><i class="fas fa-check mr-2"></i> Сохранить</button>
       
             </div> 
       

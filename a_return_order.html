@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Оплата заказа</title>
+    <title>Возврат</title>
     <!-- Bootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -74,14 +74,13 @@
         </ul>
       </div>
     </nav>
-
       
-    <h1>Оплата заказа</h1>
+    <h1>Возврат</h1>
     <ol class="breadcrumb bg-white pl-0">
         <li class="breadcrumb-item"><a href="#">Главная</a></li>
         <li class="breadcrumb-item"><a href="#">Заказы</a></li>
         <li class="breadcrumb-item"><a href="#">Заказ №3</a></li>
-        <li class="breadcrumb-item active">Оплата заказа</li>
+        <li class="breadcrumb-item active">Возврат</li>
     </ol>
 
 
@@ -98,7 +97,7 @@
         
         <div class="h5">Заказ: <a title="Почта" href="a_order.html">Грузоперевозки</a></div>
 
-        <ul class="list-group list-group-flush p-0 h5 mt-5 col-sm-6">              
+        <ul class="list-group list-group-flush p-0 h5 my-5 col-sm-6">              
           <div class="my-2">Внесено: <span class="font-weight-bold">10 000</span></div>
           <div class="my-2">Осталось: <span class="font-weight-bold">20 000</span></div>
           <div class="my-2 text-uppercase">Итого: <span class="font-weight-bold">30 000</span></div>
@@ -106,43 +105,58 @@
 
           </ul>
 
+          <div class="h5">Выберите способ возврата:</div>
+          <div class="d-sm-flex flex-row justify-content-between">
+            <div class="form-group  ml-0 mt-3 custom-control custom-radio">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio1">Возврат денежных средств</label>
+            </div>
+            <div class="form-group mt-3 custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="customRadio2">Без возврата денежных средств</label>
+            </div>
+          </div>
 
-<div class="d-sm-flex flex-row">
+          
 
-  <div class="form-group col-sm-6 px-0 pr-sm-2 mt-5 h5">
-    <label for="inputPos3">Метод оплаты</label>
-    <select class="custom-select" id="inputPos3">
-      <option selected>Выберите метод оплаты...</option>
-      <option value="1">Произвольная сумма</option>
-      <option value="2">Оплатить частично (1/2)</option>
-      <option value="3">Полностью</option>
-    </select>
-  </div>
+          <div class="d-sm-flex flex-row">
 
-  <div class="form-group col-sm-6 px-0 pl-sm-2 mt-5 h5">
-    <label for="inputID">Сумма оплаты</label>
-    <input type="text" class="form-control" id="inputID" value="10 000">
-  </div>
-
-</div>
-
-
-
-
+            <div class="form-group col-sm-6 px-0 pr-sm-2 mt-5 h5">
+              <label for="inputPos3">Метод оплаты</label>
+              <select class="custom-select" id="inputPos3">
+                <option selected>Выберите метод оплаты...</option>
+                <option value="1">Произвольная сумма</option>
+                <option value="2">Оплатить частично (1/2)</option>
+                <option value="3">Полностью</option>
+              </select>
+            </div>
+          
+            <div class="form-group col-sm-6 px-0 pl-sm-2 mt-5 h5">
+              <label for="inputID">Сумма оплаты</label>
+              <input type="text" class="form-control" id="inputID" value="10 000">
+            </div>
+          
+          </div>
 
 
 
-<div class="d-sm-flex flex-row my-5 w-100 mx-auto justify-content-between">
-  <div class="text-center text-sm-left">
-    <button type="button" class="btn btn-outline-danger mt-2 py-1 btn-lg w-100"><i class="fas fa-times mr-2"></i> Отменить</button>
 
-  </div>
-  
-  <div class="text-center text-sm-left">
-    <button type="button" class="btn btn-outline-success  mt-4 mt-sm-2 py-1 btn-lg px-4 w-100"><i class="fas fa-check mr-2"></i> Оплатить</button>
 
-  </div> 
-</div>
+
+
+
+          <div class="d-sm-flex flex-row my-5 w-100 mx-auto justify-content-between">
+            <div class="text-center text-sm-left">
+              <button type="button" class="btn btn-outline-danger mt-2 py-1 btn-lg w-100"><i class="fas fa-times mr-2"></i> Отменить</button>
+          
+            </div>
+            
+            <div class="text-center text-sm-left">
+              <button type="button" class="btn btn-outline-success  mt-4 mt-sm-2 py-1 btn-lg px-4 w-100"><i class="fas fa-check mr-2"></i> Оплатить</button>
+          
+            </div> 
+          </div>
+          
 
 
 

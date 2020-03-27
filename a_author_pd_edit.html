@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Сотрудник №2</title>
-    <!-- Bootstrap -->
+    <title> Редактирование Автор №2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/fa/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
   </head>
   <body class="cont_all">
     <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
@@ -74,110 +72,125 @@
         </ul>
       </div>
     </nav>
-
       
-    <h1>Сотрудник Иванов И.И.</h1>
+    <div class="d-md-flex flex-row">
+      <h1 class="text-break">Редактирование Автор Иванов И.И.</h1>     
+      <div class="ml-md-3"><a type="button" href="a_catalog.html" class="btn btn-outline-primary btn-lg">ПО автора</a></div>
+    </div>  
+
     <ol class="breadcrumb bg-white pl-0">
         <li class="breadcrumb-item"><a href="#">Главная</a></li>
-        <li class="breadcrumb-item"><a href="#">Сотрудники</a></li>
-        <li class="breadcrumb-item active">Сотрудник Иванов И.И.</li>
+        <li class="breadcrumb-item"><a href="#">Авторы</a></li>
+        <li class="breadcrumb-item"><a href="#">Автор Иванов И.И.</a></li>
+        <li class="breadcrumb-item active">Редактирование</li>
     </ol>
 
-    <ul class="nav nav-pills nav-fill justify-content-center">
-      <li class="nav-item bg-light">
-        <a class="nav-link btn-outline-info active" href="a_employee_pd.html">Личные данные</a>
-      </li>
-      <li class="nav-item bg-light">
-        <a class="nav-link btn-outline-info" href="a_orders.html">Заказы сотрудника</a>
-      </li>
-      <li class="nav-item bg-light">
-        <a class="nav-link btn-outline-info" href="a_chats.html">Чаты сотрудника</a>
-      </li>
-      <li class="nav-item bg-light">
-        <a class="nav-link btn-outline-info" href="a_finance.html">Финансы сотрудника</a>
-      </li>
-    </ul>
+
 
     <section class="container-sm px-0 my-5">
    
       <div class="mx-auto d-md-flex flex-row">
       <div class="col-md-6 col-lg-5 mx-auto px-0 px-md-2">
       <div class="form-group mx-auto mt-3">
-        <label for="inputID" class="font-weight-bold">ID</label>
-        <input type="text" class="form-control bg-white" readonly id="inputID" value="3">
-      </div>
-      <div class="form-group mx-auto mt-3">
         <label for="inputID" class="font-weight-bold">ФИО</label>
-        <input type="text" class="form-control bg-white" readonly id="inputID"  value="Иванов Илларион Исаакович">
+        <input type="text" class="form-control" id="inputID"  value="Иванов Илларион Исаакович">
+      </div>
+      <div class="form-group mx-auto  mt-3">
+        <label for="inputID" class="font-weight-bold">Дата рождения</label>
+        <input type="date" class="form-control" id="inputID"  value="2000-10-10">
       </div>
       <div class="form-group mx-auto mt-3">
-        <label for="inputID" class="font-weight-bold">Должность</label>
-        <input type="text" class="form-control bg-white" readonly id="inputID"  value="Программист">
+        <label for="inputID" class="font-weight-bold">Социальные сети</label>
+        <input type="text" class="form-control" id="inputID"  value="vk/dffdff">
       </div>
-      <div class="form-group mx-auto">
-        <label for="inputID" class="font-weight-bold">Оплата труда</label>
-        <input type="text" class="form-control bg-white" readonly id="inputID"  value="Повременная">
 
-
-        <div class="d-flex flex-row justify-content-between mt-2">
-          <div class="col-7 px-0">
-            <input type="text" class="form-control bg-white" readonly id="inputID"  value="1 час">
-          </div>
-          <div class="col-5 pl-1 pr-0">
-            <input type="text" class="form-control bg-white" readonly id="inputID"  value="1000">
-          </div>
-        </div>
-
-
-
-      </div>
     </div>
 
       <div class="col-md-6 col-lg-5 mx-auto px-0 px-md-2">
       <div class="form-group mx-auto mt-3">
         <label for="inputID" class="font-weight-bold">Телефон</label>
-        <div class="d-flex flex-row">
-          <input type="tel" class="form-control bg-white" readonly id="inputID" href = "tel:+7 (924)8793741" value="8(904)-232-44-55">
-          <a id = "phone" class= "card-link ml-2 align-self-center" readonly href = "tel:+7 (924)8793741"> <i class="fas fa-phone-volume orders_i"></i></a>
-        </div>
-
+        <input type="tel" class="form-control" id="inputID"  value="8(904)-232-44-55">
       </div>
       <div class="form-group mx-auto  mt-3">
         <label for="inputID" class="font-weight-bold">Запасной телефон</label>
-        <div class="d-flex flex-row">
-          <input type="tel" class="form-control bg-white" readonly id="inputID" href = "tel:+7 (924)8793741" value="8(922)-222-44-55">
-          <a id = "phone" class= "card-link ml-2 align-self-center" readonly href = "tel:+7 (922)2223741"> <i class="fas fa-phone-volume orders_i"></i></a>
-        </div>
+        <input type="tel" class="form-control" id="inputID"  value="8(988)-233-44-55">
       </div>
       <div class="form-group mx-auto  mt-3">
         <label for="inputID" class="font-weight-bold">Электронная почта</label>
-        <div class="d-flex flex-row">
-          <input type="email" class="form-control bg-white" readonly id="inputID"  value="ivanoooov@mail.ru">
-          <a id = "phone" class= "card-link ml-2 align-self-center" readonly href="mailto: ivanoooov@mail.ru"> <i class="fas fa-envelope-open-text orders_i"></i></a>
-        </div>
+        <input type="email" class="form-control" id="inputID"  value="ivanoooov@mail.ru">
       </div>
-      <div class="form-group mx-auto  mt-3">
-        <label for="inputID" class="font-weight-bold">Дата рождения</label>
-        <input type="text" class="form-control bg-white" readonly id="inputID"  value="10.10.2000">
-      </div>
+
     </div>
 
 
   </div>
 
+  <div class="form-group col-md-9 mx-auto my-4 w-100 px-0">
+    <label for="inputID" class="font-weight-bold">Комментарий</label>
+    <textarea class="form-control" rows="10" id="inputID">
+Замечательная программа! Не могу нарадоваться! Жду доработки, 
+которую предложила, и тогда приложение станет совершенно идеальным 
+для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+которую предложила, и тогда приложение станет совершенно идеальным 
+для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+которую предложила, и тогда приложение станет совершенно идеальным 
+для меня! Спасибо вам! 
+    </textarea>
+  </div>
+
+  <div class="text-center mt-3">
+    <a class="btn btn-outline-info" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Сменить пароль
+    </a>
+  </div>
+  <div class="collapse mt-3 col-md-7 mx-auto" id="collapseExample">
+    <div class="card card-body bg-light mb-4">
+      
+      <div class="form-group mx-auto mt-3 w-100">
+        <label for="inputID" class="font-weight-bold">Старый пароль</label>
+        <input type="password" class="form-control" id="inputID">
+      </div>
+
+      <div class="form-group mx-auto mt-3 w-100">
+        <label for="inputID" class="font-weight-bold">Новый пароль</label>
+        <input type="password" class="form-control" id="inputID">
+      </div>
+
+      <div class="form-group mx-auto mt-3 w-100">
+        <label for="inputID" class="font-weight-bold">Повторите пароль</label>
+        <input type="password" class="form-control" id="inputID">
+      </div>
+
+      <div class="d-flex flex-row mt-3 w-100 mx-auto justify-content-between">
+        <div>
+          <button type="button" class="btn btn-outline-danger mt-2 mx-0 py-1">Отменить</button>
+  
+        </div>
+        
+        <div>
+          <button type="button" class="btn btn-outline-info  mt-2 py-1">Сохранить</button>
+  
+        </div> 
+
+    </div>
+
+
+    </div>
+  </div>
 
 
   <div class="form-group">
     <div class="d-sm-flex flex-row mt-3">
       <div class="col-md-6 col-lg-5 text-center text-sm-left mx-auto px-0 px-md-2">
-        <button type="button" class="btn btn-outline-danger mt-2 py-1 btn-lg"><i class="fas fa-user-minus mr-2"></i> Удалить</button>
+        <button type="button" class="btn btn-outline-danger mt-2 py-1 btn-lg"><i class="fas fa-times mr-2"></i> Отменить</button>
 
       </div>
       
       <div class="col-md-6 col-lg-5 text-center text-sm-right mx-auto px-0 px-md-2">
-        <button type="button" class="btn btn-outline-info  mt-2 py-1 btn-lg px-4"><i class="fas fa-user-edit mr-2"></i> Редактировать</button>
+        <button type="button" class="btn btn-outline-success  mt-2 py-1 btn-lg px-4"><i class="fas fa-check mr-2"></i> Сохранить</button>
 
       </div> 
+
   </div>
 </div>
 

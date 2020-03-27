@@ -44,6 +44,17 @@
   }
 }
 
+@media (min-width: 576px) {
+  .mr-1_sm:nth-child(2n+1) {
+    padding-right: 1rem;
+    padding-left: 0rem;
+  }
+  .mr-1_sm:nth-child(2n) {
+    padding-right: 0rem;
+    padding-left: 1rem;
+  }
+}
+
 .li_padding_02em > li {
   padding: .2em;
 }

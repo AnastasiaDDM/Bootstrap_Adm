@@ -12,60 +12,68 @@
   </head>
   <body  class="cont_all">
     <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto flex-lg-wrap">
-            <li class="nav-item ">
-              <a class="nav-link" href="/a_employees.html">Сотрудники </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Клиенты</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Все заказы</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Все загрузки</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Избранное</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Каталог</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Статьи</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Отзывы<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Коммуникации
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Чаты</a>
-                <a class="dropdown-item" href="#">Обратная связь</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Статистика</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Финансы</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Справочная информация</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto flex-lg-wrap">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Работа с клиентами
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">            
+              <a class="dropdown-item" href="a_orders.html">Все заказы</a>
+              <a class="dropdown-item" href="a_downloads.html">Все загрузки</a>
+              <a class="dropdown-item" href="a_clients.html">Клиенты</a>
+              <a class="dropdown-item" href="a_favourites.html">Избранное</a>
+              <a class="dropdown-item" href="a_reviews.html">Отзывы</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="a_catalog.html">Каталог</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/a_employees.html">Сотрудники </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Коммуникации
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_chats.html">Чаты</a>
+              <a class="dropdown-item" href="a_feedback.html">Обратная связь</a>
+            </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="a_articles.html">Статьи</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Статистика
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_statistic.html">Статистика</a>
+              <a class="dropdown-item" href="a_finance.html">Финансы</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Справочники
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_area.html">Области применения</a>
+              <a class="dropdown-item" href="a_tag.html">Теги</a>
+              <a class="dropdown-item active" href="a_authors.html">Авторы<span class="sr-only">(current)</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <h1>Отзыв №2</h1>     
     <ol class="breadcrumb bg-white p-0">
@@ -81,7 +89,7 @@
         <a class="badge badge-info px-3 py-1"  href= "a_review_edit.html" >
           <span class="h4">Видимый<i class="fa fa-eye ml-3" aria-hidden="true"></i></span>
         </a>
-        <div class=""><a type="button" href= "a_review_edit.html" class="btn btn-outline-info py-1 btn-lg px-4 mt-3 mt-sm-0"><i class="fas fa-edit mr-2"></i> Редактировать</a></div>
+        <div class=""><a type="button" href= "a_review_edit.html" class="btn btn-outline-info py-1 btn-lg w-100 px-4 mt-3 mt-sm-0"><i class="fas fa-edit mr-2"></i> Редактировать</a></div>
   
       </div>
      

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Каталог</title>
+    <title>Избранное</title>
     <!-- Bootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -74,219 +74,17 @@
         </ul>
       </div>
     </nav>
-
-    <div class="d-md-flex flex-row">
-      <h1 class="text-break">Каталог</h1>     
-      <div class="ml-md-3"><a type="button" href="a_software.html" class="btn btn-outline-primary btn-lg">Добавить новое</a></div>
-    </div>
-
+      
+        <h1>Избранное</h1>     
     <ol class="breadcrumb bg-white  pl-0">
         <li class="breadcrumb-item"><a href="#">Главная</a></li>
-        <li class="breadcrumb-item active">Каталог</li>
+        <li class="breadcrumb-item active">Избранное</li>
     </ol>
 
 
     
-<div class="d-sm-flex flex-sm-row">
 
-<div class="col-sm-4 col-lg-3 pr-sm-0 pb-3 pl-0 pr-0 pr-sm-1">
-
-
-
-  <!-- <button type="button" class="d-block d-md-none col-xl-2 btn btn-outline-info col-md-4 col-12 mt-2 mt-md-0 d-block d-sm-none" 
-  data-toggle="collapse" href="#find_form_left" aria-expanded="false" aria-controls="collapseExample">Расширенный поиск</button> -->
-
-
-
-  <div class="border border-info p-2 bg-light collapse show" role="tabpanel" id="find_form_left">
-
-  <div class="form-group">
-    <label for="inputID">Наименование ПО</label>
-    <input type="text" class="form-control" id="inputID" placeholder="Наименование">
-  </div>
-
-  <div class="form-group  my-auto pt-3">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="customCheckPrfrom">
-      <label class="custom-control-label" for="customCheckPrfrom">Платно</label>
-    </div>
-  </div>
-
-  <div class="form-group  my-auto py-1">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="customCheckPrto">
-      <label class="custom-control-label" for="customCheckPrto">Бесплатно</label>
-    </div>
-  </div>
-
-  <div class="form-group  my-auto pb-3">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="customCheckPrall">
-      <label class="custom-control-label" for="customCheckPrall">Все</label>
-    </div>
-  </div>
-
-  <div class="d-flex flex-md-row flex-row flex-sm-column">
-    <div class="form-group col-md-6 px-0 pr-2 pr-sm-0 pr-md-2">
-      <label for="inputName">Цена от</label>
-      <input class="form-control" type="number" min="0" id="example-number-input" placeholder="0">
-    </div>
-    <div class="form-group col-md-6 p-0">
-      <label for="inputPos">Цена до</label>
-      <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="0">
-  </div>
-    </div>
-
-
-
-  <div class="form-group  my-auto py-3">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="modif">
-      <label class="custom-control-label" for="modif">Возможна доработка</label>
-    </div>
-  </div>
-
-  <div class="font-weight-bold">Вид:</div>
-  <div class="form-group  my-auto">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="desc">
-      <label class="custom-control-label" for="desc">Настольное приложение</label>
-    </div>
-  </div>
-  <div class="form-group  my-auto py-1">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="site">
-      <label class="custom-control-label" for="site">Сайт</label>
-    </div>
-  </div>
-  <div class="form-group  my-auto pb-3">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="mob">
-      <label class="custom-control-label" for="mob">Мобильное приложение</label>
-    </div>
-  </div>
-
-  <div class="font-weight-bold">Область применения:</div>
-  <div class="form-group  my-auto">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="desc">
-      <label class="custom-control-label" for="desc">Кафе</label>
-    </div>
-  </div>
-  <div class="form-group  my-auto py-1">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="site">
-      <label class="custom-control-label" for="site">Образование</label>
-    </div>
-  </div>
-  <div class="form-group  my-auto pb-3">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="mob">
-      <label class="custom-control-label" for="mob">Доставка</label>
-    </div>
-  </div>
-  <a href="#!" class="card-link"><p class="card-subtitle mb-2">Еще...</p></a>
-
-  <div class="font-weight-bold">Тип использования:</div>
-  <div class="form-group  my-auto">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="desc">
-      <label class="custom-control-label" for="desc">Индивидуальный доступ</label>
-    </div>
-  </div>
-  <div class="form-group  my-auto py-1">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="site">
-      <label class="custom-control-label" for="site">Групповой</label>
-    </div>
-  </div>
-  <div class="form-group  my-auto pb-3">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="mob">
-      <label class="custom-control-label" for="mob">Сетевой</label>
-    </div>
-  </div>
-
-  <div class="font-weight-bold">Размер:</div>
-  <div class="form-group  my-auto">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="desc">
-      <label class="custom-control-label" for="desc">Небольшой</label>
-    </div>
-  </div>
-  <div class="form-group  my-auto py-1">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="site">
-      <label class="custom-control-label" for="site">Средний</label>
-    </div>
-  </div>
-  <div class="form-group  my-auto pb-3">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="mob">
-      <label class="custom-control-label" for="mob">Большой</label>
-    </div>
-  </div>
-
-  <div class="font-weight-bold">Ограничение доступа:</div>
-  <div class="form-group  my-auto">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="desc">
-      <label class="custom-control-label" for="desc">Разделение ролей</label>
-    </div>
-  </div>
-  <div class="form-group  my-auto py-1">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="site">
-      <label class="custom-control-label" for="site">Без разделения</label>
-    </div>
-  </div>
-
-  <div class="font-weight-bold">Доп. установки:</div>
-  <div class="form-group  my-auto">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="desc">
-      <label class="custom-control-label" for="desc">Требуются</label>
-    </div>
-  </div>
-  <div class="form-group  my-auto py-1">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="site">
-      <label class="custom-control-label" for="site">Не требуются</label>
-    </div>
-  </div>
- 
-  <div class="font-weight-bold">Установка ПО:</div>
-  <div class="form-group  my-auto">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="desc">
-      <label class="custom-control-label" for="desc">Требуется</label>
-    </div>
-  </div>
-  <div class="form-group  my-auto py-1">
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" id="site">
-      <label class="custom-control-label" for="site">Не требуется</label>
-    </div>
-  </div>
-
-
-
-  <div class="form-group mt-4">
-    <div class="d-flex flex-row flex-md-row flex-sm-column justify-content-between text-sm-center">
-        <button type="button" class="btn btn-outline-secondary py-1">Очистить</button>
-
-    <button type="button" class="btn btn-outline-info btn-lg px-5 px-md-4 mt-0 mt-sm-3 mt-md-0">Поиск</button>
-  </div>
-</div>
-
-
-
-</div>
-</div>
-
-
-    <div class="col-sm-8 col-lg-9 px-0">
-    <div class="container mx-auto mb-3 pr-0 pl-0 pl-sm-2">
+    <div class="container-md mx-auto mb-3 px-0">
 
 
 <div class="bord_radius mb-2">
@@ -305,35 +103,17 @@
 
 
 
-
-      <!-- <div class="form-group d-flex flex-row  px-0 flex-wrap flex-md-nowrap">
-        <input type="text" class="form-control col-xl-7 col-md-6 col-9 rounded-0" id="inputFIO" placeholder="Введите ФИО/ID автора">
-        <button type="button" class="btn btn-outline-info col-xl-3 col-md-2 col-3 h-auto rounded-0">Поиск</button> -->
-
-      
-     
-
-        
-
-
-      <!-- </div> -->
-
-
-
-      <!-- <a class="btn btn-primary mb-1" data-toggle="collapse" href="#find_form" aria-expanded="false" aria-controls="collapseExample">
-        Доп.поиск
-      </a> -->
     <form class="mx-auto border border-info p-2 bg-light collapse" id="find_form" >
         <div class="form-row">
-          <div class="form-group col-lg-4 col-sm-6">
+          <div class="form-group col-md-4 col-sm-6">
             <label for="inputDatefrom">Дата добавления (от)</label>
             <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
           </div>
-          <div class="form-group col-lg-4 col-sm-6">
+          <div class="form-group col-md-4 col-sm-6">
             <label for="inputDateto">Дата добавления (до)</label>
             <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
           </div>
-          <div class="form-group col-lg-4">
+          <div class="form-group col-md-4">
             <label for="inputMonth">Месяц</label>
             <select class="custom-select" id="inputMonth">
               <option selected>Выберите месяц...</option>
@@ -354,40 +134,52 @@
  
         </div>
         <div class="form-row">
-            <div class="form-group col-lg-4">
-              <label for="inputID">Автор ПО</label>
-              <input type="text" class="form-control" id="inputID" placeholder="ФИО/ID автора">
-            </div>
+          <div class="form-group col-md-4 col-sm-6">
+            <label for="inputID">ID клиента</label>
+            <input type="text" class="form-control" id="inputID" placeholder="ID">
+          </div>
+          <div class="form-group col-md-4 col-sm-6">
+            <label for="inputFIO">ФИО клиента</label>
+            <input type="text" class="form-control" id="inputFIO" placeholder="ФИО">
+          </div>
 
-            <div class="col-lg-4  d-sm-flex flex-sm-row">
+            <div class="col-md-4  d-sm-flex flex-sm-row">
               <div class="form-group col-sm-6 px-0 pr-sm-2">
-                <label for="inputName">Заказы (от)</label>
+                <label for="inputName">Кол-во (от)</label>
                 <input class="form-control" type="number" min="0" id="example-number-input" placeholder="0">
               </div>
               <div class="form-group col-sm-6 p-0">
-                <label for="inputPos">Заказы (до)</label>
+                <label for="inputPos">Кол-во (до)</label>
                 <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="0">
             </div>
               </div>
 
-
-              <div class="form-group col-lg-4 my-auto pt-3">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck">
-                  <label class="custom-control-label" for="customCheck">Видимые на сайте</label>
-                </div>
-              </div>
-<!-- 
-            <div class="form-group col-md-4">
-              <label for="inputName">Кол-во заказов (от)</label>
-              <input class="form-control" type="number" min="0" id="example-number-input" placeholder="0">
-            </div>
-            <div class="form-group col-md-4">
-              <label for="inputPos">Кол-во заказов (до)</label>
-              <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="0">
-            </div>
-    -->
           </div>
+
+
+          
+                  
+          <div class="form-row">
+            <div class="form-group col-md-4 ">
+              <label for="inputID">ID ПО</label>
+              <input type="text" class="form-control" id="inputID" placeholder="ID ПО">
+            </div>
+            <div class="form-group col-md-4 col-sm-6">
+              <label for="inputID">Наименование ПО</label>
+              <input type="text" class="form-control" id="inputID" placeholder="Наименование ПО">
+            </div>
+            <div class="form-group col-md-4 col-sm-6">
+              <label for="inputPos3">Вид ПО</label>
+              <select class="custom-select" id="inputPos3">
+                <option selected>Выберите вид ПО...</option>
+                <option value="1">Настольное приложение</option>
+                <option value="2">Сайт</option>
+                <option value="3">Мобильное приложение</option>
+              </select>
+            </div>
+   
+          </div>
+
         
           <div class="form-group mt-4 mt-lg-0">
             <div class="d-flex flex-row justify-content-between mt-3">
@@ -402,10 +194,10 @@
 
 
         
-        <div class="container-md mx-auto mb-5 pr-0 pl-0 pl-sm-2">
+        <div class="container-md mx-auto mb-5 pr-0 px-0">
           <form class="mx-auto border border-info p-2 bg-light">
             <div class="form-row">
-              <div class="form-group col-md-4 mb-0">
+              <div class="form-group col-sm-4 mb-0">
                 <select class="custom-select" id="inputPos">
                   <option selected>Сортировать по...</option>
                   <option value="1">Все</option>
@@ -416,7 +208,7 @@
                   <option value="6">&#8659 по кол-ву непрочитанных</option >
                 </select>
               </div>
-            <div class="form-group col-md-4 mb-0 mt-2 mt-md-0">
+            <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0">
               <select class="custom-select" id="inputMonth">
                 <option selected>Показывать по...</option>
                 <option value="1">4</option>
@@ -425,7 +217,7 @@
                 <option value="4">12</option>
               </select>
             </div>
-            <div class="input-group col-md-4 mb-0 mt-2 mt-md-0 ">
+            <div class="input-group col-sm-4 mb-0 mt-2 mt-sm-0 ">
               <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
               <div class="input-group-append">
                 <button type="button" class="btn btn-outline-info">Ок</button>
@@ -438,22 +230,28 @@
         
 
 
-    <section class="mx-auto pl-0 pl-sm-2">
+    <section class=" container-md mx-auto px-0">
     <div class="card-deck align-self-center ">
 
 
-      <div class=" col-lg-6 col-xl-4 mb-3 px-0">
+      <div class="col-lg-4 col-md-6 mb-3 px-0">
       <div class="card">
-        <div class="card-header">
-          <div class="float-right ">
+        <div class="card-header p-0">
+          <div class="float-left pt-0 mr-2 mb-1 h5">
+           
+            <div class="badge badge-warning p-2"> <i class="fas fa-heart"></i> 13</div>
+          </div>
+
+          <div class="float-right p-2">
             <i class="fa fa-eye" aria-hidden="true"></i>
             <div class="badge badge-secondary">2</div>
           </div>
 
-          <a href="#!" class="card-link"><h2 class="h4">Грузоперевозки по городу нашему родному Иркутску сладкому</h2></a> 
+          <a href="#!" class="card-link"><h2 class="h4 p-2">Грузоперевозки по городу нашему родному Иркутску сладкому</h2></a> 
       </div>
       
         <div class="">
+          <!-- <img class="card-img-top" src="images/computer.jpg" alt="Card image cap"> -->
           <img src="images/code.jpg" class="img-fluid" alt="Responsive image">
         </div>
 
@@ -499,15 +297,20 @@
 
 
 
-    <div class=" col-lg-6 col-xl-4 mb-3 px-0">
+    <div class="col-lg-4 col-md-6 mb-3 px-0">
       <div class="card">
-        <div class="card-header">
-          <div class="float-right ">
+        <div class="card-header p-0">
+          <div class="float-left pt-0 mr-2 mb-1 h5">
+           
+            <div class="badge badge-warning p-2"> <i class="fas fa-heart"></i> 1333</div>
+          </div>
+
+          <div class="float-right p-2">
             <i class="fa fa-eye" aria-hidden="true"></i>
             <div class="badge badge-secondary">2</div>
           </div>
 
-          <a href="#!" class="card-link"><h2 class="h4">Кафе</h2></a> 
+          <a href="#!" class="card-link"><h2 class="h4 p-2">Кафе</h2></a> 
       </div>
       
         <div class="">
@@ -546,15 +349,20 @@
       </div>
     </div>
 
-    <div class=" col-lg-6 col-xl-4 mb-3 px-0">
+    <div class="col-lg-4 col-md-6 mb-3 px-0">
       <div class="card">
-        <div class="card-header">
-          <div class="float-right ">
-            <i class="fa fa-eye d-none" aria-hidden="true"></i>
+        <div class="card-header p-0">
+          <div class="float-left pt-0 mr-2 mb-1 h5">
+           
+            <div class="badge badge-warning p-2"> <i class="fas fa-heart"></i> 100</div>
+          </div>
+
+          <div class="float-right p-2">
+            <i class="fa fa-eye" aria-hidden="true"></i>
             <div class="badge badge-secondary">2</div>
           </div>
 
-          <a href="#!" class="card-link"><h2 class="h4">Грузоперевозки</h2></a> 
+          <a href="#!" class="card-link"><h2 class="h4 p-2">Грузоперевозки по городу нашему родному Иркутску сладкому</h2></a> 
       </div>
       
         <div class="">
@@ -604,15 +412,20 @@
 
 
 
-    <div class=" col-lg-6 col-xl-4 mb-3 px-0">
+    <div class="col-lg-4 col-md-6 mb-3 px-0">
       <div class="card">
-        <div class="card-header">
-          <div class="float-right ">
+        <div class="card-header p-0">
+          <div class="float-left pt-0 mr-2 mb-1 h5">
+           
+            <div class="badge badge-warning p-2"> <i class="fas fa-heart"></i> 2</div>
+          </div>
+
+          <div class="float-right p-2">
             <i class="fa fa-eye" aria-hidden="true"></i>
             <div class="badge badge-secondary">2</div>
           </div>
 
-          <a href="#!" class="card-link"><h2 class="h4">Грузоперевозки по городу нашему родному Иркутску сладкому</h2></a> 
+          <a href="#!" class="card-link"><h2 class="h4 p-2">Грузоперевозки</h2></a> 
       </div>
       
         <div class="">
@@ -687,16 +500,10 @@
         </nav>
 
 
+
     </section>
 
-  </div>
 
-</div>
-
-
-
-
-      </div>
 
     <script src="js/jquery.js"></script>
     <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->

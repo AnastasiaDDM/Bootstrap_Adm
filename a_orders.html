@@ -2,87 +2,138 @@
 <html>
   <head>
     <title>Заказы</title>
-    <!-- Bootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/fa/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
   </head>
   <body class="cont_all">
     <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto flex-lg-wrap">
-            <li class="nav-item ">
-              <a class="nav-link" href="/a_employees.html">Сотрудники </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Клиенты</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Все заказы<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Все загрузки</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Избранное</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Каталог</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Статьи</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Отзывы</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Коммуникации
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Чаты</a>
-                <a class="dropdown-item" href="#">Обратная связь</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Статистика</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Финансы</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Справочная информация</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto flex-lg-wrap">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Работа с клиентами
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">            
+              <a class="dropdown-item" href="a_orders.html">Все заказы</a>
+              <a class="dropdown-item" href="a_downloads.html">Все загрузки</a>
+              <a class="dropdown-item" href="a_clients.html">Клиенты</a>
+              <a class="dropdown-item" href="a_favourites.html">Избранное</a>
+              <a class="dropdown-item" href="a_reviews.html">Отзывы</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="a_catalog.html">Каталог</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/a_employees.html">Сотрудники </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Коммуникации
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_chats.html">Чаты</a>
+              <a class="dropdown-item" href="a_feedback.html">Обратная связь</a>
+            </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="a_articles.html">Статьи</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Статистика
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_statistic.html">Статистика</a>
+              <a class="dropdown-item" href="a_finance.html">Финансы</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Справочники
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_area.html">Области применения</a>
+              <a class="dropdown-item" href="a_tag.html">Теги</a>
+              <a class="dropdown-item active" href="a_authors.html">Авторы<span class="sr-only">(current)</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
       
-    <h1 >Заказы</h1>
+    <div class="d-md-flex flex-row">
+      <h1 class="text-break">Заказы</h1>     
+      <div class="ml-md-3"><a type="button" href="" class="btn btn-outline-primary btn-lg">Добавить новый</a></div>
+    </div>
     <ol class="breadcrumb bg-white pl-0">
         <li class="breadcrumb-item"><a href="#">Главная</a></li>
         <li class="breadcrumb-item active">Все заказы</li>
     </ol>
 
+
+
+
+
+    
+
+
+
     <div class="container-md mx-auto mb-3 px-0">
-    <form class="mx-auto border border-info p-2 bg-light">
-        <div class="form-row">
-          <div class="form-group col-md-4 col-sm-6">
-            <label for="inputDatefrom">Дата обращения (от)</label>
-            <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
+
+
+
+      <div class="bord_radius mb-2">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Введите Наименование/ID заказа"
+           aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
+          <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-info" type="button">Поиск</button>
+            <button class="btn btn-outline-info d-md-block d-none" data-toggle="collapse" 
+            href="#find_form" aria-expanded="false" aria-controls="collapseExample" type="button">Расширенный поиск</button>
           </div>
-          <div class="form-group col-md-4  col-sm-6">
-            <label for="inputDateto">Дата обращения (до)</label>
+        </div>
+        <button type="button" class="d-block d-md-none col-xl-2 btn btn-outline-info col-md-4 col-12 mt-2 mt-md-0" 
+        data-toggle="collapse" href="#find_form" aria-expanded="false" aria-controls="collapseExample">Расширенный поиск</button>
+      </div>
+
+
+
+    <form class="mx-auto border border-info p-2 bg-light collapse" id="find_form">
+        <div class="form-row">
+          <div class="form-group col-lg-4">
+            <label for="inputPos">По дате...</label>
+            <select class="custom-select" id="inputPos">
+              <option selected>Выберите вариант даты...</option>
+              <option value="1">Дата заказа</option>
+              <option value="2">Дата полной оплаты</option>
+              <option value="3">Дата завершения</option>
+            </select>
+          </div>
+    
+          <div class="col-md-6 col-lg-4 d-sm-flex flex-sm-row">
+            <div class="form-group col-sm-6 px-0 pr-sm-2">
+              <label for="inputDatefrom">Дата (от)</label>
+              <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
+            </div>
+            <div class="form-group col-sm-6 p-0">
+              <label for="inputDateto">Дата (до)</label>
             <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
           </div>
-          <div class="form-group col-md-4">
+            </div>
+          <div class="form-group col-md-6 col-lg-4">
             <label for="inputMonth">Месяц</label>
             <select class="custom-select" id="inputMonth">
               <option selected>Выберите месяц...</option>
@@ -102,25 +153,93 @@
           </div>
  
         </div>
+
+
         <div class="form-row">
-            <div class="form-group col-md-4  col-sm-6">
-              <label for="inputID">Клиент</label>
-              <input type="text" class="form-control" id="inputID" placeholder="ФИО/ID клиента">
-            </div>
-            <div class="form-group col-md-4  col-sm-6">
-              <label for="inputTel">Номер телефона</label>
-              <input type="tel" class="form-control" id="inputTel" placeholder="">
-            </div>
-            <div class="form-group col-md-4">
+          <div class="form-group col-sm-4">
+            <label for="inputID">ID заказа</label>
+            <input type="text" class="form-control" id="inputID" placeholder="ID">
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="inputName">Название заказа</label>
+            <input type="tel" class="form-control" id="inputName" placeholder="Название заказа">
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="inputPos">Тип заказа</label>
+            <select class="custom-select" id="inputPos">
+              <option selected>Выберите тип заказа...</option>
+              <option value="1">Оригинальная разработка</option>
+              <option value="2">Доработка</option>
+              <option value="3">Покупка</option>
+            </select>
+          </div>
+ 
+        </div>
+
+
+
+
+        <div class="form-row">
+          <div class="form-group col-sm-4">
+            <label for="inputID">ID разработчика</label>
+            <input type="text" class="form-control" id="inputID" placeholder="ID разработчика">
+          </div>
+          <div class="form-group col-sm-4">
+            <label for="inputID">ФИО разработчика</label>
+            <input type="text" class="form-control" id="inputID" placeholder="ФИО разработчика">
+          </div>
+            <div class="form-group col-sm-4">
               <label for="inputPos">Текущее состояние</label>
               <select class="custom-select" id="inputPos">
                 <option selected>Выберите состояние...</option>
-                <option value="1">Не обработано</option>
-                <option value="2">Обработано</option>
+                <option value="1">Не оплачено</option>
+                <option value="2">В разработке</option>
+                <option value="3">Оплачено</option>
+                <option value="4">Завершено</option>
               </select>
             </div>
    
           </div>
+
+
+          <div class="form-row">
+            <div class="form-group col-sm-4">
+              <label for="inputID">ID ПО</label>
+              <input type="text" class="form-control" id="inputID" placeholder="ID ПО">
+            </div>
+            <div class="form-group col-sm-4">
+              <label for="inputID">Наименование ПО</label>
+              <input type="text" class="form-control" id="inputID" placeholder="Наименование ПО">
+            </div>
+            <div class="form-group col-sm-4">
+              <label for="inputPos3">Вид ПО</label>
+              <select class="custom-select" id="inputPos3">
+                <option selected>Выберите вид ПО...</option>
+                <option value="1">Настольное приложение</option>
+                <option value="2">Сайт</option>
+                <option value="3">Мобильное приложение</option>
+              </select>
+            </div>
+   
+          </div>
+
+
+          <div class="form-row">
+            <div class="form-group col-sm-4">
+              <label for="inputID">ID клиента</label>
+              <input type="text" class="form-control" id="inputID" placeholder="ID клиента">
+            </div>
+            <div class="form-group col-sm-4">
+              <label for="inputID">ФИО клиента</label>
+              <input type="text" class="form-control" id="inputID" placeholder="ФИО клиента">
+            </div>
+            <div class="form-group col-sm-4">
+              <label for="inputTel">Номер телефона</label>
+              <input type="tel" class="form-control" id="inputTel" placeholder="">
+            </div>
+   
+          </div>
+
         
           <div class="form-group">
             <div class="d-flex flex-row justify-content-between mt-3">
@@ -157,11 +276,6 @@
               <option value="4">12</option>
             </select>
           </div>
-          <!-- <div class="form-group col-sm-4 mb-0 mt-2 mt-sm-0 form-row">
-              <input class="form-control col-9" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
-              <button type="button" class="btn btn-secondary col-3">Ок</button>
-          </div> -->
-
           <div class="input-group col-sm-4 mb-0 mt-2 mt-sm-0 ">
             <input class="form-control" type="number" min="0" id="example-number-input"  placeholder="Перейти на страницу...">
             <div class="input-group-append">
@@ -183,7 +297,7 @@
             <div class="card"> 
                 <div class="card-header">
                     <div class="float-right badge badge-secondary">2</div>
-                    <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h2 class="h4">Грузоперевозки</h2></a> 
+                    <a id = "phone" href = "a_order.html" class="card-link"><h2 class="h4">Грузоперевозки</h2></a> 
 
 
                     <div class="float-right">
@@ -192,34 +306,32 @@
                     </div>
 
 
-                    <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
+                    <a><span class="card-subtitle mb-2">Сайт</span></a>
                 </div>
-                <!-- <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right">
-                  <i class="fas fa-pencil-alt orders_i" title="Доработка ПО" aria-hidden="true">
-                  </i>
-                </div></div> -->
                 <div class="d-sm-flex flex-sm-row flex-md-column flex-lg-row"> 
                   <div class="col-sm-7 col-lg-7 col-md-12 p-1">
                       <ul class="list-group list-group-flush li_padding_02em">              
-                        <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
+                        <li class="list-group-item">Клиент: <a class= "card-link"  href="a_client_pd.html">Иванова М.В.</a></li>
                           <li class="list-group-item">
-                            <div>Дата заказа: <a >20.03.2020 11:45</a></div>
-                            <div>Дата покупки: <a >20.03.2020 11:45</a></div>
-                            <div>Дата завершения: <a >20.03.2020 11:45</a></div>
+                            <div>Заказано: <a >20.03.2020 11:45</a></div>
+                            <div>Оплачено: <a >20.03.2020 11:45</a></div>
+                            <div>Завершено: <a >20.03.2020 11:45</a></div>
                           </li>
                           <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
-                          <li class="list-group-item">ПО: <a title="Почта" href="a_software.html"> Грузовики</a></li>
+                          <li class="list-group-item">ПО: <a class= "card-link" href="a_software.html"> Грузовики</a></li>
+                          <li class="list-group-item mt-2"><a title="Чат" class= "card-link"
+                            href="a_client_personal_data.html">Чат: <span class="badge badge-danger p-2">(200/2)</span></a></li>
                         </ul>
                 </div>
 
             <div class="col-sm-5 col-lg-5 col-md-12 1mb-3 1align-self-end pr-0 pl-0">
-              <div class="alert alert-success m-0 rounded-0 pl-1" role="alert"> Состояние: <a>Оплачено</a></div>
+              <div class="alert alert-success m-0 rounded-0 pl-1" role="alert"><a>Оплачено</a></div>
 
                 <ul class="list-group list-group-flush bg-light p-1">              
-                  <div class="my-1">Внесено: <span class="font-weight-bold">10 000</span></div>
-                  <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
+                  <div class="my-1">Внесено: <span class="font-weight-bold">30 000</span></div>
+                  <div class="my-1">Осталось: <span class="font-weight-bold">0</span></div>
                   <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">30 000</span></div>
-                  <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
+                  <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold d-none">Оплатить</button></div>
 
 
                   </ul>
@@ -235,7 +347,7 @@
           <div class="card"> 
               <div class="card-header">
                   <div class="float-right badge badge-secondary">2</div>
-                  <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h2 class="h4">Грузоперевозки самые лучшие на всем белом и черном свете</h2></a> 
+                  <a id = "phone" href = "a_order.html" class="card-link"><h2 class="h4">Грузоперевозки самые лучшие на всем белом и черном свете</h2></a> 
 
 
                   <div class="float-right">
@@ -244,28 +356,26 @@
                   </div>
 
 
-                  <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
+                  <a><span class="card-subtitle mb-2">Сайт</span></a>
               </div>
-              <!-- <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right">
-                <i class="fas fa-pencil-alt orders_i" title="Доработка ПО" aria-hidden="true">
-                </i>
-              </div></div> -->
               <div class="d-sm-flex flex-sm-row flex-md-column flex-lg-row"> 
                 <div class="col-sm-7 col-lg-7 col-md-12 p-1">
                     <ul class="list-group list-group-flush li_padding_02em">              
-                      <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
-                        <li class="list-group-item">
-                          <div>Дата заказа: <a >20.03.2020 11:45</a></div>
-                          <div>Дата покупки: <a >20.03.2020 11:45</a></div>
-                          <div>Дата завершения: <a >20.03.2020 11:45</a></div>
-                        </li>
-                        <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
-                        <li class="list-group-item">ПО: <a title="Почта" href="a_software.html"> Грузовики</a></li>
+                      <li class="list-group-item">Клиент: <a class= "card-link"  href="a_client_pd.html">Иванова М.В.</a></li>
+                      <li class="list-group-item">
+                        <div>Заказано: <a >20.03.2020 11:45</a></div>
+                        <div>Оплачено: <a >20.03.2020 11:45</a></div>
+                        <div>Завершено: <a >20.03.2020 11:45</a></div>
+                      </li>
+                      <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
+                      <li class="list-group-item">ПО: <a class= "card-link" href="a_software.html"> Грузовики</a></li>
+                        <li class="list-group-item mt-2"><a title="Чат" class= "card-link"
+                          href="a_client_personal_data.html">Чат: <span class="badge badge-light p-2">(200/0)</span></a></li>
                       </ul>
               </div>
 
           <div class="col-sm-5 col-lg-5 col-md-12 1mb-3 1align-self-end pr-0 pl-0">
-            <div class="alert alert-danger m-0 rounded-0 pl-1" role="alert">Состояние: <a>Не оплачено</a></div>
+            <div class="alert alert-danger m-0 rounded-0 pl-1" role="alert"><a>Не оплачено</a></div>
 
             <ul class="list-group list-group-flush bg-light p-1">              
               <div class="my-1">Внесено: <span class="font-weight-bold">0</span></div>
@@ -284,182 +394,194 @@
 
 
 
-        <div class="col-md-6 col-xl-4 mb-3  pr-0 pl-0">
-          <div class="card"> 
-              <div class="card-header">
-                  <div class="float-right badge badge-secondary">2</div>
-                  <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h2 class="h4">Грузоперевозки</h2></a> 
-                  <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
-              </div>
-              <!-- <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right">
-                <i class="fas fa-pencil-alt orders_i" title="Доработка ПО" aria-hidden="true">
-                </i>
-              </div></div> -->
-              <div class="d-lg-flex flex-lg-row"> 
-                <div class="col-lg-7 p-1">
-                    <ul class="list-group list-group-flush">              
-                      <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
-                        <li class="list-group-item">
-                          <div>Дата заказа: <a >20.03.2020 11:45</a></div>
-                          <div>Дата покупки: <a >20.03.2020 11:45</a></div>
-                          <div>Дата завершения: <a >20.03.2020 11:45</a></div>
-                        </li>
-                        <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
-                        <li class="list-group-item">ПО: <a title="Почта" href="a_software.html"> Грузовики</a></li>
-                      </ul>
-              </div>
 
-    
-
-
-
-          <div class="col-md-5 1mb-3 align-self-end pr-0 pl-0">
-            <div class="alert alert-danger m-0" role="alert">Состояние: <a>Не оплачено</a><div class="float-right">
-              <i class="fa fa-magic orders_i" title="Оригинальная разработка" aria-hidden="true">
-              </i>
-            </div></div>
-            <ul class="list-group list-group-flush bg-light p-1">              
-              <div class="my-1">Внесено: <span class="font-weight-bold">0</span></div>
-              <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
-              <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">20 000</span></div>
-              <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
-              </ul>
-        </div>
-
-    </div>
-      </div>
-      </div>
-
-
-
-
-        <div class="col-md-6 col-xl-4 mb-3  pr-0 pl-0">
-          <div class="card"> 
-              <div class="card-header">
-                  <div class="float-right badge badge-secondary">2</div>
-                  <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h2 class="h4">Грузоперевозки</h2></a> 
-                  <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
-              </div>
-              <div class="alert alert-danger m-0" role="alert">Состояние: <a>Не оплачено</a><div class="float-right">
-                <i class="fa fa-magic orders_i" title="Оригинальная разработка" aria-hidden="true">
-                </i>
-              </div></div>
-              <div class="d-lg-flex flex-lg-row"> 
-                <div class="col-lg-6 p-1">
-                    <ul class="list-group list-group-flush">              
-                      <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
-                        <li class="list-group-item">
-                          <div>Дата заказа: <a >20.03.2020 11:45</a></div>
-                          <div>Дата покупки: <a >20.03.2020 11:45</a></div>
-                          <div>Дата завершения: <a >20.03.2020 11:45</a></div>
-                        </li>
-                        <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
-                        <li class="list-group-item">ПО: <a title="Почта" href="a_software.html"> Грузовики</a></li>
-                      </ul>
-              </div>
-
-
-
-
-
-          <div class="col-lg-6  align-self-end m-lg-1">
-              <ul class="list-group list-group-flush bg-light p-1">              
-                <div class="my-1">Внесено: <span class="font-weight-bold">0</span></div>
-                <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
-                <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">20 000</span></div>
-                <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
-                </ul>
-        </div>
-
-    </div>
-      </div>
-      </div>
       <div class="col-md-6 col-xl-4 mb-3  pr-0 pl-0">
         <div class="card"> 
             <div class="card-header">
                 <div class="float-right badge badge-secondary">2</div>
-                <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h2 class="h4">Грузоперевозки</h2></a> 
-                <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
+                <a id = "phone" href = "a_order.html" class="card-link"><h2 class="h4">Грузоперевозки самые лучшие на всем белом и черном свете</h2></a> 
+
+
+                <div class="float-right">
+                  <i class="fas fa-cart-plus orders_i" title="Оригинальная разработка" aria-hidden="true">
+                  </i>
+                </div>
+
+
+                <a><span class="card-subtitle mb-2">Настольное приложение</span></a>
             </div>
-            <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right">
-              <i class="fas fa-cart-plus orders_i" title="Купленные ПО" aria-hidden="true">
-              </i>
-            </div></div>
-            <div class="d-lg-flex flex-lg-row"> 
-              <div class="col-lg-6 p-1">
-                  <ul class="list-group list-group-flush">              
-                    <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
-                      <li class="list-group-item">
-                        <div>Дата заказа: <a >20.03.2020 11:45</a></div>
-                        <div>Дата покупки: <a >20.03.2020 11:45</a></div>
-                        <div>Дата завершения: <a >20.03.2020 11:45</a></div>
-                      </li>
-                      <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
-                      <li class="list-group-item">ПО: <a title="Почта" href="a_software.html"> Грузовики</a></li>
+            <div class="d-sm-flex flex-sm-row flex-md-column flex-lg-row"> 
+              <div class="col-sm-7 col-lg-7 col-md-12 p-1">
+                  <ul class="list-group list-group-flush li_padding_02em">              
+                    <li class="list-group-item">Клиент: <a class= "card-link"  href="a_client_pd.html">Иванова М.В.</a></li>
+                    <li class="list-group-item">
+                      <div>Заказано: <a >20.03.2020 11:45</a></div>
+                      <div>Оплачено: <a >20.03.2020 11:45</a></div>
+                      <div>Завершено: <a >20.03.2020 11:45</a></div>
+                    </li>
+                    <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
+                    <li class="list-group-item">ПО: <a class= "card-link" href="a_software.html"> Грузовики</a></li>
+                      <li class="list-group-item mt-2"><a title="Чат" class= "card-link"
+                        href="a_client_personal_data.html">Чат: <span class="badge badge-danger p-2">(200/2)</span></a></li>
                     </ul>
             </div>
 
+        <div class="col-sm-5 col-lg-5 col-md-12 1mb-3 1align-self-end pr-0 pl-0">
+          <div class="alert alert-warning m-0 rounded-0 pl-1" role="alert"><a>В разработке</a></div>
 
-
-
-
-        <div class="col-lg-6  align-self-end m-lg-1">
-            <ul class="list-group list-group-flush bg-light p-1">              
-              <div class="my-1">Внесено: <span class="font-weight-bold">10 000</span></div>
-              <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
-              <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">30 000</span></div>
-              <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
-
-
-              </ul>
+          <ul class="list-group list-group-flush bg-light p-1">              
+            <div class="my-1">Внесено: <span class="font-weight-bold">10 000</span></div>
+            <div class="my-1">Осталось: <span class="font-weight-bold">10 000</span></div>
+            <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">20 000</span></div>
+            <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
+            </ul>
       </div>
 
   </div>
     </div>
     </div>
-    <div class="col-md-6 col-lg-4 mb-3  pr-0 pl-0">
+
+
+
+    <div class="col-md-6 col-xl-4 mb-3  pr-0 pl-0">
       <div class="card"> 
           <div class="card-header">
               <div class="float-right badge badge-secondary">2</div>
-              <a id = "phone" href = "tel:+7 (924)8793741" class="card-link"><h3>Грузоперевозки</h3></a> 
-              <a href="#!" class="card-link"><span class="card-subtitle mb-2">Сайт</span></a>
+              <a id = "phone" href = "a_order.html" class="card-link"><h2 class="h4">Грузоперевозки самые лучшие на всем белом и черном свете</h2></a> 
+
+
+              <div class="float-right">
+                <i class="fas fa-magic orders_i" title="Оригинальная разработка" aria-hidden="true">
+                </i>
+              </div>
+
+
+              <a><span class="card-subtitle mb-2">Сайт</span></a>
           </div>
-          <div class="alert alert-success m-0" role="alert">Состояние: <a>Оплачено</a><div class="float-right">
-            <i class="fas fa-pencil-alt orders_i" title="Доработка ПО" aria-hidden="true">
-            </i>
-          </div></div>
-          <div class="d-lg-flex flex-lg-row"> 
-            <div class="col-lg-6">
-                <ul class="list-group list-group-flush">              
-                  <li class="list-group-item">Клиент: <a title="Почта" href="a_client_personal_data.html">Иванова М.В.</a></li>
-                    <li class="list-group-item">
-                      <div>Дата заказа: <a >20.03.2020 11:45</a></div>
-                      <div>Дата покупки: <a >20.03.2020 11:45</a></div>
-                      <div>Дата завершения: <a >20.03.2020 11:45</a></div>
-                    </li>
-                    <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
-                    <li class="list-group-item">ПО: <a title="Почта" href="a_software.html"> Грузовики</a></li>
+          <div class="d-sm-flex flex-sm-row flex-md-column flex-lg-row"> 
+            <div class="col-sm-7 col-lg-7 col-md-12 p-1">
+                <ul class="list-group list-group-flush li_padding_02em">              
+                  <li class="list-group-item">Клиент: <a class= "card-link"  href="a_client_pd.html">Иванова М.В.</a></li>
+                  <li class="list-group-item">
+                    <div>Заказано: <a >20.03.2020 11:45</a></div>
+                    <div>Оплачено: <a >20.03.2020 11:45</a></div>
+                    <div>Завершено: <a >20.03.2020 11:45</a></div>
+                  </li>
+                  <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
+                  <li class="list-group-item">ПО: <a class= "card-link" href="a_software.html"> Грузовики</a></li>
+                    <li class="list-group-item mt-2"><a title="Чат" class= "card-link"
+                      href="a_client_personal_data.html">Чат: <span class="badge badge-danger p-2">(200/2)</span></a></li>
                   </ul>
           </div>
 
+      <div class="col-sm-5 col-lg-5 col-md-12 1mb-3 1align-self-end pr-0 pl-0">
+        <div class="alert alert-danger m-0 rounded-0 pl-1" role="alert"><a>Не оплачено</a></div>
 
-
-
-
-      <div class="col-lg-6  align-self-end m-lg-1">
-          <ul class="list-group list-group-flush bg-light p-1">              
-            <div class="my-1">Внесено: <span class="font-weight-bold">10 000</span></div>
-            <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
-            <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">30 000</span></div>
-            <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
-
-
-            </ul>
+        <ul class="list-group list-group-flush bg-light p-1">              
+          <div class="my-1">Внесено: <span class="font-weight-bold">0</span></div>
+          <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
+          <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">20 000</span></div>
+          <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
+          </ul>
     </div>
 
 </div>
   </div>
   </div>
+
+  <div class="col-md-6 col-xl-4 mb-3  pr-0 pl-0">
+    <div class="card"> 
+        <div class="card-header">
+            <div class="float-right badge badge-secondary">2</div>
+            <a id = "phone" href = "a_order.html" class="card-link"><h2 class="h4">Грузоперевозки самые лучшие на всем белом и черном свете</h2></a> 
+
+
+            <div class="float-right">
+              <i class="fas fa-magic orders_i" title="Оригинальная разработка" aria-hidden="true">
+              </i>
+            </div>
+
+
+            <a><span class="card-subtitle mb-2">Сайт</span></a>
+        </div>
+        <div class="d-sm-flex flex-sm-row flex-md-column flex-lg-row"> 
+          <div class="col-sm-7 col-lg-7 col-md-12 p-1">
+              <ul class="list-group list-group-flush li_padding_02em">              
+                <li class="list-group-item">Клиент: <a class= "card-link"  href="a_client_pd.html">Иванова М.В.</a></li>
+                          <li class="list-group-item">
+                            <div>Заказано: <a >20.03.2020 11:45</a></div>
+                            <div>Оплачено: <a >20.03.2020 11:45</a></div>
+                            <div>Завершено: <a >20.03.2020 11:45</a></div>
+                          </li>
+                          <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
+                          <li class="list-group-item">ПО: <a class= "card-link" href="a_software.html"> Грузовики</a></li>
+                  <li class="list-group-item mt-2"><a title="Чат" class= "card-link"
+                    href="a_client_personal_data.html">Чат: <span class="badge badge-danger p-2">(200/2)</span></a></li>
+                </ul>
+        </div>
+
+    <div class="col-sm-5 col-lg-5 col-md-12 1mb-3 1align-self-end pr-0 pl-0">
+      <div class="alert alert-danger m-0 rounded-0 pl-1" role="alert"><a>Не оплачено</a></div>
+
+      <ul class="list-group list-group-flush bg-light p-1">              
+        <div class="my-1">Внесено: <span class="font-weight-bold">0</span></div>
+        <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
+        <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">20 000</span></div>
+        <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
+        </ul>
+  </div>
+
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-xl-4 mb-3  pr-0 pl-0">
+  <div class="card"> 
+      <div class="card-header">
+          <div class="float-right badge badge-secondary">2</div>
+          <a id = "phone" href = "a_order.html" class="card-link"><h2 class="h4">Грузоперевозки самые лучшие на всем белом и черном свете</h2></a> 
+
+
+          <div class="float-right">
+            <i class="fas fa-magic orders_i" title="Оригинальная разработка" aria-hidden="true">
+            </i>
+          </div>
+
+
+          <a><span class="card-subtitle mb-2">Сайт</span></a>
+      </div>
+      <div class="d-sm-flex flex-sm-row flex-md-column flex-lg-row"> 
+        <div class="col-sm-7 col-lg-7 col-md-12 p-1">
+            <ul class="list-group list-group-flush li_padding_02em">              
+              <li class="list-group-item">Клиент: <a class= "card-link"  href="a_client_pd.html">Иванова М.В.</a></li>
+              <li class="list-group-item">
+                <div>Заказано: <a >20.03.2020 11:45</a></div>
+                <div>Оплачено: <a >20.03.2020 11:45</a></div>
+                <div>Завершено: <a >20.03.2020 11:45</a></div>
+              </li>
+              <li class="list-group-item">Лицензия: <a >Неограничена</a></li>
+              <li class="list-group-item">ПО: <a class= "card-link" href="a_software.html"> Грузовики</a></li>
+                <li class="list-group-item mt-2"><a title="Чат" class= "card-link"
+                  href="a_client_personal_data.html">Чат: <span class="badge badge-danger p-2">(200/2)</span></a></li>
+              </ul>
+      </div>
+
+  <div class="col-sm-5 col-lg-5 col-md-12 1mb-3 1align-self-end pr-0 pl-0">
+    <div class="alert alert-danger m-0 rounded-0 pl-1" role="alert"><a>Не оплачено</a></div>
+
+    <ul class="list-group list-group-flush bg-light p-1">              
+      <div class="my-1">Внесено: <span class="font-weight-bold">0</span></div>
+      <div class="my-1">Осталось: <span class="font-weight-bold">20 000</span></div>
+      <div class="my-1 text-uppercase">Итого: <span class="font-weight-bold">20 000</span></div>
+      <div class="mt-2"><button type="button" class="btn btn-primary w-100 font-weight-bold">Оплатить</button></div>
+      </ul>
+</div>
+
+</div>
+</div>
+</div>
+
+
         </div>
         </div>
 
@@ -492,7 +614,6 @@
       </div>
 
     <script src="js/jquery.js"></script>
-    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
