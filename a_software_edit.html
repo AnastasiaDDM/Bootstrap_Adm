@@ -2,13 +2,13 @@
 <html>
   <head>
     <title>Редактирование ПО</title>
-    <!-- Bootstrap -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/fa/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
   </head>
   <body  class="cont_all">
     <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
@@ -683,6 +683,27 @@
 
 
 
+<div class="d-sm-flex flex-row my-4 w-100 mx-auto justify-content-between">
+  <div class="text-center text-sm-left">
+    <button type="button" class="btn btn-outline-danger w-100 mt-2 py-1 btn-lg"><i class="fas fa-times mr-2"></i> Отменить</button>
+
+  </div>
+  
+  <div class="text-center text-sm-left">
+    <button type="button" class="btn btn-outline-success w-100 mt-2 py-1 btn-lg px-4"><i class="fas fa-check mr-2"></i> Сохранить</button>
+
+  </div> 
+
+
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+</div>
 
 
 
@@ -742,30 +763,29 @@
 
            <script>
             function handleFileSelect(evt) {
-              var files = evt.target.files; // FileList object
+              var files = evt.target.files; 
           
-              // Loop through the FileList and render image files as thumbnails.
+
               for (var i = 0, f; f = files[i]; i++) {
           
-                // Only process image files.
+        
                 if (!f.type.match('image.*')) {
                   continue;
                 }
           
                 var reader = new FileReader();
           
-                // Closure to capture the file information.
+         
                 reader.onload = (function(theFile) {
                   return function(e) {
-                    // Render thumbnail.
+
                     var span = document.createElement('span');
                     span.innerHTML = ['<img class="thumb" src="', e.target.result,
                                       '" title="', escape(theFile.name), '"/>'].join('');
                     document.getElementById('list').insertBefore(span, null);
                   };
                 })(f);
-          
-                // Read in the image file as a data URL.
+       
                 reader.readAsDataURL(f);
               }
             }
@@ -891,30 +911,8 @@
 
 
 
-          <div class="d-sm-flex flex-row my-4 w-100 mx-auto justify-content-between">
-            <div class="text-center text-sm-left">
-              <button type="button" class="btn btn-outline-danger w-100 mt-2 py-1 btn-lg"><i class="fas fa-times mr-2"></i> Отменить</button>
-      
-            </div>
-            
-            <div class="text-center text-sm-left">
-              <button type="button" class="btn btn-outline-success w-100 mt-2 py-1 btn-lg px-4"><i class="fas fa-check mr-2"></i> Сохранить</button>
-      
-            </div> 
-      
-      
-      
-        </div>
-    
-    
-        </div>
-      </div>
-    </section>
-
-      </div>
 
     <script src="js/jquery.js"></script>
-    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
 
 
@@ -962,7 +960,7 @@ function handleFiles(files) {
     const img = document.createElement("img");
     img.classList.add("obj");
     img.file = file;
-    preview.appendChild(img); // Assuming that "preview" is the div output where the content will be displayed.
+    preview.appendChild(img); 
     
     const reader = new FileReader();
     reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
