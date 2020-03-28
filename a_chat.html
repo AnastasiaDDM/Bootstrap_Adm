@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Чат заказа №2</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fa/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+  </head>
+  <body  class="cont_all">
+    <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto flex-lg-wrap">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Работа с клиентами
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">            
+              <a class="dropdown-item" href="a_orders.html">Все заказы</a>
+              <a class="dropdown-item" href="a_downloads.html">Все загрузки</a>
+              <a class="dropdown-item" href="a_clients.html">Клиенты</a>
+              <a class="dropdown-item" href="a_favourites.html">Избранное</a>
+              <a class="dropdown-item" href="a_reviews.html">Отзывы</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="a_catalog.html">Каталог</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/a_employees.html">Сотрудники </a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Коммуникации
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_chats.html">Чаты</a>
+              <a class="dropdown-item" href="a_feedback.html">Обратная связь</a>
+            </div>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="a_articles.html">Статьи</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Статистика
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_statistic.html">Статистика</a>
+              <a class="dropdown-item" href="a_finance.html">Финансы</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Справочники
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="a_area.html">Области применения</a>
+              <a class="dropdown-item" href="a_tag.html">Теги</a>
+              <a class="dropdown-item active" href="a_authors.html">Авторы<span class="sr-only">(current)</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+      
+    <h1 class="text-break">Чат заказа №2</h1>     
+   
+
+    <ol class="breadcrumb bg-white pl-0">
+        <li class="breadcrumb-item"><a href="#">Главная</a></li>
+        <li class="breadcrumb-item"><a href="#">Заказы</a></li>
+        <li class="breadcrumb-item"><a href="#">Заказ №2</a></li>
+        <li class="breadcrumb-item active">Чат заказа №2</li>
+    </ol>
+
+
+
+    
+
+
+    <section class="container-lg mx-auto mt-5 px-0">
+ 
+
+      <div class="pos_center_for_div padding_top-bootom_1em scrollbox">
+        <div class= "sticky-top p-0 chat_panel_sticky">
+          <div class="text-center">
+            <i class="fa fa-chevron-circle-up chat_panel_sticky_i" aria-hidden="true">
+            </i>
+          </div>
+          <div class="d-flex flex-column">
+            <div class="w-100"> 
+              <div class="">Новое сообщение
+              </div>
+              <textarea class = "chat_panel_sticky_textarea w-100" rows="4"></textarea>
+            </div>
+            <div class="d-flex flex-row justify-content-between">
+              <div class="input__wrapper text-left">
+                <input name="file" type="file" name="file" id="input__file" class="input input__file " multiple>
+                <label for="input__file" class="input__file-button">
+                  <span class="input__file-icon-wrapper">
+                    <i class="fa fa-paperclip chat_panel_sticky_clip_i" aria-hidden="true">
+                    </i>
+                  </span>
+                  <span class="input__file-button-text">Выберите файл
+                  </span>
+                </label>
+              </div>
+
+              <div>
+                <i class="fa fa-arrow-circle-right chat_panel_sticky_i">
+                </i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5">
+          <div class="chat_left">
+            <div class="chat_comment">
+              <div class="chat_comment_bubble_left">
+                <div class="chat_comment_date_left">20.04.2020 10:34
+                </div>
+                <div class="chat_comment_text">На нас те медали, что мы добывали в бою
+                  <br>
+                  Не смотри на меня волком, не смотри - я пастух
+                  <br>
+                  Не молчи - я молю, разожги - я потух Не смотри на меня волком, не смотри - я пастух Не смотри на меня волком, не смотри - я пастух Не смотри на меня волком, не смотри - я пастух Не смотри на меня волком, не смотри - я пастух
+                  Накорми меня с рук, напои меня с губ
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat_right">
+            <div class="chat_comment ">
+              <div class="chat_comment_bubble_right">
+                <div class="chat_comment_date_right">20.04.2020 10:34
+                </div>
+                <div class="chat_comment_text">Неживой водой
+                  <br>
+                  Ключевым ручьем
+                  <br>
+                  Сытой зимой
+                  <br>
+                  Спелой весной
+                  <br>
+                  Спела приговор
+                  <br>
+                  Перспективы стен
+                  <br>
+                  Это нелюбовь
+                  <br>
+                  Разве только плен
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat_right">
+            <div class="chat_comment ">
+              <div class="chat_comment_bubble_right">
+                <div class="chat_comment_date_right">20.04.2020 10:34
+                </div>
+                <div class="chat_comment_text">Нет уж, не терпеть больно
+                  <br>
+                  Больно доставлять боль
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat_left">
+            <div class="chat_comment">
+              <div class="chat_comment_bubble_left">
+                <div class="chat_comment_date_left">20.04.2020 10:34
+                </div>
+                <div class="chat_comment_text">Ты - белая, как день ночью
+                  Черная, как ночь днем
+                  Небо, точно дождь прочит
+                  В ведрах вон уж весь дом
+                  Хватит, это ложь - полно
+                  Режет, точно ножом
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat_left">
+            <div class="chat_comment">
+              <div class="chat_comment_bubble_left">
+                <div class="chat_comment_date_left">20.04.2020 10:34
+                </div>
+                <div class="chat_comment_text">Вот фотографии проекта, внесите свои поправки,
+                  если таковые имеются.
+                </div>
+                <div class="d-flex flex-row flex-wrap my-2">
+
+                  <a target="_blank" href="images/timetable.jpg">
+                    <img class="chat_h_img" src="images/timetable.jpg" alt="Forest">
+                  </a>
+
+
+                  <div>
+                    <img class = "chat_h_img"  src="images/timetable.jpg" alt="Расписание"/>
+                  </div>
+                  <div>
+                    <img  class = "chat_h_img" src="images/business.jpg" alt="Расписание"/>
+                  </div>
+                  <div>
+                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
+                  </div>
+                  <div>
+                    <img  class = "chat_h_img" src="images/computer.jpg" alt="Расписание"/>
+                  </div>
+                  <div>
+                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
+                  </div>
+                  <div>
+                    <img class = "chat_h_img"  src="images/timetable.jpg" alt="Расписание"/>
+                  </div>
+                  <div>
+                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
+                  </div>
+                  <div>
+                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
+                  </div>
+                  <div>
+                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
+                  </div>
+                  <div>
+                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
+                  </div>
+                  <div>
+                    <img class = "chat_h_img"  src="images/timetable.jpg" alt="Расписание"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chat_right" id="last">
+            <div class="chat_comment ">
+              <div class="chat_comment_bubble_right">
+                <div class="chat_comment_date_right">20.04.2020 10:34
+                </div>
+                <div class="chat_comment_text">Круто! Все отлично!
+                </div>
+                <div class="d-flex flex-row flex-wrap my-2">
+                  <div class = "chat_img_margin_between">
+                    <img class = "chat_h_img"  src="images/timetable.jpg" alt="Расписание"/>
+                  </div>
+                  <div class = "chat_img_margin_between">
+                    <img class = "chat_h_img"  src="images/timetable.jpg" alt="Расписание"/>
+                  </div>
+                </div>
+                <div class="chat_comment_text"> Вот дополнение 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </section>
+
+      </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

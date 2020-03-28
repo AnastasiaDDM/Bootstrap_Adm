@@ -162,7 +162,7 @@
               <td></td>
               <td>
                 <div class="text-center text-sm-left">
-                  <button type="button" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+                  <button type="button" class="btn btn-outline-danger py-1 w-100" data-toggle="modal" data-target="#ModalDel"><i class="fas fa-times"></i></button>
                 </div>
               </td>
               <td>
@@ -180,7 +180,7 @@
               <td>Временно убран из пользования.</td>
               <td>
                 <div class="text-center text-sm-left">
-                  <button type="button" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+                  <button type="button" class="btn btn-outline-danger py-1 w-100" data-toggle="modal" data-target="#ModalDel" data-toggle="modal" data-target="#ModalDel"><i class="fas fa-times"></i></button>
                 </div>
               </td>
               <td>
@@ -198,7 +198,7 @@
               <td></td>
               <td>
                 <div class="text-center text-sm-left">
-                  <button type="button" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+                  <button type="button" class="btn btn-outline-danger py-1 w-100" data-toggle="modal" data-target="#ModalDel"><i class="fas fa-times"></i></button>
                 </div>
               </td>
               <td>
@@ -255,6 +255,32 @@
 </div>
 
 
+
+ <!-- Модальное окно для удаления -->
+ <div class="modal" id="ModalDel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenteredLabel">Удаление тега</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+          <div class="form-group col-12 ">
+          Вы уверены, что хотите удалить этот тег? Дальнейшее восстановление будет невозможным.
+          </div>
+  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
+          <button type="button" class="btn btn-outline-primary">Подтвердить</button>
+        </div>
+    </div>
+  </div>
+</div>
+
       
       
 
@@ -288,7 +314,6 @@
       </div>
 
     <script src="js/jquery.js"></script>
-    <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
