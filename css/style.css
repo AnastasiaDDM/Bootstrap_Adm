@@ -152,9 +152,9 @@
 }
 
 .chat_panel_sticky {
-  height: 15em;
-  border: solid 0.5em #bae1fc;
-  background-color: #bae1fc;
+  height: 14em;
+  border: solid 0.5em #f0f8fa;
+  background-color: #f0f8fa;
 }
 
 .chat_panel_sticky_i {
@@ -211,7 +211,7 @@
 }
 
 .chat_comment {
-  max-width: 80%;
+  max-width: 85%;
   margin-bottom: 2em;
 }
 
@@ -250,7 +250,7 @@
 }
 
 .chat_comment_bubble_right {
-  background: #bae1fc;
+  background: #ecf3fa;
   position: relative;
   border-radius: 16px;
   margin-right: 2em;
@@ -265,7 +265,7 @@
   width: 0;
   height: 0;
   border-top: 12px solid transparent;
-  border-left: 18px solidrgb(186, 225, 252);
+  border-left: 18px solid #ecf3fa;
   border-bottom: 12px solid transparent;
 }
 

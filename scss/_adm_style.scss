@@ -293,9 +293,9 @@
         margin-top: .5em;
     }
     &_panel_sticky {
-        height: 15em;
-        border:solid .5em rgb(186, 225, 252);
-        background-color:rgb(186, 225, 252);
+        height: 14em;
+        border:solid .5em rgb(240, 248, 250);
+        background-color:rgb(240, 248, 250);
         &_i {
             font-size: 2rem;
             color: rgb(91, 176, 190); 
@@ -343,7 +343,7 @@
     }
 
     &_comment {
-        max-width: 80%; 
+        max-width: 85%; 
         margin-bottom: 2em;
 
         &_date {
@@ -381,7 +381,7 @@
             }
             &_right {
 
-                background: rgb(186, 225, 252);
+                background: rgb(236, 243, 250);
 
                 // background: rgb(202, 202, 250);
                 position: relative;
@@ -396,7 +396,7 @@
                     width: 0;
                     height: 0;
                     border-top: 12px solid transparent;
-                    border-left: 18px solidrgb(186, 225, 252);
+                    border-left: 18px solid rgb(236, 243, 250);
                     border-bottom: 12px solid transparent;
                 }
             }
