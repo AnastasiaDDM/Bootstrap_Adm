@@ -274,40 +274,40 @@
 
 
 <div>
-        <div class="d-sm-flex flex-row mt-5 mb-2">
-          <div class="h4">Картинки и фотографии для ПО</div>    
-          <div class="ml-0 ml-sm-3"><button type="button" class="btn btn-outline-primary w-100" data-toggle="modal" data-target="#ModalDownload">Добавить</button></div>
-        </div>
+  <div class="d-sm-flex flex-row mt-5 mb-2">
+    <h2>Картинки и фотографии ПО</h2>    
+    <div class="ml-0 ml-sm-3"><button type="button" class="btn btn-outline-primary  w-100" data-toggle="modal" data-target="#ModalDownload">Добавить</button></div>
+  </div>
 
 
 
 
 <!-- Модальное окно для добавления фото -->
 <div class="modal" id="ModalDownload" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenteredLabel">Добавление фото</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalCenteredLabel">Редактирование фото</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
 
-        <input type="file" id="files" name="files[]" multiple />
-        <output id="list"></output>
-        <div class="form-group col-12 px-0 mt-5">
-          <label for="inputID">Название</label>
-          <input type="text" class="form-control" id="inputID" placeholder="Например, Главаная страница сайта">
-        </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
-        <button type="button" class="btn btn-outline-primary">Сохранить</button>
-      </div>
-    </div>
+  <input type="file" id="files" name="files[]" multiple />
+  <output id="list"></output>
+  <div class="form-group col-12 px-0 mt-5">
+    <label for="inputID">Название</label>
+    <input type="text" class="form-control" id="inputID" placeholder="Например, Главаная страница сайта">
   </div>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
+  <button type="button" class="btn btn-outline-primary">Сохранить</button>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -317,118 +317,152 @@
 
 <!-- Модальное окно для главной -->
 <div class="modal" id="ModalMain" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenteredLabel">Главное фото</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+<div class="modal-dialog modal-dialog-centered" role="document">
+<div class="modal-content">
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalCenteredLabel">Главное фото</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
 
-        <div class="form-group col-12 ">
-        Вы уверены, что хотите сделать это фото главным? Оно будет отображаться в каталоге и виджетах.
-        </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
-        <button type="button" class="btn btn-outline-primary">Подтвердить</button>
-      </div>
-    </div>
+  <div class="form-group col-12 ">
+  Вы уверены, что хотите сделать это фото главным? Оно будет отображаться в каталоге и виджетах.
   </div>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
+  <button type="button" class="btn btn-outline-primary">Подтвердить</button>
+</div>
+</div>
+</div>
 </div>
 
 
 
 
 
-        <div class="scroll_table">
-          <table class="table table-bordered table-striped">
-            <thead class="table-info">
-              <tr>
-                <th>#</th>
-                <th>Фото</th>
-                <th>Название</th>
-                <th>Удалить</th>
-                <th>Изменить</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1
-                </th>
-                <td>
-                  <div class="form-group custom-control custom-radio">
-                    <input type="radio" checked id="radoi1" name="customRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="radoi1">Главная</label>
-                  </div>
-                  <div class = "">
-                    <img class = " h_img"  src="images/code.jpg" alt="Расписание"/>
-                  </div>
-                </td>
-                <td>Главная страница</td>
-                <td>
-                  <div class="text-center text-sm-left">
-                    <button type="button" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center text-sm-left">
-                    <button type="button" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
-                  </div>
-                </td>             
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>
-                  <div class="form-group custom-control custom-radio">
-                    <input type="radio" id="radoi2" name="customRadio" class="custom-control-input" data-toggle="modal" data-target="#ModalMain">
-                    <label class="custom-control-label" for="radoi2">Главная</label>
-                  </div>
-                  <div class = "">
-                    <img class = " h_img"  src="images/business.jpg" alt="Расписание"/>
-                  </div>
-                </td>
-                <td>Расписание</td>
-                <td>
-                  <div class="text-center text-sm-left">
-                    <button type="button" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center text-sm-left">
-                    <button type="button" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
-                  </div>
-                </td>             
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>
-                  <div class="form-group custom-control custom-radio">
-                    <input type="radio" id="radoi3" name="customRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="radoi3">Главная</label>
-                  </div>
-                  <div class = "">
-                    <img class = " h_img"  src="images/computer.jpg" alt="Расписание"/>
-                  </div>
-                </td>
-                <td>Регистрация</td>
-                <td>
-                  <div class="text-center text-sm-left">
-                    <button type="button" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
-                  </div>
-                </td>
-                <td>
-                  <div class="text-center text-sm-left">
-                    <button type="button" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
-                  </div>
-                </td>             
-              </tr>
-            </tbody>
-          </table>
+  <div class="scroll_table">
+    <table class="table table-bordered table-striped">
+      <thead class="table-info">
+        <tr>
+          <th>#</th>
+          <th>Фото</th>
+          <th>Название</th>
+          <th>Удалить</th>
+          <th>Изменить</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1
+          </th>
+          <td>
+            <div class="form-group custom-control custom-radio">
+              <input type="radio" checked id="radoi1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="radoi1">Главная</label>
+            </div>
+            <div class = "">
+              <img class = " h_img"  src="images/code.jpg" alt="Расписание"/>
+            </div>
+          </td>
+          <td>Главная страница</td>
+          <td>
+            <div class="text-center text-sm-left">
+              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+            </div>
+          </td>
+          <td>
+            <div class="text-center text-sm-left">
+              <button type="button"  data-toggle="modal" data-target="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+            </div>
+          </td>             
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>
+            <div class="form-group custom-control custom-radio">
+              <input type="radio" id="radoi2" name="customRadio" class="custom-control-input" data-toggle="modal" data-target="#ModalMain">
+              <label class="custom-control-label" for="radoi2">Главная</label>
+            </div>
+            <div class = "">
+              <img class = " h_img"  src="images/business.jpg" alt="Расписание"/>
+            </div>
+          </td>
+          <td>Расписание</td>
+          <td>
+            <div class="text-center text-sm-left">
+              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+            </div>
+          </td>
+          <td>
+            <div class="text-center text-sm-left">
+              <button type="button"  data-toggle="modal" data-target="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+            </div>
+          </td>             
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>
+            <div class="form-group custom-control custom-radio">
+              <input type="radio" id="radoi3" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="radoi3">Главная</label>
+            </div>
+            <div class = "">
+              <img class = " h_img"  src="images/computer.jpg" alt="Расписание"/>
+            </div>
+          </td>
+          <td>Регистрация</td>
+          <td>
+            <div class="text-center text-sm-left">
+              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+            </div>
+          </td>
+          <td>
+            <div class="text-center text-sm-left">
+              <button type="button"  data-toggle="modal" data-target="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+            </div>
+          </td>             
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
+
+
+
+
+
+<!-- Модальное окно для удаления -->
+<div class="modal" id="ModalDel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenteredLabel">Удаление</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+          <div class="form-group col-12 ">
+          Вы уверены, что хотите удалить этот объект? Дальнейшее восстановление будет невозможным.
+          </div>
+  
         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
+          <button type="button" class="btn btn-outline-primary">Подтвердить</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+
 
 
       </div>

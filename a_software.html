@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/fa/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
   </head>
   <body  class="cont_all">
     <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
@@ -81,7 +82,16 @@
         <li class="breadcrumb-item active">ПО №4</li>
     </ol>
 
-    
+    <div class="alert alert-success shadow-sm" role="alert">
+      <i class="fas fa-check mr-4 h3"></i><strong>ПО успешно изменено!</strong>
+    </div>
+
+    <div class="alert alert-success alert-dismissible fade show shadow-sm" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <i class="fas fa-check mr-4 h3"></i><strong>ПО успешно изменено!</strong>
+    </div>
 
     <section class="container-lg mx-auto px-0">
     
@@ -151,32 +161,39 @@
           <div class = "border border-info px-3 pb-3 pt-2">
             <div class="d-flex flex-row flex-wrap">
               <div class = "">
-                <img class = " h_img"  src="images/cafe.jpg" alt="Расписание"/>
+                <a class="example-image-link" href="images/code.jpg" data-lightbox="example-set" 
+                data-title="Главная страница"><img class="example-image h_img" src="images/code.jpg" alt=""/></a>
               </div>
               <div class = "">
-                <img class = " h_img"  src="images/rewiew.jpg" alt="Расписание"/>
+                <a class="example-image-link" href="images/cafe.jpg" data-lightbox="example-set" 
+                data-title="Главная страница"><img class="example-image h_img" src="images/cafe.jpg" alt=""/></a>
               </div>
               <div class = "">
-                <img class = " h_img"  src="images/computer.jpg" alt="Расписание"/>
+                <a class="example-image-link" href="images/computer.jpg" data-lightbox="example-set" 
+                data-title="Главная страница"><img class="example-image h_img" src="images/computer.jpg" alt=""/></a>
               </div>
               <div class = "">
-                <img class = " h_img"  src="images/code.jpg" alt="Расписание"/>
+                <a class="example-image-link" href="images/code.jpg" data-lightbox="example-set" 
+                data-title="Главная страница"><img class="example-image h_img" src="images/code.jpg" alt=""/></a>
               </div>
               <div class = "">
-                <img class = " h_img"  src="images/code.jpg" alt="Расписание"/>
+                <a class="example-image-link" href="images/cafe.jpg" data-lightbox="example-set" 
+                data-title="Главная страница"><img class="example-image h_img" src="images/cafe.jpg" alt=""/></a>
               </div>
               <div class = "">
-                <img class = " h_img"  src="images/code.jpg" alt="Расписание"/>
+                <a class="example-image-link" href="images/cafe.jpg" data-lightbox="example-set" 
+                data-title="Главная страница"><img class="example-image h_img" src="images/cafe.jpg" alt=""/></a>
               </div>
               <div class = "">
-                <img class = " h_img"  src="images/code.jpg" alt="Расписание"/>
+                <a class="example-image-link" href="images/computer.jpg" data-lightbox="example-set" 
+                data-title="Главная страница"><img class="example-image h_img" src="images/computer.jpg" alt=""/></a>
               </div>
             </div>
           </div> 
           
           
           <div class="d-flex flex-column flex-sm-row w-100 justify-content-between mt-5">
-            <button type="button" class="btn btn-outline-danger btn-lg px-4 col-sm-5"><i class="fas fa-times mr-2"></i>Удалить</button> 
+            <button type="button" class="btn btn-outline-danger btn-lg px-4 col-sm-5" data-toggle="modal" data-target="#ModalDel"><i class="fas fa-times mr-2"></i>Удалить</button> 
             <a type="button" href= "a_review_edit.html"  class="btn btn-outline-info btn-lg px-4 mt-3 mt-sm-0 col-sm-6"><i class="fas fa-edit mr-2"></i>Редактировать</a> 
           </div>
 
@@ -500,61 +517,66 @@
 </div>
 
 <div class="mt-3">
-<ul class="list-group">
-  <li class="list-group-item px-2 px-sm-3">
-    <div class="d-flex flex-row w-100 mx-auto justify-content-between">
-      <div>
-        <div class="font-weight-bold">Иванов М.Л.</div>
+  <ul class="list-group">
+    <li class="list-group-item px-2 px-sm-3">
+      <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+        <div>
+          <div class="font-weight-bold">Иванов М.Л.</div>
+  
+        </div>
+        
+        <div>
+          <div class="">20.01.2020</div>
+  
+        </div> 
+  
+  
+  
+    </div>
+      <div class="mt-3">
 
+        Замечательная программа! Не могу нарадоваться! Жду доработки, 
+        которую предложила, и тогда приложение станет совершенно идеальным 
+        для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+        которую предложила, и тогда приложение станет совершенно идеальным 
+        для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+        которую предложила, и тогда приложение станет совершенно идеальным 
+        для меня! Спасибо вам! 
       </div>
-      
-      <div>
-        <div class="">20.01.2020</div>
 
-      </div> 
+      <div class="d-sm-flex flex-row w-100 mx-auto justify-content-between">
+        <div class="align-self-center">
 
+          <a data-toggle="collapse" 
+          href="#ul_1" aria-expanded="false" aria-controls="collapseExample" class="">Комментарии (1011)
+          </a>
+  
+        </div>
+        
+        <div class="d-sm-flex flex-row mt-3 justify-content-end">            
+          <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 justify-content-center">
+            <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger px-2">Удалить</button> 
+            <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
+          </div>
 
+          <a data-toggle="collapse" 
+          href="#answer_admin" aria-expanded="false" aria-controls="collapseExample" class="align-self-center ml-0 ml-sm-4 ml-md-5">Ответить
+          </a>
+  
+        </div> 
 
-  </div>
-    <div class="mt-3">
-
-      Замечательная программа! Не могу нарадоваться! Жду доработки, 
-      которую предложила, и тогда приложение станет совершенно идеальным 
-      для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-      которую предложила, и тогда приложение станет совершенно идеальным 
-      для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-      которую предложила, и тогда приложение станет совершенно идеальным 
-      для меня! Спасибо вам! 
     </div>
 
-    <div class="d-sm-flex flex-row w-100 mx-auto justify-content-between">
-      <div class="align-self-center">
-
-        <a data-toggle="collapse" 
-        href="#ul_1" aria-expanded="false" aria-controls="collapseExample" class="">Комментарии (1011)
-        </a>
-
-      </div>
-      
-      <div class="d-sm-flex flex-row mt-3 justify-content-end">            
-        <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 justify-content-center">
-          <button type="button" class="btn btn-outline-danger px-2">Удалить</button> 
-          <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
-        </div>
-
-        <a href="#" class="align-self-center ml-0 ml-sm-4 ml-md-5">Ответить
-        </a>
-
-      </div> 
-
-  </div>
 
 
-    <ul class="list-group collapse mt-3" role="tabpanel" id="ul_1">
+
+
+
+    <ul class="list-group collapse mt-3" role="tabpanel" id="answer_admin">
       <li class="list-group-item bg-light">
-        <div class="d-flex flex-row w-100 mx-auto justify-content-between">
+        <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
           <div>
-            <div class="font-weight-bold">Иванов М.Л.</div>
+            <div class="font-weight-bold">Ответ администратора</div>
     
           </div>
           
@@ -567,290 +589,331 @@
     
       </div>
         <div class="mt-3">
-
-          Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! 
+          <textarea class="w-100 form-control" rows="8">
+Замечательная программа! Не могу нарадоваться! Жду доработки, 
+которую предложила, и тогда приложение станет совершенно идеальным 
+для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+которую предложила, и тогда приложение станет совершенно идеальным 
+для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+которую предложила, и тогда приложение станет совершенно идеальным 
+для меня! Спасибо вам! 
+          </textarea>
         </div>
         <div class="d-sm-flex flex-row mt-3 justify-content-end">
           <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
-            <button type="button" class="btn btn-outline-danger px-2">Удалить</button> 
-            <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
+            <button type="button" data-toggle="collapse" href="#answer_admin" aria-expanded="false" aria-controls="collapseExample" class="btn btn-outline-danger px-2">Отменить</button> 
+            <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Ответить</button> 
           </div>
         </div>
-
         </li>
-      <li class="list-group-item bg-light">
-        <div class="d-flex flex-row w-100 mx-auto justify-content-between">
-          <div>
-            <div class="font-weight-bold">Иванов М.Л.</div>
-    
-          </div>
-          
-          <div>
-            <div class="">20.01.2020</div>
-    
-          </div> 
-    
-    
-    
-      </div>
-        <div class="mt-3">
-
-          Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! 
-        </div>
-        <div class="d-sm-flex flex-row mt-3 justify-content-end">
-          <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
-            <button type="button" class="btn btn-outline-danger px-2">Удалить</button> 
-            <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
-          </div>
-        </div>
-      </li>
-      <li class="list-group-item bg-light">
-        <div class="d-flex flex-row w-100 mx-auto justify-content-between">
-          <div>
-            <div class="font-weight-bold">Иванов М.Л.</div>
-    
-          </div>
-          
-          <div>
-            <div class="">20.01.2020</div>
-    
-          </div> 
-    
-    
-    
-      </div>
-        <div class="mt-3">
-
-          Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! 
-        </div>
-        <div class="d-sm-flex flex-row mt-3 justify-content-end">
-          <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
-            <button type="button" class="btn btn-outline-danger px-2">Удалить</button> 
-            <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
-          </div>
-        </div>
-      </li>
-
-      <div class="mt-1">
-        <a data-toggle="collapse" 
-        href="#ul_1" aria-expanded="false" aria-controls="collapseExample" class="">Свернуть<i class="fas fa-arrow-up ml-2"></i></a>
-        </a>
-      </div>
     </ul>
 
+
+
+
+
+
+      <ul class="list-group collapse mt-3" role="tabpanel" id="ul_1">
+        <li class="list-group-item bg-light">
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+              <div class="font-weight-bold">Иванов М.Л.</div>
+      
+            </div>
+            
+            <div>
+              <div class="">20.01.2020</div>
+      
+            </div> 
+      
+      
+      
+        </div>
+          <div class="mt-3">
+
+            Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! 
+          </div>
+          <div class="d-sm-flex flex-row mt-3 justify-content-end">
+            <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
+              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger px-2">Удалить</button> 
+              <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
+            </div>
+          </div>
+
+          </li>
+        <li class="list-group-item bg-light">
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+              <div class="font-weight-bold">Иванов М.Л.</div>
+      
+            </div>
+            
+            <div>
+              <div class="">20.01.2020</div>
+      
+            </div> 
+      
+      
+      
+        </div>
+          <div class="mt-3">
+
+            Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! 
+          </div>
+          <div class="d-sm-flex flex-row mt-3 justify-content-end">
+            <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
+              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger px-2">Удалить</button> 
+              <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item bg-light">
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+              <div class="font-weight-bold">Иванов М.Л.</div>
+      
+            </div>
+            
+            <div>
+              <div class="">20.01.2020</div>
+      
+            </div> 
+      
+      
+      
+        </div>
+          <div class="mt-3">
+
+            Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! 
+          </div>
+          <div class="d-sm-flex flex-row mt-3 justify-content-end">
+            <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
+              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger px-2">Удалить</button> 
+              <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
+            </div>
+          </div>
+        </li>
+
+        <div class="mt-1">
+          <a data-toggle="collapse" 
+          href="#ul_1" aria-expanded="false" aria-controls="collapseExample" class="">Свернуть<i class="fas fa-arrow-up ml-2"></i></a>
+          </a>
+        </div>
+      </ul>
+
+
+
+      </li>
+    <li class="list-group-item px-2 px-sm-3">
+      <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+        <div>
+          <div class="font-weight-bold">Иванов М.Л.</div>
+  
+        </div>
+        
+        <div>
+          <div class="">20.01.2020</div>
+  
+        </div> 
+  
+  
+  
+    </div>
+      <div class="mt-3">
+
+        Замечательная программа! Не могу нарадоваться! Жду доработки, 
+        которую предложила, и тогда приложение станет совершенно идеальным 
+        для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+        которую предложила, и тогда приложение станет совершенно идеальным 
+        для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+        которую предложила, и тогда приложение станет совершенно идеальным 
+        для меня! Спасибо вам! 
+      </div>
+
+      <div class="d-sm-flex flex-row w-100 mx-auto justify-content-between">
+        <div class="align-self-center">
+
+          <a data-toggle="collapse" 
+          href="#ul_2" aria-expanded="false" aria-controls="collapseExample" class="">Комментарии (3)
+          </a>
+  
+        </div>
+        
+        <div class="d-sm-flex flex-row mt-3 justify-content-end">            
+          <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 justify-content-center">
+            <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger px-2">Удалить</button> 
+            <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
+          </div>
+
+          <a href="#" class="align-self-center ml-0 ml-sm-4 ml-md-5">Ответить
+          </a>
+  
+        </div> 
+
+    </div>
+
+
+      <ul class="list-group collapse  mt-3" role="tabpanel" id="ul_2">
+        <li class="list-group-item bg-light">
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+              <div class="font-weight-bold">Иванов М.Л.</div>
+      
+            </div>
+            
+            <div>
+              <div class="">20.01.2020</div>
+      
+            </div> 
+      
+      
+      
+        </div>
+          <div class="mt-3">
+
+            Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! 
+          </div>
+          <div class="d-sm-flex flex-row mt-3 justify-content-end">
+            <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
+              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger px-2">Удалить</button> 
+              <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
+            </div>
+          </div>
+          </li>
+        <li class="list-group-item bg-light">
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+              <div class="font-weight-bold">Иванов М.Л.</div>
+      
+            </div>
+            
+            <div>
+              <div class="">20.01.2020</div>
+      
+            </div> 
+      
+      
+      
+        </div>
+          <div class="mt-3">
+
+            Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! Спасибо вам! 
+          </div>
+          <div class="d-sm-flex flex-row mt-3 justify-content-end">
+            <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
+              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger px-2">Удалить</button> 
+              <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item bg-light">
+          <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+            <div>
+              <div class="font-weight-bold">Иванов М.Л.</div>
+      
+            </div>
+            
+            <div>
+              <div class="">20.01.2020</div>
+      
+            </div> 
+      
+      
+      
+        </div>
+          <div class="mt-3">
+
+            Замечательная программа! Не могу нарадоваться! Жду доработки, 
+            которую предложила, и тогда приложение станет совершенно идеальным 
+            для меня! 
+          </div>
+          <div class="d-sm-flex flex-row mt-3 justify-content-end">
+            <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
+              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger px-2">Удалить</button> 
+              <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
+            </div>
+          </div>
+         
+        </li>
+        <div class="mt-1">
+          <a data-toggle="collapse" 
+          href="#ul_2" aria-expanded="false" aria-controls="collapseExample" class="">Свернуть<i class="fas fa-arrow-up ml-2"></i></a>
+          </a>
+        </div>
+      </ul>
 
 
     </li>
-  <li class="list-group-item px-2 px-sm-3">
-    <div class="d-flex flex-row w-100 mx-auto justify-content-between">
-      <div>
-        <div class="font-weight-bold">Иванов М.Л.</div>
-
-      </div>
-      
-      <div>
-        <div class="">20.01.2020</div>
-
-      </div> 
-
-
-
-  </div>
-    <div class="mt-3">
-
-      Замечательная программа! Не могу нарадоваться! Жду доработки, 
-      которую предложила, и тогда приложение станет совершенно идеальным 
-      для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-      которую предложила, и тогда приложение станет совершенно идеальным 
-      для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-      которую предложила, и тогда приложение станет совершенно идеальным 
-      для меня! Спасибо вам! 
+    <li class="list-group-item px-2 px-sm-3">
+      <div class="d-flex flex-row 1mt-3 w-100 mx-auto justify-content-between">
+        <div>
+          <div class="font-weight-bold">Иванов М.Л.</div>
+  
+        </div>
+        
+        <div>
+          <div class="">20.01.2020</div>
+  
+        </div> 
+  
+  
+  
     </div>
+      <div class="mt-3">
 
-    <div class="d-sm-flex flex-row w-100 mx-auto justify-content-between">
-      <div class="align-self-center">
-
-        <a data-toggle="collapse" 
-        href="#ul_2" aria-expanded="false" aria-controls="collapseExample" class="">Комментарии (3)
-        </a>
-
+        Замечательная программа! Не могу нарадоваться! 
       </div>
-      
-      <div class="d-sm-flex flex-row mt-3 justify-content-end">            
-        <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 justify-content-center">
-          <button type="button" class="btn btn-outline-danger px-2">Удалить</button> 
-          <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
+
+
+      <div class="d-sm-flex flex-row w-100 mx-auto justify-content-between">
+        <div class="align-self-center">
+
+          <a data-toggle="collapse" 
+          href="#ul_3" aria-expanded="false" aria-controls="collapseExample" class="">Комментарии (0)
+          </a>
+  
         </div>
-
-        <a href="#" class="align-self-center ml-0 ml-sm-4 ml-md-5">Ответить
-        </a>
-
-      </div> 
-
-  </div>
-
-
-    <ul class="list-group collapse  mt-3" role="tabpanel" id="ul_2">
-      <li class="list-group-item bg-light">
-        <div class="d-flex flex-row w-100 mx-auto justify-content-between">
-          <div>
-            <div class="font-weight-bold">Иванов М.Л.</div>
-    
-          </div>
-          
-          <div>
-            <div class="">20.01.2020</div>
-    
-          </div> 
-    
-    
-    
-      </div>
-        <div class="mt-3">
-
-          Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! 
-        </div>
-        <div class="d-sm-flex flex-row mt-3 justify-content-end">
-          <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
-            <button type="button" class="btn btn-outline-danger px-2">Удалить</button> 
+        
+        <div class="d-sm-flex flex-row mt-3 justify-content-end">            
+          <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 justify-content-center">
+            <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger px-2">Удалить</button> 
             <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
           </div>
-        </div>
-        </li>
-      <li class="list-group-item bg-light">
-        <div class="d-flex flex-row w-100 mx-auto justify-content-between">
-          <div>
-            <div class="font-weight-bold">Иванов М.Л.</div>
-    
-          </div>
-          
-          <div>
-            <div class="">20.01.2020</div>
-    
-          </div> 
-    
-    
-    
-      </div>
-        <div class="mt-3">
 
-          Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! Спасибо вам! 
-        </div>
-        <div class="d-sm-flex flex-row mt-3 justify-content-end">
-          <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
-            <button type="button" class="btn btn-outline-danger px-2">Удалить</button> 
-            <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
-          </div>
-        </div>
-      </li>
-      <li class="list-group-item bg-light">
-        <div class="d-flex flex-row w-100 mx-auto justify-content-between">
-          <div>
-            <div class="font-weight-bold">Иванов М.Л.</div>
-    
-          </div>
-          
-          <div>
-            <div class="">20.01.2020</div>
-    
-          </div> 
-    
-    
-    
-      </div>
-        <div class="mt-3">
+          <a href="#" class="align-self-center ml-0 ml-sm-4 ml-md-5">Ответить
+          </a>
+  
+        </div> 
 
-          Замечательная программа! Не могу нарадоваться! Жду доработки, 
-          которую предложила, и тогда приложение станет совершенно идеальным 
-          для меня! 
-        </div>
-        <div class="d-sm-flex flex-row mt-3 justify-content-end">
-          <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 float-sm-right justify-content-center">
-            <button type="button" class="btn btn-outline-danger px-2">Удалить</button> 
-            <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
-          </div>
-        </div>
-       
-      </li>
-      <div class="mt-1">
-        <a data-toggle="collapse" 
-        href="#ul_2" aria-expanded="false" aria-controls="collapseExample" class="">Свернуть<i class="fas fa-arrow-up ml-2"></i></a>
-        </a>
-      </div>
-    </ul>
-
-
-  </li>
-  <li class="list-group-item px-2 px-sm-3">
-    <div class="d-flex flex-row w-100 mx-auto justify-content-between">
-      <div>
-        <div class="font-weight-bold">Иванов М.Л.</div>
-
-      </div>
-      
-      <div>
-        <div class="">20.01.2020</div>
-
-      </div> 
-
-
-
-  </div>
-    <div class="mt-3">
-
-      Замечательная программа! Не могу нарадоваться! 
     </div>
-
-
-    <div class="d-sm-flex flex-row w-100 mx-auto justify-content-between">
-      <div class="align-self-center">
-
-        <a data-toggle="collapse" 
-        href="#ul_3" aria-expanded="false" aria-controls="collapseExample" class="">Комментарии (0)
-        </a>
-
-      </div>
-      
-      <div class="d-sm-flex flex-row mt-3 justify-content-end">            
-        <div class="d-flex flex-column flex-sm-row mb-3 mb-sm-0 justify-content-center">
-          <button type="button" class="btn btn-outline-danger px-2">Удалить</button> 
-          <button type="button" class="btn btn-outline-info ml-0 ml-sm-2 px-2 mt-3 mt-sm-0">Редактировать</button> 
-        </div>
-
-        <a href="#" class="align-self-center ml-0 ml-sm-4 ml-md-5">Ответить
-        </a>
-
-      </div> 
-
-  </div>
-  </li>
-</ul>
+    </li>
+  </ul>
 
 <div class="text-center mt-3 mx-auto">
   <a class="btn btn-outline-info px-5" href="a_comments.html">
@@ -861,36 +924,36 @@
 </div>
 
 
-<div class="d-flex flex-column flex-sm-row w-100 justify-content-between mt-5">
-  <button type="button" class="btn btn-outline-danger btn-lg px-4"><i class="fas fa-times mr-2"></i>Удалить</button> 
+<div class="d-flex flex-column flex-sm-row w-100 justify-content-between mb-5">
+  <button type="button" class="btn btn-outline-danger btn-lg px-4" data-toggle="modal" data-target="#ModalDel"><i class="fas fa-times mr-2"></i>Удалить</button> 
   <a type="button" href= "a_review_edit.html"  class="btn btn-outline-info btn-lg px-4 mt-3 mt-sm-0"><i class="fas fa-edit mr-2"></i>Редактировать</a> 
 </div>
 
+     <!-- Модальное окно для удаления -->
+     <div class="modal" id="ModalDel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenteredLabel">Удаление</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
 
+              <div class="form-group col-12 ">
+              Вы уверены, что хотите удалить это ПО? Дальнейшее восстановление будет невозможным.
+              </div>
+      
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
+              <button type="button" class="btn btn-outline-primary">Подтвердить</button>
+            </div>
+        </div>
+      </div>
+    </div>
 
-        <nav class="my-5">
-            <ul class="pagination justify-content-center">
-              <li class="page-item">
-                <a class="page-link" href="#!" aria-label="Previous">
-                  <span aria-hidden="true">&laquo;</span>
-                  <span class="sr-only">Previous</span>
-                </a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#!">1</a></li>
-              <li class="page-item active"><a class="page-link" href="#!">2</a></li>
-              <li class="page-item"><a class="page-link" href="#!">3</a></li>
-              <li class="page-item"><a class="page-link" href="#!">4</a></li>
-              <li class="page-item d-none d-sm-block"><a class="page-link" href="#!">5</a></li>
-              <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
-              <li class="page-item"><a class="page-link" href="#!">19</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#!" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
 
     </section>
 
@@ -898,5 +961,6 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
   </body>
 </html>

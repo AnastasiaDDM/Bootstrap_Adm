@@ -8,8 +8,13 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/fa/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
  
   </head>
+  <div id= "toTop">         
+    <i class="fa fa-chevron-circle-up chat_panel_sticky_i" aria-hidden="true">
+    </i>
+  </div>
   <body  class="cont_all">
     <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -96,11 +101,11 @@
       <div class="pos_center_for_div padding_top-bootom_1em scrollbox">
         <div class="border border-info sticky-top p-0">
         <div class= "chat_panel_sticky">
-          <div class="text-center">
+          <!-- <div class="text-center">
             <a href="#">
               <i class="fa fa-chevron-circle-up chat_panel_sticky_i" aria-hidden="true"></i>
             </a>
-          </div>
+          </div> -->
           <div class="d-flex flex-column">
             <div class="w-100"> 
               <div class="">Новое сообщение
@@ -204,44 +209,35 @@
                   если таковые имеются.
                 </div>
                 <div class="d-flex flex-row flex-wrap my-2">
-
-                  <a target="_blank" href="images/timetable.jpg">
-                    <img class="chat_h_img" src="images/timetable.jpg" alt="Forest">
-                  </a>
-
-
+                  <a class="example-image-link" href="images/computer.jpg" data-lightbox="example-set" 
+                  data-title="Главная страница"><img class="example-image chat_h_img" src="images/computer.jpg" alt=""/></a>
                   <div>
-                    <img class = "chat_h_img"  src="images/timetable.jpg" alt="Расписание"/>
+                    <a class="example-image-link" href="images/code.jpg" data-lightbox="example-set" 
+                    data-title="Главная страница"><img class="example-image chat_h_img" src="images/code.jpg" alt=""/></a>
                   </div>
                   <div>
-                    <img  class = "chat_h_img" src="images/business.jpg" alt="Расписание"/>
+                    <a class="example-image-link" href="images/computer.jpg" data-lightbox="example-set" 
+                    data-title="Главная страница"><img class="example-image chat_h_img" src="images/computer.jpg" alt=""/></a>
                   </div>
                   <div>
-                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
+                    <a class="example-image-link" href="images/cafe.jpg" data-lightbox="example-set" 
+                    data-title="Главная страница"><img class="example-image chat_h_img" src="images/cafe.jpg" alt=""/></a>
                   </div>
                   <div>
-                    <img  class = "chat_h_img" src="images/computer.jpg" alt="Расписание"/>
+                    <a class="example-image-link" href="images/computer.jpg" data-lightbox="example-set" 
+                    data-title="Главная страница"><img class="example-image chat_h_img" src="images/computer.jpg" alt=""/></a>
                   </div>
                   <div>
-                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
+                    <a class="example-image-link" href="images/computer.jpg" data-lightbox="example-set" 
+                    data-title="Главная страница"><img class="example-image chat_h_img" src="images/computer.jpg" alt=""/></a>
                   </div>
                   <div>
-                    <img class = "chat_h_img"  src="images/timetable.jpg" alt="Расписание"/>
+                    <a class="example-image-link" href="images/code.jpg" data-lightbox="example-set" 
+                    data-title="Главная страница"><img class="example-image chat_h_img" src="images/code.jpg" alt=""/></a>
                   </div>
                   <div>
-                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
-                  </div>
-                  <div>
-                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
-                  </div>
-                  <div>
-                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
-                  </div>
-                  <div>
-                    <img  class = "chat_h_img" src="images/timetable.jpg" alt="Расписание"/>
-                  </div>
-                  <div>
-                    <img class = "chat_h_img"  src="images/timetable.jpg" alt="Расписание"/>
+                    <a class="example-image-link" href="images/cafe.jpg" data-lightbox="example-set" 
+                    data-title="Главная страница"><img class="example-image chat_h_img" src="images/cafe.jpg" alt=""/></a>
                   </div>
                 </div>
               </div>
@@ -256,10 +252,12 @@
                 </div>
                 <div class="d-flex flex-row flex-wrap my-2">
                   <div class = "chat_img_margin_between">
-                    <img class = "chat_h_img"  src="images/timetable.jpg" alt="Расписание"/>
+                    <a class="example-image-link" href="images/cafe.jpg" data-lightbox="example-set" 
+                    data-title="Главная страница"><img class="example-image chat_h_img" src="images/cafe.jpg" alt=""/></a>
                   </div>
                   <div class = "chat_img_margin_between">
-                    <img class = "chat_h_img"  src="images/timetable.jpg" alt="Расписание"/>
+                    <a class="example-image-link" href="images/cafe.jpg" data-lightbox="example-set" 
+                    data-title="Главная страница"><img class="example-image chat_h_img" src="images/cafe.jpg" alt=""/></a>
                   </div>
                 </div>
                 <div class="chat_comment_text"> Вот дополнение 
@@ -269,16 +267,37 @@
           </div>
         </div>
       </div>
-
-
-
-
-
     </section>
-
       </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/javascript.js" charset="UTF-8"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script>
+      $(function() {
+       
+      $(window).scroll(function() {
+       
+      if($(this).scrollTop() != 0) {
+       
+      $('#toTop').fadeIn();
+       
+      } else {
+       
+      $('#toTop').fadeOut();
+       
+      }
+       
+      });
+       
+      $('#toTop').click(function() {
+       
+      $('body,html').animate({scrollTop:200},400);
+       
+      });
+       
+      });
+      </script>
   </body>
 </html>

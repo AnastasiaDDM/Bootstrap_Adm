@@ -152,7 +152,7 @@
 }
 
 .chat_panel_sticky {
-  height: 14em;
+  height: 12em;
   border: solid 0.5em #f0f8fa;
   background-color: #f0f8fa;
 }
@@ -267,6 +267,15 @@
   border-top: 12px solid transparent;
   border-left: 18px solid #ecf3fa;
   border-bottom: 12px solid transparent;
+}
+
+#toTop {
+  z-index: 20;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  cursor: pointer;
+  display: none;
 }
 
 .input__wrapper {

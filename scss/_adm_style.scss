@@ -190,7 +190,7 @@
         margin-top: .5em;
     }
     &_panel_sticky {
-        height: 14em;
+        height: 12em;
         border:solid .5em rgb(240, 248, 250);
         background-color:rgb(240, 248, 250);
         &_i {
@@ -301,6 +301,15 @@
 
     }
 }
+
+#toTop {
+    z-index: 20;
+    position:fixed;
+    bottom:30px;
+    right:50px;
+    cursor:pointer;
+    display:none;
+    }
 
 
 
