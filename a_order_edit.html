@@ -2,13 +2,11 @@
 <html>
   <head>
     <title>Редактирование заказа</title>
-    <!-- Bootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/fa/css/all.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
   </head>
   <body  class="cont_all">
     <nav class="navbar navbar-expand-lg navbar-light mb-4" style="background-color: #bae1fc;">
@@ -273,7 +271,7 @@
   </div>
 
 <div class="scroll_table">
-  <table class="table table-bordered">
+  <table class="table table-bordered" id="table_workers">
     <thead class="table-info">
       <tr>
         <th>#</th>
@@ -347,36 +345,7 @@
           </div>
         </td>     
       </tr>
-      <tr class="collapse"  id="newworker">
-        <th scope="row">3</th>
-        <td class="p-0">
-          <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="">
-        </td>
-        <td class="p-0">
-          <input type="text" class="border-0 form-control p-0 h-100 py-3 px-2" id="inputID" value="">
-        </td>
-        <td></td>
-        <td class="p-0">
-          <select class="custom-select p-0 h-100  py-3 px-2 border-0" id="inputPos3">
-            <option selected>Должность...</option>
-            <option value="1">Не выбрано</option>
-            <option value="2">Программист</option>
-            <option value="3">Дизайнер</option>
-          </select>
-        </td>
-    
-        <td class="p-0">
-          <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="">
-        </td>
-        <td class="p-0">
-          <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="">
-        </td>
-        <td>
-          <div class="text-center text-sm-left">
-            <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
-          </div>
-        </td>    
-      </tr>
+
     </tbody>
   </table>
 </div>
@@ -845,10 +814,46 @@
       </div>
     </section>
 
+<!-- ШАБЛОН СТРОКИ ТАБЛИЦЫ -->
+<div id="pattern_table_tr_newworker" style="display: none;">
+  <tr  class="copy_tr_newworker" style="display: none;">
+    <th scope="row">3</th>
+    <td class="p-0">
+      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="">
+    </td>
+    <td class="p-0">
+      <input type="text" class="border-0 form-control p-0 h-100 py-3 px-2" id="inputID" value="">
+    </td>
+    <td></td>
+    <td class="p-0">
+      <select class="custom-select p-0 h-100  py-3 px-2 border-0" id="inputPos3">
+        <option selected>Должность...</option>
+        <option value="1">Не выбрано</option>
+        <option value="2">Программист</option>
+        <option value="3">Дизайнер</option>
+      </select>
+    </td>
+
+    <td class="p-0">
+      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="">
+    </td>
+    <td class="p-0">
+      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="">
+    </td>
+    <td>
+      <div class="text-center text-sm-left">
+        <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+      </div>
+    </td>    
+  </tr>
+</div>
+    
+  
+
       </div>
 
     <script src="js/jquery.js"></script>
-
+    <script src="js/javascript.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
 

@@ -95,16 +95,16 @@
            aria-label="Recipient's username with two button addons" aria-describedby="button-addon4">
           <div class="input-group-append" id="button-addon4">
             <button class="btn btn-outline-info" type="button">Поиск</button>
-            <button class="btn btn-outline-info d-sm-block d-none" data-toggle="collapse" 
-            href="#find_form" aria-expanded="false" aria-controls="collapseExample" type="button">Расширенный поиск</button>
+            <button class="btn btn-outline-info d-sm-block d-none"
+            href="#find_form" type="button">Расширенный поиск</button>
           </div>
         </div>
         <button type="button" class="d-block d-sm-none col-xl-2 btn btn-outline-info col-sm-4 col-12 mt-2 mt-sm-0" 
-        data-toggle="collapse" href="#find_form" aria-expanded="false" aria-controls="collapseExample">Расширенный поиск</button>
+         href="#find_form">Расширенный поиск</button>
       </div>
 
 
-    <form class="mx-auto border border-info p-2  bg-light collapse" role="tabpanel" id="find_form">
+    <form class="mx-auto border border-info p-2  bg-light" style="display: none;" role="tabpanel" id="find_form">
         <div class="form-row"> 
           <div class="form-group col-sm-4">
             <label for="inputID">ID клиента</label>
@@ -311,5 +311,6 @@
     <script src="js/jquery.js"></script>
  
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
   </body>
 </html>
