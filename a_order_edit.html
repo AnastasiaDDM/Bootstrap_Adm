@@ -273,8 +273,8 @@
 <div class="scroll_table">
   <table class="table table-bordered" id="table_workers">
     <thead class="table-info">
-      <tr>
-        <th>#</th>
+      <tr id="worker_tr_0">
+        <th  data-id = "row_worker_id">#</th>
         <th>#ID</th>
         <th>ФИО разработчика</th>
         <th>Должность</th>
@@ -285,8 +285,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
+      <tr id="worker_tr_1">
+        <th scope="row" data-id = "row_worker_id">1</th>
         <td class="p-0">
           <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="6">
         </td>
@@ -311,12 +311,12 @@
         </td>
         <td>
           <div class="text-center text-sm-left">
-            <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+            <button type="button" data-id="worker_tr_1" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
           </div>
         </td>    
       </tr>
-      <tr>
-        <th scope="row">2</th>
+      <tr id="worker_tr_2">
+        <th scope="row" data-id = "row_worker_id">2</th>
         <td class="p-0">
           <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="6">
         </td>
@@ -341,7 +341,7 @@
         </td>
         <td>
           <div class="text-center text-sm-left">
-            <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+            <button type="button"  data-id="worker_tr_2" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
           </div>
         </td>     
       </tr>
@@ -570,7 +570,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-outline-primary">Подтвердить</button>
+                <button type="button" id="btn_confirm" class="btn btn-outline-primary">Подтвердить</button>
               </div>
           </div>
         </div>
@@ -815,18 +815,19 @@
     </section>
 
 <!-- ШАБЛОН СТРОКИ ТАБЛИЦЫ -->
-<div id="pattern_table_tr_newworker" style="display: none;">
-  <tr  class="copy_tr_newworker" style="display: none;">
-    <th scope="row">3</th>
+<table style="display: none;">
+  <tbody  id="pattern_table_tr_newworker">
+  <tr class="copy_tr_newworker" style="display: none;">
+    <th scope="row" data-id="row_worker_id"></th>
     <td class="p-0">
-      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="">
+      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" value="">
     </td>
     <td class="p-0">
-      <input type="text" class="border-0 form-control p-0 h-100 py-3 px-2" id="inputID" value="">
+      <input type="text" class="border-0 form-control p-0 h-100 py-3 px-2"value="">
     </td>
     <td></td>
     <td class="p-0">
-      <select class="custom-select p-0 h-100  py-3 px-2 border-0" id="inputPos3">
+      <select class="custom-select p-0 h-100  py-3 px-2 border-0">
         <option selected>Должность...</option>
         <option value="1">Не выбрано</option>
         <option value="2">Программист</option>
@@ -835,10 +836,10 @@
     </td>
 
     <td class="p-0">
-      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="">
+      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" value="">
     </td>
     <td class="p-0">
-      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="">
+      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" value="">
     </td>
     <td>
       <div class="text-center text-sm-left">
@@ -846,7 +847,8 @@
       </div>
     </td>    
   </tr>
-</div>
+</tbody>
+</table>
     
   
 

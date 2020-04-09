@@ -102,65 +102,97 @@ function table_append_newworker()
 	//   $("[data-rel='single_form_answer']").detach();
 
 
-	//  ВОТ ЗДЕСЬ ПРОБЛЕМА ВОЗНИКАЕТ. ПОСМОТРИ В КОНСОЛИ БРАУЗЕРА - ТАМ НЕ ВЫВОДЯТСЯ ТЕГИ TR TD
-	console.log($( "#pattern_table_tr_newworker").html());
+	// console.log($( "#pattern_table_tr_newworker").html());
 	  var newworker = $( "#pattern_table_tr_newworker").html();
 
-	  console.log($("#table_workers>tbody tr:last-child"));
+	  if ($( "#table_workers>tbody tr:last-child>[data-id='row_worker_id']").html() == "undefined")
+	  {
+		//   var maxid = 0;
+		  var next_id = 1;
+	  }
+	  else {
+		var maxid =  parseInt($( "#table_workers>tbody tr:last-child>[data-id='row_worker_id']").html());
+		var next_id = maxid + 1;
+	  }
+
+
+
+	  
+
+
+
+		   console.log($( "#table_workers>tbody tr:last-child>[data-id='row_worker_id']").html());
+		   console.log( next_id);
+
 	  $('#table_workers>tbody tr:last-child').parent().append(newworker);
+
+	  $('#table_workers>tbody tr:last-child').attr( "id", "worker_tr_"+next_id );
+
+	  $('#table_workers tr:last-child>td:last-child button').attr( "data-id", "worker_tr_"+next_id );
+
+	  $('#table_workers>tbody tr:last-child th').html(next_id);
+
+	  console.log( $('#table_workers>tbody tr:last-child th').html(next_id));
 
 	//   $(this).parent().append( $(form) );
 
 	  // console.log($(this).siblings(".copy_form_answer"));
 
-	  $($(this).siblings(".copy_tr_newworker").attr( "data-rel", "single_tr_newworker" ));
+	  $(".copy_tr_newworker").attr( "data-rel", "single_tr_newworker" );
 
-	  $("[data-rel='single_tr_newworker']").show(500);
+	  $("#table_workers>tbody tr:last-child").show("slow");
 
+	  table_remove_tr_worker();
 	//   activate_form_answer();
 	});
 
-	// $( ".btn_answer_two" ).click(function () {
-
-	// 	$(".btn_answer_two").show(500);
-	// 	$(this).hide(500);
-
-	// 	$("[data-rel='single_form_answer']").hide(500);
-	// 	$("[data-rel='single_form_answer']").detach();
-
-	// 	// var bt_data = $(this).data("target");
-
-	// 	var form = $( "#pattern_form_answer").html(); 
-
-	// 	$(this).parents(".discussion").append( $(form) );
-
-	// 	$($( ".discussion" ).children( ".copy_form_answer" ).attr( "data-rel", "single_form_answer" ));
-
-	// 	$("[data-rel='single_form_answer']").show(500);
-
-	// 	activate_form_answer();
-	// });
-
-	// $( ".comment_roll" ).click(function() {
-
-	//   var com_data = $(this).data("target");
-
-	//   $( "[id="+com_data+"] .discussion_comment" ).slideToggle( "slow", function() {
-
-	//   });
-	// });
-
-	// $( ".btn_rollup" ).click(function() {
-	  
-	//   $( this ).parents(".discussion_comment").slideToggle( "slow", function() {
-	//   });
-	// });
+	table_remove_tr_worker();
 
 }
 
 
 
 
+function table_remove_tr_worker()
+{
+
+
+
+	// $('.btn-add-name-company').on('click', function () {
+	// 	var name = $('.modal').find('inpit[name="name"]').val();
+	// 	//Делайте с ним то, что нужно
+	//   });
+	
+
+
+  $("#table_workers td:last-child button").click( function () {
+
+	// console.log( $("#table_workers td:last-child button"));
+
+	var row_id = $(this).attr("data-id");
+	console.log(row_id);
+
+	// $("#table_workers>tbody tr [id="+row_id+"]").remove();
+
+	// $("[id='worker_tr_2']").remove();
+
+	$("#ModalDel #btn_confirm").click( function () {
+
+		console.log($("#table_workers tr[id="+row_id+"]").html());
+
+
+		$("#table_workers tr[id="+row_id+"]").remove();
+
+		// $("#ModalDel").on("dialogclose", function(){});
+		$("#ModalDel").modal("hide");
+
+	})
+	
+	});
+
+
+
+}
 
 
 
@@ -173,6 +205,7 @@ jQuery(document).ready(function () {
 	search_roll();
 	// button_search();
 	table_append_newworker();
+	// table_remove_tr_worker();
 	
 	if ($( window ).width() < 600) {
 		$('.search_datepicker').each(function() {
