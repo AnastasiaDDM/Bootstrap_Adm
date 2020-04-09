@@ -265,16 +265,15 @@
 
   <div class="d-sm-flex flex-row mt-5 mb-3">
     <h2 class="">Разработчики</h2>    
-    <div class="ml-0 ml-sm-3"><a type="button" class="btn btn-outline-primary w-100 font-weight-bold"
-      data-toggle="collapse" href="#newworker" aria-expanded="false"
-      aria-controls="collapseExample" >Добавить</a></div>
+    <div class="ml-0 ml-sm-3"><button type="button" class="btn btn-outline-primary w-100 font-weight-bold"
+      id="add_new_worker" >Добавить</button></div>
   </div>
 
 <div class="scroll_table">
-  <table class="table table-bordered" id="table_workers">
+  <table class="table table-bordered">
     <thead class="table-info">
       <tr id="worker_tr_0">
-        <th  data-id = "row_worker_id">#</th>
+        <th  data-id = "0">#</th>
         <th>#ID</th>
         <th>ФИО разработчика</th>
         <th>Должность</th>
@@ -284,9 +283,9 @@
         <th>Удалить</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="table_workers">
       <tr id="worker_tr_1">
-        <th scope="row" data-id = "row_worker_id">1</th>
+        <th scope="row">1</th>
         <td class="p-0">
           <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="6">
         </td>
@@ -311,12 +310,12 @@
         </td>
         <td>
           <div class="text-center text-sm-left">
-            <button type="button" data-id="worker_tr_1" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+            <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
           </div>
         </td>    
       </tr>
       <tr id="worker_tr_2">
-        <th scope="row" data-id = "row_worker_id">2</th>
+        <th scope="row">2</th>
         <td class="p-0">
           <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" id="inputID" value="6">
         </td>
@@ -341,7 +340,7 @@
         </td>
         <td>
           <div class="text-center text-sm-left">
-            <button type="button"  data-id="worker_tr_2" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+            <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
           </div>
         </td>     
       </tr>
@@ -390,74 +389,8 @@
     <div class="mt-4">
         <div class="d-sm-flex flex-row mt-5 mb-2">
           <h2>Картинки и фотографии для заказа</h2>    
-          <div class="ml-0 ml-sm-3"><button type="button" class="btn btn-outline-primary  w-100" data-toggle="modal" data-target="#ModalDownload">Добавить</button></div>
+          <div class="ml-0 ml-sm-3"><button type="button" id="add_new_image" class="btn btn-outline-primary w-100" data-toggle="modal" data-target="#ModalDownload">Добавить</button></div>
         </div>
-
-
-
-
-<!-- Модальное окно для добавления фото -->
-<div class="modal" id="ModalDownload" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenteredLabel">Редактирование фото</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <input type="file" id="files" name="files[]" multiple />
-        <output id="list"></output>
-        <div class="form-group col-12 px-0 mt-5">
-          <label for="inputID">Название</label>
-          <input type="text" class="form-control" id="inputID" placeholder="Например, Главаная страница сайта">
-        </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
-        <button type="button" class="btn btn-outline-primary">Сохранить</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-<!-- Модальное окно для главной -->
-<div class="modal" id="ModalMain" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenteredLabel">Главное фото</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <div class="form-group col-12 ">
-        Вы уверены, что хотите сделать это фото главным? Оно будет отображаться в каталоге и виджетах.
-        </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
-        <button type="button" class="btn btn-outline-primary">Подтвердить</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
         <div class="scroll_table">
           <table class="table table-bordered table-striped">
             <thead class="table-info">
@@ -469,7 +402,7 @@
                 <th>Изменить</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="table_images">
               <tr>
                 <th scope="row">1
                 </th>
@@ -551,6 +484,67 @@
 
 
 
+<!-- Модальное окно для добавления фото -->
+<div class="modal" id="ModalDownload" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenteredLabel">Редактирование фото</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <input type="file" id="table_image_path" name="files[]" />
+        <output id="list"></output>
+        <div class="form-group col-12 px-0 mt-5">
+          <label for="inputID">Название</label>
+          <input type="text" class="form-control" id="table_image_name" placeholder="Например, Главаная страница сайта">
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
+        <button type="button"  id="btn_add_image_confirm" class="btn btn-outline-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Модальное окно для главной -->
+<div class="modal" id="ModalMain" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenteredLabel">Главное фото</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group col-12 ">
+        Вы уверены, что хотите сделать это фото главным? Оно будет отображаться в каталоге и виджетах.
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
+        <button type="button" class="btn btn-outline-primary">Подтвердить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
       <!-- Модальное окно для удаления -->
       <div class="modal" id="ModalDel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -570,7 +564,7 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" id="btn_confirm" class="btn btn-outline-primary">Подтвердить</button>
+                <button type="button" id="btn_del_confirm" class="btn btn-outline-primary">Подтвердить</button>
               </div>
           </div>
         </div>
@@ -816,8 +810,8 @@
 
 <!-- ШАБЛОН СТРОКИ ТАБЛИЦЫ -->
 <table style="display: none;">
-  <tbody  id="pattern_table_tr_newworker">
-  <tr class="copy_tr_newworker" style="display: none;">
+  <tbody >
+  <tr  id="pattern_table_tr_newworker">
     <th scope="row" data-id="row_worker_id"></th>
     <td class="p-0">
       <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" value="">
@@ -851,6 +845,44 @@
 </table>
     
   
+
+
+
+
+<table style="display: none;">
+  <tbody>
+    <tr id="pattern_table_tr_newimage">
+      <th scope="row">
+      </th>
+      <td>
+        <div class="form-group custom-control custom-radio">
+          <input type="radio" id="radoi1" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label" for="radoi1">Главная</label>
+        </div>
+        <div data-img="image_path" class = "">
+          <img class = " h_img"/>
+        </div>
+      </td>
+      <td data-img="image_name"></td>
+      <td>
+        <div class="text-center text-sm-left">
+          <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+        </div>
+      </td>
+      <td>
+        <div class="text-center text-sm-left">
+          <button type="button"  data-toggle="modal" data-target="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+        </div>
+      </td>             
+    </tr>
+</tbody>
+</table>
+
+
+
+
+
+
 
       </div>
 
