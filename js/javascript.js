@@ -113,9 +113,9 @@ $("[id='worker_tr_"+next_id+"'] th").html(next_id);
 
 //   $("#table_workers tr:last-child").slideDown("slow");
   $("#table_workers tr:last-child").show("slow");
-    table_remove_tr_worker();
+  table_tr_worker_remove();
   });
-  table_remove_tr_worker();
+  table_tr_worker_remove();
 }
 
 
@@ -192,7 +192,7 @@ $("[id='worker_tr_"+next_id+"'] th").html(next_id);
 // }
 
 
-function table_remove_tr_worker()
+function table_tr_worker_remove()
 {
   var row_id=0;
 
@@ -282,53 +282,112 @@ function table_remove_tr_worker()
 
 // }
 
-function fil_tr_image ( img_name, img_path, current_tr, next_id) {
+function tr_image_add( img_name, img_path) {
 
-	$(current_tr+"th").html(next_id);
-	// $(current_tr+"img").attr( "src", img_path );
-	$(current_tr+"img").attr({ "src": img_path, "alt": img_name });
-	$(current_tr+"[data-img='image_name']").html(img_name);
-	$("#ModalDownload").modal("hide");
-}
+	var newimage = $( "#pattern_table_tr_newimage");
+	var next_id=1;
+	if ($( "#table_images").children().length != 0)
+	{
+	  var maxid =  parseInt($( "#table_images tr:last-child>th").html());
+	  next_id = maxid + 1;
+	}
 
-
-function table_add_tr_image()
-{
-  var row_id=0;
-  var newimage = $( "#pattern_table_tr_newimage");
-
-  $("#btn_add_image_confirm").click( function () {
-
-	var img_name = $('#table_image_name').val();
-
-	var img_path = $('#table_image_path').val();
-
-	var maxid =  parseInt($( "#table_images tr:last-child>th").html());
-	next_id = maxid + 1;
-	
-	console.log(next_id);
-	console.log(img_name);
-	console.log(img_path);
 
 	$('#table_images').append("<tr  id=image_tr_"+next_id+">"+newimage.html()+"</tr>");
-	// $("[id='image_tr_"+next_id+"'] th").html(next_id);
-	// // $("[id='image_tr_"+next_id+"'] th").attr( "data-worker_remove", "worker_tr_"+next_id );
-	// $("[id='image_tr_"+next_id+"'] th").html(next_id);
 
 	var current_tr = $("[id='image_tr_"+next_id+"']");
 	console.log(current_tr);
+	console.log($(current_tr).html());
 
-	fil_tr_image (img_name, img_path, current_tr, next_id);
-	
 
-	// $(current_tr+"th").html(next_id);
+	// $(current_tr+" th").html(next_id);
 	// // $(current_tr+"img").attr( "src", img_path );
 	// $(current_tr+"img").attr({ "src": img_path, "alt": img_name });
 	// $(current_tr+"[data-img='image_name']").html(img_name);
+	// // $("#ModalDownload").modal("hide");
+	// $("#ModalSuccess_Add").modal("show");
+	// console.log('"'+current_tr+' th"');
+
+	$("[id='image_tr_"+next_id+"'] th").html(next_id);
+	// $(current_tr+"img").attr( "src", img_path );
+	$("[id='image_tr_"+next_id+"'] img").attr({ "src": img_path, "alt": img_name });
+	$("[id='image_tr_"+next_id+"'] [data-img='image_name']").html(img_name);
+	$("[id='image_tr_"+next_id+"'] input").attr("id", "radoi_image_"+next_id);
+	$("[id='image_tr_"+next_id+"'] label").attr("for", "radoi_image_"+next_id);
 
 
-    // $("#ModalDownload").modal("hide");
-  });
+
+	$("#ModalSuccess_Add").modal("show");
+
+	table_tr_image_remove();
+	table_tr_image_edit();
+	table_image_checked_main();
+}
+
+
+function modal_tr_image_add()
+{
+
+	$("#add_new_image").click( function () {
+
+		$("#btn_edit_image_confirm").hide();
+		$("#btn_add_image_confirm").show();
+		$("#ModalDownload").modal("show");
+
+	  
+		$("#btn_add_image_cancel").click( function () {
+		  $('#modal_image_name').val('');
+		  $('#modal_image_path').val('');
+		});
+
+		// table_tr_image_edit();
+		// table_tr_image_remove();
+	});
+
+	
+	$("#btn_add_image_confirm").click( function () {
+
+		var img_name = $('#modal_image_name').val();
+	
+		var img_path = $('#modal_image_path').val();
+
+		$("#ModalDownload").modal("hide");
+		// $('#ModalDownload')[0].reset();
+	
+		$('#modal_image_name').val('');
+		$('#modal_image_path').val('');
+	
+	
+	
+	
+		tr_image_add(img_name, img_path);
+		
+		
+	
+		// $(current_tr+"th").html(next_id);
+		// // $(current_tr+"img").attr( "src", img_path );
+		// $(current_tr+"img").attr({ "src": img_path, "alt": img_name });
+		// $(current_tr+"[data-img='image_name']").html(img_name);
+	
+  
+  
+	});
+
+
+
+// Вот здесь проблема! например, если добавить новую строку 
+// и менять в ней название (хотя бы 1 раз), то все будет стираться,
+// короче, проблема вся в том, что строка в таблице добавляется потом именно из-за этого
+// нужно всюду пихать эти три функции. то есть вот здесь на строках 383-385
+// и там наверху, где эта строка добавляется на строках 322-324!
+// неужели нельзя без этой белиберды??
+// просто взять и прописать все эти 3 функции написать
+// внизу где происходят вызовы всех основных функций в Jquery
+// я думала, может как-то в if взять что-нибудь, но так и не поняла как ( да и думаю это не поможет)
+
+	table_tr_image_edit();
+	table_tr_image_remove();
+	table_image_checked_main();
 
 }
 
@@ -337,6 +396,139 @@ function table_add_tr_image()
 
 
 
+function table_tr_image_remove()
+{
+  var row_id=0;
+
+  $("#table_images [data-target='#ModalDel']").click( function () {
+
+  row_id = $(this).parent().parent().parent().attr('id');
+  });
+
+  $("#btn_del_confirm").click( function () {
+
+	// $("#"+row_id).slideUp("slow");
+	$("#"+row_id).remove();	
+
+	$("#ModalDel").modal("hide");
+	$("#ModalSuccess_Del").modal("show");
+
+  });
+}
+
+
+
+function tr_image_edit( img_name, img_path, row_id) {
+
+	console.log(row_id);
+	console.log(img_name);
+	console.log(img_path);
+
+
+	// $("[id='image_tr_"+row_id+"'] th").html(row_id);
+	// $(current_tr+"img").attr( "src", img_path );
+	// $("#"+row_id+" img").attr({ "src": img_path, "alt": img_name });
+	$("#"+row_id+" [data-img='image_name']").html(img_name);
+
+	$("#ModalSuccess_Edit").modal("show");
+
+	table_tr_image_remove();
+
+}
+
+
+
+function table_tr_image_edit()
+{
+	var row_id=0;
+
+	$("#table_images [data-edit='#ModalDownload']").click( function () {
+
+		$("#btn_add_image_confirm").hide();
+		$("#btn_edit_image_confirm").show();
+		$("#ModalDownload").modal("show");
+
+		
+
+	row_id = $(this).parent().parent().parent().attr('id');
+	console.log("1111ddddd"+row_id);
+
+	$('#modal_image_name').val($("#"+row_id+" [data-img='image_name']").html());
+	//   $('#modal_image_path').val($("#"+row_id+" img").attr('src'));
+	
+	//   $("[id='image_tr_"+next_id+"'] img").attr({ "src": img_path, "alt": img_name });
+	//   $("[id='image_tr_"+next_id+"'] [data-img='image_name']").html(img_name);
+
+
+	console.log($("#"+row_id+" [data-img='image_name']").html());
+	  });
+	  
+  
+	$("#btn_edit_image_confirm").click( function () {
+  
+	  console.log($('#modal_image_name').val());
+	  var img_name = $('#modal_image_name').val();
+  
+	  var img_path = $('#modal_image_path').val();
+  
+	  $("#ModalDownload").modal("hide");
+  
+	  $('#modal_image_name').val('');
+	  $('#modal_image_path').val('');
+  
+	  console.log(row_id);
+	  console.log(img_name);
+	  console.log(img_path);
+  
+	  tr_image_edit(img_name, img_path, row_id);
+  
+	});
+
+}
+
+
+
+
+
+function table_image_checked_main()
+{
+  var input_id;
+
+  $("#table_images input").click( function () {
+
+  input_id = $(this);
+  $(this).prop("checked",false);
+  $(image_checked_input_id).prop("checked",true);
+
+  $("#ModalMain").modal("show");
+
+  });
+
+  $("#image_checked_main_confirm").click( function () {
+
+	$(input_id).prop("checked",true);
+	image_checked_input_id = input_id;
+	console.log(image_checked_input_id);
+
+	$("#ModalMain").modal("hide");
+	$("#ModalSuccess_Edit").modal("show");
+
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+var image_checked_input_id;
+image_checked_input_id = $("#table_images input:checked");
 
 jQuery(document).ready(function () {
 	
@@ -346,8 +538,14 @@ jQuery(document).ready(function () {
 	search_roll();
 	// button_search();
 	table_append_newworker();
-	table_add_tr_image();
-	
+	modal_tr_image_add();
+	// table_tr_image_edit();
+	// table_tr_image_remove();
+
+
+	// table_image_checked_main();
+
+
 	if ($( window ).width() < 600) {
 		$('.search_datepicker').each(function() {
 			$( this  ).attr( "type", "date" );
