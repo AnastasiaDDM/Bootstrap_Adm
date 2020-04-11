@@ -115,8 +115,8 @@
         <div class="form-row">
           <div class="form-group col-lg-4">
             <label for="inputPos">По дате...</label>
-            <select class="custom-select" id="inputPos">
-              <option selected>Выберите вариант даты...</option>
+            <select class="custom-select" id="date_type_select">
+              <option value="date_type_select_not_selected" selected>Выберите вариант даты...</option>
               <option value="1">Дата заказа</option>
               <option value="2">Дата полной оплаты</option>
               <option value="3">Дата завершения</option>
@@ -126,11 +126,11 @@
           <div class="col-md-6 col-lg-4 d-sm-flex flex-sm-row">
             <div class="form-group col-sm-6 px-0 pr-sm-2">
               <label for="inputDatefrom">Дата (от)</label>
-              <input type="date" class="form-control" id="inputDatefrom" placeholder="Дата от">
+              <input type="date" disabled class="form-control" id="datefrom_input" placeholder="Дата от">
             </div>
             <div class="form-group col-sm-6 p-0">
               <label for="inputDateto">Дата (до)</label>
-            <input type="date" class="form-control" id="inputDateto" placeholder="Дата до">
+            <input type="date" disabled class="form-control" id="dateto_input" placeholder="Дата до">
           </div>
             </div>
           <div class="form-group col-md-6 col-lg-4">
@@ -663,5 +663,17 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $("#date_type_select").change(function(){
+        if ($(this).val() == "date_type_select_not_selected") {
+          $("#datefrom_input").attr("disabled", true); 
+          $("#dateto_input").attr("disabled", true); 
+        }
+        else {
+          $("#datefrom_input").attr("disabled", false); 
+          $("#dateto_input").attr("disabled", false); 
+        }
+      });
+    </script>
   </body>
 </html>

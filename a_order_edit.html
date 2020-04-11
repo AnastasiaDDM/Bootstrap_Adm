@@ -310,7 +310,7 @@
         </td>
         <td>
           <div class="text-center text-sm-left">
-            <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+            <button type="button" data-del="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
           </div>
         </td>    
       </tr>
@@ -340,7 +340,7 @@
         </td>
         <td>
           <div class="text-center text-sm-left">
-            <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+            <button type="button" data-del="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
           </div>
         </td>     
       </tr>
@@ -418,12 +418,12 @@
                 <td data-img="image_name">Главная страница</td>
                 <td>
                   <div class="text-center text-sm-left">
-                    <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+                    <button type="button" data-del="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
                   </div>
                 </td>
                 <td>
                   <div class="text-center text-sm-left">
-                    <button type="button"  data-toggle="modal" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+                    <button type="button" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
                   </div>
                 </td>             
               </tr>
@@ -441,12 +441,12 @@
                 <td data-img="image_name">Расписание</td>
                 <td>
                   <div class="text-center text-sm-left">
-                    <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+                    <button type="button" data-del="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
                   </div>
                 </td>
                 <td>
                   <div class="text-center text-sm-left">
-                    <button type="button"  data-toggle="modal" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+                    <button type="button" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
                   </div>
                 </td>             
               </tr>
@@ -464,12 +464,12 @@
                 <td data-img="image_name">Регистрация</td>
                 <td>
                   <div class="text-center text-sm-left">
-                    <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+                    <button type="button" data-del="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
                   </div>
                 </td>
                 <td>
                   <div class="text-center text-sm-left">
-                    <button type="button"  data-toggle="modal" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+                    <button type="button" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
                   </div>
                 </td>             
               </tr>
@@ -506,8 +506,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" id="btn_add_image_cancel" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
-        <button type="button"  id="btn_add_image_confirm" class="btn btn-outline-primary">Сохранить</button>
-        <button type="button"  id="btn_edit_image_confirm" class="btn btn-outline-primary">Изменить</button>
+        <button type="button"  id="add_image_btn_confirm" class="btn btn-outline-primary">Сохранить</button>
+        <button type="button"  id="edit_image_btn_confirm" class="btn btn-outline-primary">Изменить</button>
       </div>
     </div>
   </div>
@@ -565,7 +565,8 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
-                <button type="button" id="btn_del_confirm" class="btn btn-outline-primary">Подтвердить</button>
+                <button type="button" id="del_image_btn_confirm" class="btn btn-outline-primary">Подтвердить</button>
+                <button type="button"  id="del_worker_btn_confirm" class="btn btn-outline-primary">Подтвердить</button>
               </div>
           </div>
         </div>
@@ -575,11 +576,10 @@
 
 
 
- 
 
-
-<!-- Модальное окно добавлено -->
-<div class="modal" id="ModalSuccess_Add" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+  
+      <!-- Модальное окно уведомления -->
+<div class="modal" id="ModalSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -589,7 +589,7 @@
       </div>
       <div class="modal-body">
 
-        <div class="form-group col-12 ">
+        <div class="form-group col-12" id="ModalSuccess_text">
        Успешно добавлено!
         </div>
 
@@ -601,68 +601,7 @@
   </div>
 </div>
 
-
-<!-- Модальное окно изменено -->
-<div class="modal" id="ModalSuccess_Edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-        <div class="form-group col-12 ">
-       Данные успешно изменены!
-        </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button"  data-dismiss="modal" class="btn btn-outline-primary">ОК</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Модальное окно удалено -->
-<div class="modal" id="ModalSuccess_Del" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group col-12 ">
-       Данные удалены!
-        </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button"  data-dismiss="modal" class="btn btn-outline-primary">ОК</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
           <style>
@@ -671,45 +610,6 @@
               border: 1px solid #000;
               margin: 10px 5px 0 0;
             }
-            /* .close {
-    position:absolute;
-    opacity:0;
-    right:0px;
-    width:16px;
-    height:16px;
-    cursor:pointer;
-    border:1px solid #000;
-    background-color:#efefef;
-    z-index: 5;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAiElEQVR42r2RsQrDMAxEBRdl8SDcX8lQPGg1GBI6lvz/h7QyRRXV0qUULwfvwZ1tenw5PxToRPWMC52eA9+WDnlh3HFQ/xBQl86NFYJqeGflkiogrOvVlIFhqURFVho3x1moGAa3deMs+LS30CAhBN5nNxeT5hbJ1zwmji2k+aF6NENIPf/hs54f0sZFUVAMigAAAABJRU5ErkJggg==) no-repeat;
-    text-align:right;
-    border: 0;
-    cursor: pointer;    
-}
-.close:hover, .close:focus {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAqklEQVR4XqWRMQ6DMAxF/1Fyilyj2SmIBUG5QcTCyJA5Z8jGhlBPgRi4TmoDraVmKFJlWYrlp/g5QfwRlwEVNWVa4WzfH9jK6kCkEkBjwxOhLghheMWMELUAqqwQ4OCbnE4LJnhr5IYdqQt4DJQjhe9u4vBBmnxHHNzRFkDGjHDo0VuTAqy2vAG4NkvXXDHxbGsIGlj3e835VFNtdugma/Jk0eXq0lP//5svi4PtO01oFfYAAAAASUVORK5CYII=");
-}
-
-.content {
-    height: 75px;
-    position: relative;
-    border:1px solid #ccc;
-    margin: 5px;
-    float:left;
-}
-.content:after {
-    content:'\A';
-    position:absolute;
-    width:100%; height:100%;
-    top:0; left:0;
-    background:rgba(0,0,0,0.6);
-    opacity:0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-}
-.content:hover:after {
-    opacity:1;
-} */
           </style>        
 
            <script>
@@ -746,123 +646,6 @@
           </script>
 
 
-
-<!--  ЭТО ГДЕ НАЗВАНИЕ ФАЙЛОВ ВЫСВЕЧИВАЕТСЯ
-<script>
-  function handleFileSelect(evt) {
-    var files = evt.target.files; // FileList object
-
-    // files is a FileList of File objects. List some properties.
-    var output = [];
-    for (var i = 0, f; f = files[i]; i++) {
-      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-                  f.size, ' bytes, last modified: ',
-                  f.lastModifiedDate.toLocaleDateString(), '</li>');
-    }
-    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-  }
-
-  document.getElementById('files').addEventListener('change', handleFileSelect, false);
-</script> -->
-
-
-
-
-
-
-
- <!-- <script>
-  $('.content.clossable').hover(function(){
-   $(this).find('.close').animate({opacity:1},100)
-       },function(){
-           $(this).find('.close').animate({opacity:0},100)
-       }
-)
-</script> -->
-
-
-
-
- <!-- <script>
-
-
-  function handleFileSelect(evt) {
-    var files = evt.target.files;
-
-    for (var i = 0, f; f = files[i]; i++) {
-
-
-      if (!f.type.match('image.*')) {
-        continue;
-      }
-
-      var reader = new FileReader();
-
-
-      reader.onload = (function(theFile) {
-        return function(e) {
-
-          var span = document.createElement('span');
-          span.innerHTML = ['<div class="content clossable"><div class="close"></div><img class="thumb" src="', e.target.result,
-                            '" title="', escape(theFile.name), '"/></div>'].join('');
-          document.getElementById('list').insertBefore(span, null);
-        };
-      })(f);
-
-      reader.readAsDataURL(f);
-    }
-  }
-
-  document.getElementById('files').addEventListener('change', handleFileSelect, false);
-</script> -->
-
-
-
-
-
-
-
-
-<!-- <div class="content clossable" >
-    <div class="close"></div>
-    <img id="Image1" src = "http://blog.grio.com/wp-content/uploads/2012/09/stackoverflow.png" />
-</div>
- -->
-
-
-
-
-
-
-
-<!-- <input type="file" id="files" name="files[]" multiple />
-<output id="list"></output>
-
-<script>
-  function handleFileSelect(evt) {
-    var files = evt.target.files; // FileList object
-
-    // files is a FileList of File objects. List some properties.
-    var output = [];
-    for (var i = 0, f; f = files[i]; i++) {
-      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
-                  f.size, ' bytes, last modified: ',
-                  f.lastModifiedDate.toLocaleDateString(), '</li>');
-    }
-    document.getElementById('list').innerHTML = '<ul>' + output.join('') + '</ul>';
-  }
-
-  document.getElementById('files').addEventListener('change', handleFileSelect, false);
-</script>
-
- -->
-
-
-
-
-
-
-
           <div class="d-sm-flex flex-row my-5 w-100 mx-auto justify-content-between">
             <div class="text-center text-sm-left">
               <button type="button" class="btn btn-outline-danger mt-2 py-1 btn-lg"><i class="fas fa-times mr-2"></i> Отменить</button>
@@ -873,12 +656,9 @@
               <button type="button" class="btn btn-outline-success  mt-2 py-1 btn-lg px-4"><i class="fas fa-check mr-2"></i> Сохранить</button>
       
             </div> 
-      
-      
-      
+
         </div>
-    
-    
+
         </div>
       </div>
     </section>
@@ -912,16 +692,12 @@
     </td>
     <td>
       <div class="text-center text-sm-left">
-        <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+        <button type="button" data-del="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
       </div>
     </td>    
   </tr>
 </tbody>
 </table>
-    
-  
-
-
 
 
 <table style="display: none;">
@@ -941,12 +717,12 @@
       <td data-img="image_name"></td>
       <td>
         <div class="text-center text-sm-left">
-          <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+          <button type="button" data-del="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
         </div>
       </td>
       <td>
         <div class="text-center text-sm-left">
-          <button type="button"  data-toggle="modal" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+          <button type="button" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
         </div>
       </td>             
     </tr>
@@ -989,6 +765,15 @@ function handleFiles(files) {
 
 
 </script>
+<script>
+  jQuery(document).ready(function () {
+  input_file();
+  tr_image_init();
+  table_tr_worker_add();
+	tr_image_init();
+  })
+</script>
+
 
   </body>
 </html>

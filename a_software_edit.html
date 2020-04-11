@@ -159,16 +159,16 @@
             <div class="col-sm-5 px-0">
             <div class=" form-row">
               <div class="form-group col-7">
-                <label for="inputPos3">Тип</label>
-                <select class="custom-select" id="inputPos3">
+                <label for="price_select">Тип</label>
+                <select class="custom-select" id="price_select">
                   <option selected>Выберите...</option>
-                  <option value="1">Платно</option>
-                  <option value="2">Бесплатно</option>
+                  <option value="price_paid">Платно</option>
+                  <option value="price_free">Бесплатно</option>
                 </select>
               </div>
               <div class="col-5">
                 <label for="inputID" class="">Цена</label>
-                <input type="text" class="form-control" id="inputID" value="200 000">
+                <input type="text" readonly class="form-control" id="price_input" value="200 000">
               </div>
             </div>
 
@@ -176,15 +176,15 @@
             <div>
             <div class="form-group col-12 px-0">
               <label for="inputPos3">Лицензия</label>
-              <select class="custom-select" id="inputPos3">
+              <select class="custom-select" id="license_select">
                 <option selected>Выберите...</option>
-                <option value="1">Есть</option>
-                <option value="2">Нет</option>
+                <option value="license_yes">Есть</option>
+                <option value="license_no">Нет</option>
               </select>
             </div>
             <div class=" form-row">
               <div class="form-group col-7">
-                <select class="custom-select" id="inputPos3">
+                <select class="custom-select" disabled id="license_period">
                   <option selected>Срок...</option>
                   <option value="1">6 месяцев</option>
                   <option value="2">1 год</option>
@@ -193,7 +193,7 @@
               </div>
 
               <div class="col-5">
-                <input type="text" class="form-control" id="inputID" value="10 000">
+                <input type="text" readonly class="form-control" id="license_price" value="10 000">
               </div>
             </div>
           </div>
@@ -276,74 +276,8 @@
 <div>
   <div class="d-sm-flex flex-row mt-5 mb-2">
     <h2>Картинки и фотографии ПО</h2>    
-    <div class="ml-0 ml-sm-3"><button type="button" class="btn btn-outline-primary  w-100" data-toggle="modal" data-target="#ModalDownload">Добавить</button></div>
+    <div class="ml-0 ml-sm-3"><button type="button" id="add_new_image" class="btn btn-outline-primary w-100">Добавить</button></div>
   </div>
-
-
-
-
-<!-- Модальное окно для добавления фото -->
-<div class="modal" id="ModalDownload" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content">
-<div class="modal-header">
-  <h5 class="modal-title" id="exampleModalCenteredLabel">Редактирование фото</h5>
-  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<div class="modal-body">
-
-  <input type="file" id="files" name="files[]" multiple />
-  <output id="list"></output>
-  <div class="form-group col-12 px-0 mt-5">
-    <label for="inputID">Название</label>
-    <input type="text" class="form-control" id="inputID" placeholder="Например, Главаная страница сайта">
-  </div>
-
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
-  <button type="button" class="btn btn-outline-primary">Сохранить</button>
-</div>
-</div>
-</div>
-</div>
-
-
-
-
-
-
-<!-- Модальное окно для главной -->
-<div class="modal" id="ModalMain" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered" role="document">
-<div class="modal-content">
-<div class="modal-header">
-  <h5 class="modal-title" id="exampleModalCenteredLabel">Главное фото</h5>
-  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<div class="modal-body">
-
-  <div class="form-group col-12 ">
-  Вы уверены, что хотите сделать это фото главным? Оно будет отображаться в каталоге и виджетах.
-  </div>
-
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
-  <button type="button" class="btn btn-outline-primary">Подтвердить</button>
-</div>
-</div>
-</div>
-</div>
-
-
-
-
-
   <div class="scroll_table">
     <table class="table table-bordered table-striped">
       <thead class="table-info">
@@ -355,74 +289,74 @@
           <th>Изменить</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
+      <tbody id="table_images">
+        <tr id="image_tr_1">
           <th scope="row">1
           </th>
           <td>
             <div class="form-group custom-control custom-radio">
-              <input type="radio" checked id="radoi1" name="customRadio" class="custom-control-input">
-              <label class="custom-control-label" for="radoi1">Главная</label>
+              <input type="radio" id="radoi_image_1" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="radoi_image_1">Главная</label>
             </div>
             <div class = "">
               <img class = " h_img"  src="images/code.jpg" alt="Расписание"/>
             </div>
           </td>
-          <td>Главная страница</td>
+          <td data-img="image_name">Главная страница</td>
           <td>
             <div class="text-center text-sm-left">
-              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+              <button type="button" data-del="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
             </div>
           </td>
           <td>
             <div class="text-center text-sm-left">
-              <button type="button"  data-toggle="modal" data-target="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+              <button type="button" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
             </div>
           </td>             
         </tr>
-        <tr>
+        <tr id="image_tr_2">
           <th scope="row">2</th>
           <td>
             <div class="form-group custom-control custom-radio">
-              <input type="radio" id="radoi2" name="customRadio" class="custom-control-input" data-toggle="modal" data-target="#ModalMain">
-              <label class="custom-control-label" for="radoi2">Главная</label>
+              <input type="radio" id="radoi_image_2" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="radoi_image_2">Главная</label>
             </div>
             <div class = "">
               <img class = " h_img"  src="images/business.jpg" alt="Расписание"/>
             </div>
           </td>
-          <td>Расписание</td>
+          <td data-img="image_name">Расписание</td>
           <td>
             <div class="text-center text-sm-left">
-              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+              <button type="button" data-del="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
             </div>
           </td>
           <td>
             <div class="text-center text-sm-left">
-              <button type="button"  data-toggle="modal" data-target="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+              <button type="button" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
             </div>
           </td>             
         </tr>
-        <tr>
+        <tr id="image_tr_3">
           <th scope="row">3</th>
           <td>
             <div class="form-group custom-control custom-radio">
-              <input type="radio" id="radoi3" name="customRadio" class="custom-control-input">
-              <label class="custom-control-label" for="radoi3">Главная</label>
+              <input type="radio" id="radoi_image_3" name="customRadio" class="custom-control-input">
+              <label class="custom-control-label" for="radoi_image_3">Главная</label>
             </div>
             <div class = "">
               <img class = " h_img"  src="images/computer.jpg" alt="Расписание"/>
             </div>
           </td>
-          <td>Регистрация</td>
+          <td data-img="image_name">Регистрация</td>
           <td>
             <div class="text-center text-sm-left">
-              <button type="button" data-toggle="modal" data-target="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+              <button type="button" data-del="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
             </div>
           </td>
           <td>
             <div class="text-center text-sm-left">
-              <button type="button"  data-toggle="modal" data-target="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+              <button type="button" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
             </div>
           </td>             
         </tr>
@@ -436,28 +370,31 @@
 
 
 
-
-<!-- Модальное окно для удаления -->
-<div class="modal" id="ModalDel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+<!-- Модальное окно для добавления фото -->
+<div class="modal" id="ModalDownload" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenteredLabel">Удаление</h5>
+        <h5 class="modal-title" id="exampleModalCenteredLabel">Редактирование фото</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
 
-          <div class="form-group col-12 ">
-          Вы уверены, что хотите удалить этот объект? Дальнейшее восстановление будет невозможным.
-          </div>
-  
+        <input type="file" id="modal_image_path" name="files[]" />
+        <output id="list"></output>
+        <div class="form-group col-12 px-0 mt-5">
+          <label for="inputID">Название</label>
+          <input type="text" class="form-control" id="modal_image_name" placeholder="Например, Главаная страница сайта">
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
-          <button type="button" class="btn btn-outline-primary">Подтвердить</button>
-        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="btn_add_image_cancel" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
+        <button type="button"  id="add_image_btn_confirm" class="btn btn-outline-primary">Сохранить</button>
+        <button type="button"  id="edit_image_btn_confirm" class="btn btn-outline-primary">Изменить</button>
+      </div>
     </div>
   </div>
 </div>
@@ -465,133 +402,154 @@
 
 
 
+
+
+<!-- Модальное окно для главной -->
+<div class="modal" id="ModalMain" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenteredLabel">Главное фото</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <div class="modal-body">
+
+        <div class="form-group col-12 ">
+        Вы уверены, что хотите сделать это фото главным? Оно будет отображаться в каталоге и виджетах.
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
+        <button type="button" id="image_checked_main_confirm" class="btn btn-outline-primary">Подтвердить</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+
+
+      <!-- Модальное окно для удаления -->
+      <div class="modal" id="ModalDel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenteredLabel">Удаление</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="form-group col-12 ">
+                Вы уверены, что хотите удалить этот объект? Дальнейшее восстановление будет невозможным.
+                </div>
+        
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Отменить</button>
+                <button type="button" id="del_image_btn_confirm" class="btn btn-outline-primary">Подтвердить</button>
+                <button type="button"  id="del_worker_btn_confirm" class="btn btn-outline-primary">Подтвердить</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    
+
+
+
+
+
+  
+      <!-- Модальное окно уведомления -->
+<div class="modal" id="ModalSuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="form-group col-12" id="ModalSuccess_text">
+       Успешно добавлено!
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button"  data-dismiss="modal" class="btn btn-outline-primary">ОК</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
 
     
 <div>
       <div class="d-sm-flex flex-row mt-5 mb-2">
         <div class="h4">Область применения</div>    
         <div class="ml-0 ml-sm-3"><button type="button" 
-          class="btn btn-outline-primary w-100" data-toggle="collapse" href="#newarea" aria-expanded="false"
-           aria-controls="collapseExample">Добавить</button></div>
+          class="btn btn-outline-primary w-100" id="area_add">Добавить</button></div>
       </div>
 
 
 
-
-
-      <div class="d-flex flex-row flex-wrap mt-3">
+      <div class="d-flex flex-row flex-wrap mt-3 justify-content-between" id="areas_all">
         <div class="col-sm-6 mb-3 mr-1_sm"  id="">
           <div class=" d-flex flex-row">
-            <select class="custom-select" id="inputPos3">
-              <option selected>Тег...</option>
-              <option selected value="1">Бесплатно</option>
+            <select class="custom-select">
+              <option>Область...</option>
+              <option value="1">Кафе</option>
               <option value="2">Грузоперевозки</option>
             </select>
             <div class="text-center">
-              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+              <button type="button" data-del="delete" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
             </div>
           </div>
         </div>
         <div class="col-sm-6 mb-3 mr-1_sm"  id="">
           <div class=" d-flex flex-row">
-            <select class="custom-select" id="inputPos3">
-              <option selected>Тег...</option>
-              <option selected value="1">Бесплатно</option>
+            <select class="custom-select">
+              <option>Область...</option>
+              <option selected value="1">Кафе</option>
               <option value="2">Грузоперевозки</option>
             </select>
             <div class="text-center">
-              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+              <button type="button" data-del="delete" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
             </div>
           </div>
         </div>
         <div class="col-sm-6 mb-3 mr-1_sm"  id="">
           <div class=" d-flex flex-row">
-            <select class="custom-select" id="inputPos3">
-              <option selected>Тег...</option>
-              <option selected value="1">Бесплатно</option>
-              <option value="2">Грузоперевозки</option>
+            <select class="custom-select">
+              <option>Область...</option>
+              <option value="1">Кафе</option>
+              <option selected value="2">Грузоперевозки</option>
             </select>
             <div class="text-center">
-              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+              <button type="button" data-del="delete" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
             </div>
           </div>
         </div>
         <div class="col-sm-6 mb-3 mr-1_sm"  id="">
           <div class=" d-flex flex-row">
-            <select class="custom-select" id="inputPos3">
-              <option selected>Тег...</option>
-              <option selected value="1">Бесплатно</option>
-              <option value="2">Грузоперевозки</option>
-            </select>
-            <div class="text-center">
-              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 mb-3 mr-1_sm"  id="">
-          <div class=" d-flex flex-row">
-            <select class="custom-select" id="inputPos3">
-              <option selected>Тег...</option>
-              <option selected value="1">Бесплатно</option>
-              <option value="2">Грузоперевозки</option>
-            </select>
-            <div class="text-center">
-              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 mb-3 mr-1_sm"  id="">
-          <div class=" d-flex flex-row">
-            <select class="custom-select" id="inputPos3">
-              <option selected>Тег...</option>
-              <option selected value="1">Бесплатно</option>
-              <option value="2">Грузоперевозки</option>
-            </select>
-            <div class="text-center">
-              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 mb-3 mr-1_sm"  id="">
-          <div class=" d-flex flex-row">
-            <select class="custom-select" id="inputPos3">
-              <option selected>Тег...</option>
-              <option selected value="1">Бесплатно</option>
-              <option value="2">Грузоперевозки</option>
-            </select>
-            <div class="text-center">
-              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-        <div class="col-sm-6 mb-3 mr-1_sm collapse"  id="newarea">
-          <div class=" d-flex flex-row">
-            <select class="custom-select" id="inputPos3">
+            <select class="custom-select">
               <option selected>Область...</option>
-              <option value="1">Бесплатно</option>
+              <option value="1">Кафе</option>
               <option value="2">Грузоперевозки</option>
             </select>
             <div class="text-center">
-              <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="text-center">
-              <button type="button" class="btn btn-outline-success w-100"><i class="fas fa-check"></i></button>
+              <button type="button" data-del="delete" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
             </div>
           </div>
         </div>
-
-
+    
     </div>
-
-
 
 
 </div>
@@ -605,108 +563,62 @@
   <div class="d-sm-flex flex-row mt-5 mb-2">
     <div class="h4">Теги</div>    
     <div class="ml-0 ml-sm-3"><button type="button" 
-      class="btn btn-outline-primary w-100" data-toggle="collapse" href="#newtag" aria-expanded="false"
-       aria-controls="collapseExample">Добавить</button></div>
+      class="btn btn-outline-primary w-100" id="tag_add">Добавить</button></div>
   </div>
 
 
 
 
 
-  <div class="d-flex flex-row flex-wrap mt-3">
+  <div class="d-flex flex-row flex-wrap mt-3 justify-content-between" id="tags_all">
     <div class="col-sm-6 mb-3 mr-1_sm"  id="">
       <div class=" d-flex flex-row">
-        <select class="custom-select" id="inputPos3">
-          <option selected>Тег...</option>
-          <option selected value="1">Кафе</option>
+        <select class="custom-select">
+          <option>Тег...</option>
+          <option value="1">Кафе</option>
           <option value="2">Грузоперевозки</option>
         </select>
         <div class="text-center">
-          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+          <button type="button" data-del="delete" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
         </div>
       </div>
     </div>
     <div class="col-sm-6 mb-3 mr-1_sm"  id="">
       <div class=" d-flex flex-row">
-        <select class="custom-select" id="inputPos3">
-          <option selected>Тег...</option>
+        <select class="custom-select">
+          <option>Тег...</option>
           <option selected value="1">Кафе</option>
           <option value="2">Грузоперевозки</option>
         </select>
         <div class="text-center">
-          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+          <button type="button" data-del="delete" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
         </div>
       </div>
     </div>
     <div class="col-sm-6 mb-3 mr-1_sm"  id="">
       <div class=" d-flex flex-row">
-        <select class="custom-select" id="inputPos3">
-          <option selected>Тег...</option>
-          <option selected value="1">Кафе</option>
-          <option value="2">Грузоперевозки</option>
+        <select class="custom-select">
+          <option>Тег...</option>
+          <option value="1">Кафе</option>
+          <option selected value="2">Грузоперевозки</option>
         </select>
         <div class="text-center">
-          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+          <button type="button" data-del="delete" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
         </div>
       </div>
     </div>
     <div class="col-sm-6 mb-3 mr-1_sm"  id="">
       <div class=" d-flex flex-row">
-        <select class="custom-select" id="inputPos3">
-          <option selected>Тег...</option>
-          <option selected value="1">Кафе</option>
-          <option value="2">Грузоперевозки</option>
-        </select>
-        <div class="text-center">
-          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 mb-3 mr-1_sm"  id="">
-      <div class=" d-flex flex-row">
-        <select class="custom-select" id="inputPos3">
-          <option selected>Тег...</option>
-          <option selected value="1">Кафе</option>
-          <option value="2">Грузоперевозки</option>
-        </select>
-        <div class="text-center">
-          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 mb-3 mr-1_sm"  id="">
-      <div class=" d-flex flex-row">
-        <select class="custom-select" id="inputPos3">
-          <option selected>Тег...</option>
-          <option selected value="1">Кафе</option>
-          <option value="2">Грузоперевозки</option>
-        </select>
-        <div class="text-center">
-          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-    <div class="col-sm-6 mb-3 mr-1_sm collapse"  id="newtag">
-      <div class=" d-flex flex-row">
-        <select class="custom-select" id="inputPos3">
+        <select class="custom-select">
           <option selected>Тег...</option>
           <option value="1">Кафе</option>
           <option value="2">Грузоперевозки</option>
         </select>
         <div class="text-center">
-          <button type="button" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="text-center">
-          <button type="button" class="btn btn-outline-success w-100"><i class="fas fa-check"></i></button>
+          <button type="button" data-del="delete" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
         </div>
       </div>
     </div>
-
 
 </div>
 
@@ -742,6 +654,114 @@
 
 
 
+
+<!-- ШАБЛОН НОВОГО ТЕГА -->
+
+<div id="pattern_tag_add" >
+  <div class="col-sm-6 mb-3 mr-1_sm" style="display: none;">
+    <div class=" d-flex flex-row">
+      <select class="custom-select">
+        <option selected>Тег...</option>
+        <option value="1">Кафе</option>
+        <option value="2">Грузоперевозки</option>
+      </select>
+      <div class="text-center">
+        <button type="button" data-del="delete" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="text-center">
+        <button type="button" class="btn btn-outline-success w-100"><i class="fas fa-check"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="pattern_area_add" >
+  <div class="col-sm-6 mb-3 mr-1_sm" style="display: none;">
+    <div class=" d-flex flex-row">
+      <select class="custom-select">
+        <option selected>Область...</option>
+        <option value="1">Кафе</option>
+        <option value="2">Грузоперевозки</option>
+      </select>
+      <div class="text-center">
+        <button type="button" data-del="delete" class="btn btn-outline-danger w-100"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="text-center">
+        <button type="button" class="btn btn-outline-success w-100"><i class="fas fa-check"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- ШАБЛОН СТРОКИ ТАБЛИЦЫ -->
+<table style="display: none;">
+  <tbody >
+  <tr  id="pattern_table_tr_newworker">
+    <th scope="row" data-id="row_worker_id"></th>
+    <td class="p-0">
+      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" value="">
+    </td>
+    <td class="p-0">
+      <input type="text" class="border-0 form-control p-0 h-100 py-3 px-2"value="">
+    </td>
+    <td></td>
+    <td class="p-0">
+      <select class="custom-select p-0 h-100  py-3 px-2 border-0">
+        <option selected>Должность...</option>
+        <option value="1">Не выбрано</option>
+        <option value="2">Программист</option>
+        <option value="3">Дизайнер</option>
+      </select>
+    </td>
+
+    <td class="p-0">
+      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" value="">
+    </td>
+    <td class="p-0">
+      <input type="text" class="form-control p-0 h-100 py-3 px-2 border-0" value="">
+    </td>
+    <td>
+      <div class="text-center text-sm-left">
+        <button type="button" data-del="#ModalDel" class="btn btn-outline-danger py-1 w-100"><i class="fas fa-times"></i></button>
+      </div>
+    </td>    
+  </tr>
+</tbody>
+</table>
+
+
+<table style="display: none;">
+  <tbody>
+    <tr id="pattern_table_tr_newimage">
+      <th scope="row">
+      </th>
+      <td>
+        <div class="form-group custom-control custom-radio">
+          <input type="radio" name="customRadio" class="custom-control-input">
+          <label class="custom-control-label">Главная</label>
+        </div>
+        <div data-img="image_path" class = "">
+          <img class = " h_img"/>
+        </div>
+      </td>
+      <td data-img="image_name"></td>
+      <td>
+        <div class="text-center text-sm-left">
+          <button type="button" data-del="#ModalDel" class="btn btn-outline-danger mt-2 py-1 w-100"><i class="fas fa-times"></i></button>
+        </div>
+      </td>
+      <td>
+        <div class="text-center text-sm-left">
+          <button type="button" data-edit="#ModalDownload" class="btn btn-outline-info mt-2 py-1 w-100"><i class="fas fa-edit"></i></button>
+        </div>
+      </td>             
+    </tr>
+</tbody>
+</table>
 
 
 
@@ -948,6 +968,7 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
 
 
 
@@ -983,8 +1004,6 @@
 
 
 <script>
-
-
 function handleFiles(files) {
   for (let i = 0; i < files.length; i++) {
     const file = files[i];
@@ -1001,8 +1020,41 @@ function handleFiles(files) {
     reader.readAsDataURL(file);
   }
 }
+</script>
 
+<script>
+  $("#price_select").change(function(){
 
+    if ($(this).val() == "price_paid") {
+      $("#price_input").attr("readonly", false); 
+    }
+    else {
+      $("#price_input").attr("readonly", true); 
+    }
+});
+
+$("#license_select").change(function(){
+
+if ($(this).val() == "license_yes") {
+  $("#license_price").attr("readonly", false); 
+  $("#license_period").attr("disabled", false); 
+}
+else {
+  $("#license_price").attr("readonly", true); 
+  $("#license_period").attr("disabled", true); 
+}
+});
+</script>
+<script>
+  jQuery(document).ready(function () {
+  input_file();
+  tr_image_init();
+  tag_add();
+  area_add();
+  tr_image_init();
+  table_tr_worker_add();
+	tr_image_init();
+  })
 </script>
 
   </body>
