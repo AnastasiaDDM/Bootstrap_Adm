@@ -1,4 +1,73 @@
 
+//Ф-ия вставки миниатюр изображений.названий файлов при загрузке
+function review_list_file_mini_image(evt) {
+	//Показываем элемент, если до этого он был очищен
+	document.getElementById('review_list_file').style.display = "";
+	var files = evt.target.files;
+	var container = document.getElementById('review_list_file');
+
+	while (container.firstChild) {
+	  container.removeChild(container.firstChild);
+	}
+
+	for (var i = 0, f; f = files[i]; i++) {
+
+	  if (!f.type.match('image.*')) {
+		continue;
+	  }
+
+	  var reader = new FileReader();
+
+	  reader.onload = (function(theFile) {
+		return function(e) {
+
+	      // Создание строки с миниатюрой фотографии
+		  var span = document.createElement('span');
+		  span.innerHTML = ['<img class="input_image_style" src="', e.target.result,
+							'" title="', escape(theFile.name), '"/>'].join('');
+							
+		  // Вставка строки
+		  document.getElementById('review_list_file').insertBefore(span, null);
+		  list_file_bt_remove();
+		};
+	  })(f);
+
+	  reader.readAsDataURL(f);
+	}
+  }
+
+
+
+//Ф-ия удаления всех выбранных файлов и их миниатюр
+function list_file_bt_remove() {
+	$("#review_list_file_bt_remove").click(function() {
+		if ($( "#review_list_file" ).children().length !=0 ) {
+			$( "#review_list_file" ).slideUp(500, function() {
+				$( "#review_list_file" ).children().empty();
+				$( "#files" ).val('');
+			});
+		}
+	})
+}
+
+
+//Ф-ия выбора файла с названием и размером 
+function file_name_size(evt) {
+	console.log("ddd");
+    var files = evt.target.files; 
+
+    var output = [];
+    for (var i = 0, f; f = files[i]; i++) {
+      output.push('<li><strong>', escape(f.name), '</strong> (', f.type || 'n/a', ') - ',
+                  f.size, ' байт, Дата последней модификации: ',
+                  f.lastModifiedDate.toLocaleDateString(), '</li>');
+    }
+    document.getElementById('list_file_with_name_size').innerHTML = '<ul>' + output.join('') + '</ul>';
+}
+
+
+
+//Ф-ия разворота/сворачивания пароля
 function password_roll() {
   $( ".password_roll" ).click(function() {
 
@@ -12,26 +81,7 @@ function password_roll() {
   });
 }
 
-function input_file() {
-    let inputs = document.querySelectorAll('.input__file');
-                  Array.prototype.forEach.call(inputs, function (input) {
-                    let label = input.nextElementSibling,
-                      labelVal = label.querySelector('.input__file-button-text').innerText;
-               
-                    input.addEventListener('change', function (e) {
-                      let countFiles = '';
-                      if (this.files && this.files.length >= 1)
-                        countFiles = this.files.length;
-               
-                      if (countFiles)
-                        label.querySelector('.input__file-button-text').innerText = 'Выбрано файлов: ' + countFiles;
-                      else
-                        label.querySelector('.input__file-button-text').innerText = labelVal;
-                    });
-                  });
-     }
-
-
+//Ф-ия разворота/сворачивания всего списка областей (каталог ПО)
 function areas_more() {
 	$( ".areas_more" ).click(function() {
 
@@ -46,10 +96,10 @@ function areas_more() {
 	  });
 
 	});
-  }
+}
 
-
-  function search_roll() {  
+//Ф-ия разворота/сворачивания поиска
+function search_roll() {  
     $("[href='#find_form']").click(function() {
 	  if ($( "#find_form" ).attr('style') == 'display: none;' ) {
 		$( "#find_form" ).slideDown( "slow", function() {
@@ -67,10 +117,6 @@ function areas_more() {
 	  }
     });
 }
-
-
-
-
 
 
 
@@ -138,11 +184,7 @@ function table_tr_worker_remove()
 		}
 
 	});
-
 }
-
-
-
 
 
 
@@ -225,8 +267,6 @@ function modal_tr_image_add()
 		
 	});
 }
-
-
 
 
 
@@ -342,7 +382,6 @@ function modal_tr_image_edit()
 
 
 
-
 //Ф-ия назначения статуса главного изображения
 function table_image_checked_main()
 {
@@ -395,25 +434,6 @@ function tr_image_init()
 	modal_tr_image_edit();
 	table_image_checked_main();
 }
-
-
-// function datepicker_init() 
-// {
-// 	if ($( window ).width() < 600) {
-// 		$('.search_datepicker').each(function() {
-// 			$( this  ).attr( "type", "date" );
-// 		});
-		
-// 	}
-// 	else {
-// 			$('.search_datepicker').datepicker({
-// 				language: 'ru',
-// 				autoClose: true,
-// 				// minDate: new Date() // Now can select only dates, which goes after today
-// 			});
-// 	}
-// }
-
 
 
 function tag_add() 
@@ -495,8 +515,6 @@ function area_del()
 		current_area_deleted.remove();
 	});
 }
-
-
 
 
 
@@ -693,7 +711,6 @@ function modal_tr_area_edit()
   
 		}
 	});
-
 }
 
 
@@ -727,7 +744,6 @@ function modal_tr_area_remove()
 
 
 
-
 // Инициализируем все события с изображениями
 function tr_area_init() 
 {
@@ -738,18 +754,126 @@ function tr_area_init()
 
 
 
+// Ф-ия сворачивания формы ответа и отображение кнопки ответа
+function comments_form_answer_hide() {
+	$("[data-rel='btn_cancel']").click(function() {
+
+		// Скрытие текущей формы ответа
+		$(this).parents(".copy_form_answer").hide(500 , function () { 
+			$(this).parents(".copy_form_answer").detach();
+		});
+
+		// Показ всех кнопок Ответить
+		$("[data-rel='btn_answer']").show(500);
+		// $(".btn_answer_two").show(500);
+	});
+}
+
+
+
+// Ф-ия прорисовки формы ответа в обсуждениях и показ комментариев
+function comments_form_answer() {
+
+	$("[data-rel='btn_answer']").click( function () {
+
+		console.log("fff");
+		// Показ всех кнопок Ответить
+		$("[data-rel='btn_answer']").show(500);
+		
+		// Скрытие текущей нажатой кнопки Отвтеить 
+		$(this).hide(500);
+
+		// Скрытие всех форм ответа и уничтожение
+		$("[data-rel='single_form_answer']").hide(500, function () { 
+			$("[data-rel='single_form_answer']").detach();
+		});
+  
+		// Копирование шаблона формы ответа
+		var form = $( "#pattern_form_answer").html();
+		console.log(form);
+		console.log($(this).parent().parent().parent());
+
+		// Вставка формы ответа
+		var li_parent = $(this).parent().parent().parent();
+		$(this).parent().parent().parent().append( $(form) );
+  
+		
+		// Добавление атрибута, по которому потом будет удаляться эта форма
+		li_parent.find(".copy_form_answer").attr( "data-rel", "single_form_answer");
+  
+		// Показ формы
+		$("[data-rel='single_form_answer']").show(500);
+  
+		comments_form_answer_hide();
+	  });
+  
+	  // Нажатие кнопки просмотра комментариев 
+	  $("[data-target='discussion_comment']").click(function() {
+  
+		var li_parent = $(this).parent().parent().parent();
+		
+  
+		// Разворот/сворачивание комментариев
+		li_parent.find("[data-rel='discussion_comment']").slideToggle( "slow" );
+	  });
+  
+	  // Нажатие кнопки сворачивания комментариев 
+	  $( "[data-rel='btn_rollup']" ).click(function() {
+		
+		// Разворот/сворачивание комметнариев
+		$( this ).parent().parent().slideToggle( "slow" );
+	  });
+}
 
 
 
 
+// Ф-ия удаления обсуждения
+function modal_comment_remove()
+{
+	$("[data-target='#ModalDel']").click( function () {
 
+		// Получение номера строки
+		current_comment = $(this).parent().parent().parent().parent();
+	});
 
+	$("#del_comment_btn_confirm").off().click( function () {
 
+		// Удаление комментария
+		current_comment.hide(500 , function () {
+			current_comment.detach();
+		});	
 
+		// Проверка комметнариев для изменения кол-ва комментариев
+		var flag_exist_discussion_comment = current_comment.parents("[data-rel='discussion_comment']");
 
+		// Если событие произошло в комментариях на обсуждения
+		if (flag_exist_discussion_comment.length !=0) {
 
+			// Кол-во комментариев
+			var comment_count = flag_exist_discussion_comment.children("li").length -1;
 
+			// Изменение значения счетчика комментариев
+			var current_li_parent = $(current_comment).parent().parent();
+			$(current_li_parent).find("[data-target='discussion_comment']").html("Комментарии ("+comment_count+")");
+	
+			//Если кол-во комментариев =0, это для скрытия блока ответов-комметнариев
+			if(comment_count == 0) {
 
+				// Скрываем блок ответов
+				flag_exist_discussion_comment.hide(400 , function () {
+					flag_exist_discussion_comment.detach();
+				});	
+			}
+
+			}
+
+		$("#ModalDel").modal("hide");
+		// show_modal_success("Данные удалены!");
+
+		// }
+	});
+}
 
 
 
