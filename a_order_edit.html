@@ -601,50 +601,6 @@
   </div>
 </div>
 
- 
-
-
-          <style>
-            .thumb {
-              height: 75px;
-              border: 1px solid #000;
-              margin: 10px 5px 0 0;
-            }
-          </style>        
-
-           <script>
-            function handleFileSelect(evt) {
-              var files = evt.target.files; 
-          
-
-              for (var i = 0, f; f = files[i]; i++) {
-          
-
-                if (!f.type.match('image.*')) {
-                  continue;
-                }
-          
-                var reader = new FileReader();
-          
-
-                reader.onload = (function(theFile) {
-                  return function(e) {
-
-                    var span = document.createElement('span');
-                    span.innerHTML = ['<img class="thumb" src="', e.target.result,
-                                      '" title="', escape(theFile.name), '"/>'].join('');
-                    document.getElementById('list').insertBefore(span, null);
-                  };
-                })(f);
-          
-
-                reader.readAsDataURL(f);
-              }
-            }
-          
-            // document.getElementById('files').addEventListener('change', handleFileSelect, false);
-          </script>
-
 
           <div class="d-sm-flex flex-row my-5 w-100 mx-auto justify-content-between">
             <div class="text-center text-sm-left">
@@ -729,51 +685,17 @@
 </tbody>
 </table>
 
-
-
-
-
-
-
       </div>
-
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/javascript.js"></script>
-
-
-
-<script>
-
-
-function handleFiles(files) {
-  for (let i = 0; i < files.length; i++) {
-    const file = files[i];
-    
-    if (!file.type.startsWith('image/')){ continue }
-    
-    const img = document.createElement("img");
-    img.classList.add("obj");
-    img.file = file;
-    preview.appendChild(img); 
-    
-    const reader = new FileReader();
-    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
-    reader.readAsDataURL(file);
-  }
-}
-
-
-</script>
-<script>
-  jQuery(document).ready(function () {
-  input_file();
-  tr_image_init();
-  table_tr_worker_add();
-	tr_image_init();
-  })
-</script>
-
-
   </body>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/javascript.js"></script>
+  <script>
+    jQuery(document).ready(function () {
+    input_file();
+    tr_image_init();
+    table_tr_worker_add();
+    tr_image_init();
+    })
+  </script>
 </html>

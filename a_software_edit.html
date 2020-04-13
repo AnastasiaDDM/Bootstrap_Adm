@@ -773,8 +773,7 @@
     tr_image_init();
     table_tr_worker_add();
     tr_image_init();
-    
-    document.getElementById('file_with_name_size').addEventListener('change', file_name_size, false);
+    $( "#file_with_name_size" ).change(file_name_size);
 
     $("#price_select").change(function(){
 

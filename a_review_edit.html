@@ -224,7 +224,7 @@
       </style>        
       <script>
         jQuery(document).ready(function () {
-          document.getElementById('files').addEventListener('change', review_list_file_mini_image, false);
+          $( "#files" ).change(review_list_file_mini_image);
           list_file_bt_remove();
           input_file();
         })
