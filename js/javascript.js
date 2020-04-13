@@ -53,7 +53,6 @@ function list_file_bt_remove() {
 
 //Ф-ия выбора файла с названием и размером 
 function file_name_size(evt) {
-	console.log("ddd");
     var files = evt.target.files; 
 
     var output = [];
@@ -165,17 +164,12 @@ function table_tr_worker_remove()
 
 		// Получаем номер строки
 		row_id = $(this).parent().parent().parent().attr('id');
-
-		console.log(row_id);
 	});
 
-	console.log(row_id);
 	// Нажатие на кнопку подтверждение
 	$("#del_worker_btn_confirm").click( function () {
-		console.log(row_id);
 		if (row_id.length > 0) {
 
-			console.log(row_id);
 			// Удаление строки
 			$("#"+row_id).hide();
 
@@ -205,9 +199,6 @@ function tr_image_add( img_name, img_path) {
 	$('#table_images').append("<tr  id=image_tr_"+next_id+">"+newimage.html()+"</tr>");
 
 	var current_tr = $("#image_tr_"+next_id);
-	console.log(current_tr);
-	console.log($(current_tr).html());
-
 
 	// Заполнение строки данными, переданными извне
 	current_tr.find("th").html(next_id);
@@ -304,11 +295,6 @@ function modal_tr_image_remove()
 //Ф-ия изменения данных строки в таблице изображений 
 function tr_image_edit( img_name, img_path, current_edited_row_id_image) {
 
-	console.log(current_edited_row_id_image);
-	console.log(img_name);
-	console.log(img_path);
-
-
 	// Заполнение строки таблицы новыми данными
 	// $("[id='image_tr_"+row_id+"'] th").html(row_id);
 	// $(current_tr+"img").attr( "src", img_path );
@@ -340,9 +326,6 @@ function modal_tr_image_edit()
 
 		//   $("[id='image_tr_"+next_id+"'] img").attr({ "src": img_path, "alt": img_name });
 		//   $("[id='image_tr_"+next_id+"'] [data-img='image_name']").html(img_name);
-
-
-		console.log($("#"+current_edited_row_id_image+" [data-img='image_name']").html());
 	});
 	  
   
@@ -351,7 +334,6 @@ function modal_tr_image_edit()
 		if (current_edited_row_id_image.length > 0) {
 
 			// Получение данных из полей формы
-			console.log($('#modal_image_name').val());
 			var img_name = $('#modal_image_name').val();
 
 			var img_path = $('#modal_image_path').val();
@@ -366,10 +348,6 @@ function modal_tr_image_edit()
 
 			$('#modal_image_name').val('');
 			$('#modal_image_path').val('');
-
-			console.log(current_edited_row_id_image);
-			console.log(img_name);
-			console.log(img_path);
 
 			// Вызов ф-ии изменения информации в таблице
 			tr_image_edit(img_name, img_path, current_edited_row_id_image);
@@ -407,7 +385,6 @@ function table_image_checked_main()
 		
 		// Меняем значение глобальной переменной главного изображения
 		image_checked_input_id = input_id;
-		console.log(image_checked_input_id);
 
 		$("#ModalMain").modal("hide");
 
@@ -523,10 +500,6 @@ function tr_area_add(area_name, area_comment, area_visible) {
 	// Копирование шаблона строки изображения
 	var newarea = $( "#pattern_table_tr_area");
 
-	console.log(area_name);
-	console.log(area_comment);
-	console.log(area_visible);
-
 	// Получения максимального кол-ва строк в таблице
 	var next_id=1;
 	if ($( "#table_areas").children().length != 0)
@@ -539,9 +512,6 @@ function tr_area_add(area_name, area_comment, area_visible) {
 	$('#table_areas').append("<tr  id=area_tr_"+next_id+">"+newarea.html()+"</tr>");
 
 	var current_tr = $("#area_tr_"+next_id);
-	console.log(current_tr);
-	console.log($(current_tr).html());
-
 
 	// Заполнение строки данными, переданными извне
 	current_tr.find("th").html(next_id);
@@ -641,20 +611,13 @@ function modal_tr_area_edit()
 {
 	$("#table_areas [data-edit='#ModalDownload']").click( function () {
 
-		console.log("gg");
-
 		//Корректировка отображения нужных кнопок формы
 		$("#add_area_btn_confirm").hide();
 		$("#edit_area_btn_confirm").show();
 		$("#ModalDownload").modal("show");
 
-
 		// Получение номера строки
 		current_edited_row_id_area = $(this).parent().parent().parent().attr('id');
-
-		console.log(current_edited_row_id_area);
-		console.log($('#modal_area_name').val($("#"+current_edited_row_id_area+" [data-area='area_name']").html()));
-		console.log($("#"+current_edited_row_id_area+" [data-area='area_name']").html());
 
 		// Заполнение формы данными
 		$('#modal_area_name').val($("#"+current_edited_row_id_area+" [data-area='area_name']").html());
@@ -667,12 +630,9 @@ function modal_tr_area_edit()
 		else {
 			$("#modal_area_visible").prop("checked", false);
 		}
-	
-
 
 		//   $("[id='image_tr_"+next_id+"'] img").attr({ "src": img_path, "alt": img_name });
 		//   $("[id='image_tr_"+next_id+"'] [data-img='image_name']").html(img_name);
-
 
 	});
 	  
@@ -689,7 +649,6 @@ function modal_tr_area_edit()
 		var area_visible = $("#modal_area_visible").prop("checked");
 
 		if(area_name == "") {
-			// alert("Ввведите наименование области!")
 			show_modal_success("Ввведите наименование области!");
 
 		}
@@ -705,10 +664,6 @@ function modal_tr_area_edit()
 			// Вызов ф-ии изменения информации в таблице
 			tr_area_edit(area_name, area_comment, area_visible, current_edited_row_id_area);
 		}
-
-		
-
-  
 		}
 	});
 }
@@ -776,7 +731,6 @@ function comments_form_answer() {
 
 	$("[data-rel='btn_answer']").click( function () {
 
-		console.log("fff");
 		// Показ всех кнопок Ответить
 		$("[data-rel='btn_answer']").show(500);
 		
@@ -790,8 +744,6 @@ function comments_form_answer() {
   
 		// Копирование шаблона формы ответа
 		var form = $( "#pattern_form_answer").html();
-		console.log(form);
-		console.log($(this).parent().parent().parent());
 
 		// Вставка формы ответа
 		var li_parent = $(this).parent().parent().parent();
