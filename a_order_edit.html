@@ -404,13 +404,12 @@
             </thead>
             <tbody id="table_images">
               <tr id="image_tr_1">
-                <th scope="row">1
+                <th class="text-center" scope="row">
+                  <i class="fas fa-caret-up h3 arrows_in_table"></i>
+                  <div class="h4 text-center">1</div>
+                  <i class="fas fa-caret-down h3 arrows_in_table"></i>
                 </th>
                 <td>
-                  <div class="form-group custom-control custom-radio">
-                    <input type="radio" id="radoi_image_1" name="customRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="radoi_image_1">Главная</label>
-                  </div>
                   <div class = "">
                     <img class = " h_img"  src="images/code.jpg" alt="Расписание"/>
                   </div>
@@ -428,12 +427,12 @@
                 </td>             
               </tr>
               <tr id="image_tr_2">
-                <th scope="row">2</th>
+                <th class="text-center" scope="row">
+                  <i class="fas fa-caret-up h3 arrows_in_table"></i>
+                  <div class="h4 text-center">2</div>
+                  <i class="fas fa-caret-down h3 arrows_in_table"></i>
+                </th>
                 <td>
-                  <div class="form-group custom-control custom-radio">
-                    <input type="radio" id="radoi_image_2" name="customRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="radoi_image_2">Главная</label>
-                  </div>
                   <div class = "">
                     <img class = " h_img"  src="images/business.jpg" alt="Расписание"/>
                   </div>
@@ -451,12 +450,12 @@
                 </td>             
               </tr>
               <tr id="image_tr_3">
-                <th scope="row">3</th>
+                <th class="text-center" scope="row">
+                  <i class="fas fa-caret-up h3 arrows_in_table"></i>
+                  <div class="h4 text-center">3</div>
+                  <i class="fas fa-caret-down h3 arrows_in_table"></i>
+                </th>
                 <td>
-                  <div class="form-group custom-control custom-radio">
-                    <input type="radio" id="radoi_image_3" name="customRadio" class="custom-control-input">
-                    <label class="custom-control-label" for="radoi_image_3">Главная</label>
-                  </div>
                   <div class = "">
                     <img class = " h_img"  src="images/computer.jpg" alt="Расписание"/>
                   </div>
@@ -659,13 +658,12 @@
 <table style="display: none;">
   <tbody>
     <tr id="pattern_table_tr_newimage">
-      <th scope="row">
+      <th class="text-center" scope="row">
+        <i class="fas fa-caret-up h3 arrows_in_table"></i>
+        <div class="h4 text-center"></div>
+        <i class="fas fa-caret-down h3 arrows_in_table"></i>
       </th>
       <td>
-        <div class="form-group custom-control custom-radio">
-          <input type="radio" name="customRadio" class="custom-control-input">
-          <label class="custom-control-label">Главная</label>
-        </div>
         <div data-img="image_path" class = "">
           <img class = " h_img"/>
         </div>
@@ -692,8 +690,8 @@
   <script src="js/javascript.js"></script>
   <script>
     jQuery(document).ready(function () {
-    tr_image_init();
-    table_tr_worker_add();
+      table_tr_worker_add();
+      tr_image_init();
     })
-  </script>
+  </script> 
 </html>

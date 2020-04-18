@@ -188,9 +188,7 @@ function tr_image_init()
 	tr_swap_arrows();
 	modal_tr_image_add();
 	modal_tr_image_remove();
-	modal_tr_image_edit();
-	table_image_checked_main();
-	
+	modal_tr_image_edit();	
 }
 
 
@@ -368,42 +366,6 @@ function modal_tr_image_edit()
 		}
 	});
 
-}
-
-
-
-//Ф-ия назначения статуса главного изображения
-function table_image_checked_main()
-{
-	var input_id="";
-
-	$("#table_images input").click( function () {
-
-		// Сохранение состояния, т.е. оставляем выбранным предыдущее изображение
-		input_id = $(this);
-		$(this).prop("checked",false);
-		$(image_checked_input_id).prop("checked",true);
-
-		$("#ModalMain").modal("show");
-
-	});
-
-	$("#image_checked_main_confirm").click( function () {
-
-		if (input_id.length > 0) {
-
-		// Выбираем новое изображение главым
-		$(input_id).prop("checked",true);
-		
-		// Меняем значение глобальной переменной главного изображения
-		image_checked_input_id = input_id;
-
-		$("#ModalMain").modal("hide");
-
-		show_modal_success("Главное изображение успешно изменено!");
-		}
-
-	});
 }
 
 
@@ -820,7 +782,6 @@ function modal_comment_remove()
 
 
 
-
 // Ф-ия меняет местами строки строки таблицы изображений
 function tr_swap(current_tr, other_tr)
 {
@@ -840,54 +801,6 @@ function tr_swap(current_tr, other_tr)
 	other_tr.find("[data-img='image_name']").html(current_tr_name);
 
 }
-
-
-
-// // Ф-ия меняет местами строки строки таблицы изображений
-// function tr_swap_arrow_down()
-// {
-// 	$(".fa-caret-down").click( function () {
-
-// 		// Получение номера строки текущей
-// 		current_tr = $(this).parent().parent();
-// 		// var current_tr_img = current_tr.find("img");
-// 		// var current_tr_name = current_tr.find("[data-img='image_name']").html();
-
-// 		// Проверка на положение строки
-// 		if (current_tr.is(':last-child') == false)
-// 		{
-// 			next_tr = current_tr.next();
-
-// 			tr_swap(current_tr, next_tr);
-
-// 		}
-// 	});
-// }
-
-
-
-// // Ф-ия меняет местами строки строки таблицы изображений
-// function tr_swap_arrow_up()
-// {
-// 	$(".fa-caret-up").click( function () {
-
-// 		// Получение номера строки текущей
-// 		current_tr = $(this).parent().parent();
-
-// 		// Проверка на положение строки
-// 		if (current_tr.is(':first-child') == false)
-// 		{
-// 			// Получение номера строки следующей
-// 			prev_tr = current_tr.prev();
-
-// 			tr_swap(current_tr, prev_tr);
-
-// 		}
-
-// 	});
-// }
-
-
 
 
 // Ф-ия обрабатывает клики пользователя по стрелкам строк таблицы изображений
