@@ -37,6 +37,14 @@
   }
 }
 
+.arrows_in_table {
+  color: #17a2b8;
+}
+
+.arrows_in_table:hover {
+  color: #007bff;
+}
+
 @media (max-width: 576px) {
   .bord_radius_sm > .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
     border-top-right-radius: .25rem;

@@ -182,6 +182,20 @@ function table_tr_worker_remove()
 
 
 
+// Инициализируем все события с изображениями
+function tr_image_init() 
+{
+	tr_swap_arrow_down();
+    tr_swap_arrow_up();
+	modal_tr_image_add();
+	modal_tr_image_remove();
+	modal_tr_image_edit();
+	table_image_checked_main();
+	
+}
+
+
+
 //Ф-ия добавления новой строки в таблицу изображений 
 function tr_image_add( img_name, img_path) {
 	// Копирование шаблона строки изображения
@@ -191,7 +205,7 @@ function tr_image_add( img_name, img_path) {
 	var next_id=1;
 	if ($( "#table_images").children().length != 0)
 	{
-	  var maxid =  parseInt($( "#table_images tr:last-child>th").html());
+	  var maxid =  parseInt($( "#table_images tr:last-child>th div").html());
 	  next_id = maxid + 1;
 	}
 
@@ -201,7 +215,7 @@ function tr_image_add( img_name, img_path) {
 	var current_tr = $("#image_tr_"+next_id);
 
 	// Заполнение строки данными, переданными извне
-	current_tr.find("th").html(next_id);
+	current_tr.find("th div").html(next_id);
 	current_tr.find("img").attr({ "src": img_path, "alt": img_name });
 	current_tr.find("[data-img='image_name']").html(img_name);
 	current_tr.find("input").attr("id", "radoi_image_"+next_id);
@@ -254,7 +268,6 @@ function modal_tr_image_add()
 			// Вызов ф-ии добавления новой информации в таблицу
 			tr_image_add(img_name, img_path);
 		}
-
 		
 	});
 }
@@ -403,15 +416,6 @@ function show_modal_success(text)
 }
 
 
-// Инициализируем все события с изображениями
-function tr_image_init() 
-{
-	modal_tr_image_add();
-	modal_tr_image_remove();
-	modal_tr_image_edit();
-	table_image_checked_main();
-}
-
 
 function tag_add() 
 {
@@ -495,9 +499,9 @@ function area_del()
 
 
 
-//Ф-ия добавления новой строки в таблицу изображений 
+//Ф-ия добавления новой строки в таблицу областей 
 function tr_area_add(area_name, area_comment, area_visible) {
-	// Копирование шаблона строки изображения
+	// Копирование шаблона строки областей
 	var newarea = $( "#pattern_table_tr_area");
 
 	// Получения максимального кол-ва строк в таблице
@@ -515,7 +519,6 @@ function tr_area_add(area_name, area_comment, area_visible) {
 
 	// Заполнение строки данными, переданными извне
 	current_tr.find("th").html(next_id);
-	// current_tr.find("[data-area='image_name']").html(img_name);
 	current_tr.find("[data-area='area_name']").html(area_name);
 	current_tr.find("[data-area='area_comment']").html(area_comment);
 
@@ -532,7 +535,7 @@ function tr_area_add(area_name, area_comment, area_visible) {
 }
 
 
-//Ф-ия получения данных о новом изображении из модального окна для добавления
+//Ф-ия получения данных о новой области из модального окна для добавления
 function modal_tr_area_add()
 {
 
@@ -583,14 +586,11 @@ function modal_tr_area_add()
 }
 
 
-//Ф-ия изменения данных строки в таблице изображений 
+//Ф-ия изменения данных строки в таблице областей 
 function tr_area_edit(area_name, area_comment, area_visible, current_edited_row_id_area) {
 
 
 	// Заполнение строки таблицы новыми данными
-	// $("[id='image_tr_"+row_id+"'] th").html(row_id);
-	// $(current_tr+"img").attr( "src", img_path );
-	// $("#"+row_id+" img").attr({ "src": img_path, "alt": img_name });
 	$("#"+current_edited_row_id_area+" [data-area='area_name']").html(area_name);
 	$("#"+current_edited_row_id_area+" [data-area='area_comment']").html(area_comment);
 
@@ -606,7 +606,7 @@ function tr_area_edit(area_name, area_comment, area_visible, current_edited_row_
 }
 
 
-//Ф-ия получения изменненных данных об изображении из модального окна для редактирования
+//Ф-ия получения изменненных данных об области из модального окна для редактирования
 function modal_tr_area_edit()
 {
 	$("#table_areas [data-edit='#ModalDownload']").click( function () {
@@ -622,7 +622,6 @@ function modal_tr_area_edit()
 		// Заполнение формы данными
 		$('#modal_area_name').val($("#"+current_edited_row_id_area+" [data-area='area_name']").html());
 		$('#modal_area_comment').val($("#"+current_edited_row_id_area+" [data-area='area_comment']").html());
-		//   $('#modal_image_path').val($("#"+row_id+" img").attr('src'));
 
 		if($("#"+current_edited_row_id_area+" [data-area='area_visible']").html() == "Да" ) {
 			$("#modal_area_visible").prop("checked", true);
@@ -630,10 +629,6 @@ function modal_tr_area_edit()
 		else {
 			$("#modal_area_visible").prop("checked", false);
 		}
-
-		//   $("[id='image_tr_"+next_id+"'] img").attr({ "src": img_path, "alt": img_name });
-		//   $("[id='image_tr_"+next_id+"'] [data-img='image_name']").html(img_name);
-
 	});
 	  
   
@@ -669,7 +664,7 @@ function modal_tr_area_edit()
 }
 
 
-//Ф-ия удаления строки изображения
+//Ф-ия удаления строки областей
 function modal_tr_area_remove()
 {
 	$("#table_areas [data-del='#ModalDel']").click( function () {
@@ -699,7 +694,7 @@ function modal_tr_area_remove()
 
 
 
-// Инициализируем все события с изображениями
+// Инициализируем все события с областями
 function tr_area_init() 
 {
 	modal_tr_area_add();
@@ -821,11 +816,85 @@ function modal_comment_remove()
 			}
 
 		$("#ModalDel").modal("hide");
-		// show_modal_success("Данные удалены!");
-
-		// }
 	});
 }
+
+
+
+
+// // Ф-ия меняет местами строки строки таблицы изображений
+// function tr_swap_arrow_up()
+// {
+// 		// Меняем местами содержимое ячеек
+// 		current_tr.find("[data-img='image_name']").html(next_tr_name);
+// 		next_tr.find("[data-img='image_name']").html(current_tr_name);
+// }
+
+
+
+// Ф-ия меняет местами строки строки таблицы изображений
+function tr_swap_arrow_down()
+{
+	$(".fa-caret-down").click( function () {
+
+		// Получение номера строки текущей
+		current_tr = $(this).parent().parent();
+		var current_tr_img = current_tr.find("img");
+		var current_tr_name = current_tr.find("[data-img='image_name']").html();
+
+		// Проверка на положение строки
+		if (current_tr.is(':last-child') == false)
+		{
+			// Получение номера строки следующей
+			next_tr = current_tr.next();
+			var next_tr_img = next_tr.find("img");
+			var next_tr_name = next_tr.find("[data-img='image_name']").html();
+
+			// Меняем местами содержимое ячеек
+			var div_next_img = next_tr_img.parent();
+			current_tr.find("img").replaceWith($(next_tr_img));
+			div_next_img.append($(current_tr_img));
+
+			current_tr.find("[data-img='image_name']").html(next_tr_name);
+			next_tr.find("[data-img='image_name']").html(current_tr_name);
+		}
+	});
+}
+
+
+
+// Ф-ия меняет местами строки строки таблицы изображений
+function tr_swap_arrow_up()
+{
+	$(".fa-caret-up").click( function () {
+
+		// Получение номера строки текущей
+		current_tr = $(this).parent().parent();
+		var current_tr_img = current_tr.find("img");
+		var current_tr_name = current_tr.find("[data-img='image_name']").html();
+
+		// Проверка на положение строки
+		if (current_tr.is(':first-child') == false)
+		{
+			// Получение номера строки следующей
+			prev_tr = current_tr.prev();
+
+			var prev_tr_img = prev_tr.find("img");
+			var prev_tr_name = prev_tr.find("[data-img='image_name']").html();
+			console.log(prev_tr.html());
+	
+			// Меняем местами содержимое ячеек
+			var div_prev_img = prev_tr_img.parent();
+			current_tr.find("img").replaceWith($(prev_tr_img));
+			div_prev_img.append($(current_tr_img));
+	
+			current_tr.find("[data-img='image_name']").html(prev_tr_name);
+			prev_tr.find("[data-img='image_name']").html(current_tr_name);
+		}
+
+	});
+}
+
 
 
 

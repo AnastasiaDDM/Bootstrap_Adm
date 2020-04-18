@@ -34,7 +34,12 @@
         }
     }
 
-
+.arrows_in_table {
+    color: #17a2b8;
+    &:hover {
+        color: #007bff;
+    }
+}
 
     .bord_radius_sm>.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle)  {
 
