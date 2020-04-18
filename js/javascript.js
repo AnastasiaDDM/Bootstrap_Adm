@@ -185,8 +185,9 @@ function table_tr_worker_remove()
 // Инициализируем все события с изображениями
 function tr_image_init() 
 {
-	tr_swap_arrow_down();
-    tr_swap_arrow_up();
+	// tr_swap_arrow_down();
+	// tr_swap_arrow_up();
+	tr_swap_arrows();
 	modal_tr_image_add();
 	modal_tr_image_remove();
 	modal_tr_image_edit();
@@ -822,76 +823,106 @@ function modal_comment_remove()
 
 
 
-// // Ф-ия меняет местами строки строки таблицы изображений
-// function tr_swap_arrow_up()
-// {
-// 		// Меняем местами содержимое ячеек
-// 		current_tr.find("[data-img='image_name']").html(next_tr_name);
-// 		next_tr.find("[data-img='image_name']").html(current_tr_name);
-// }
-
-
-
 // Ф-ия меняет местами строки строки таблицы изображений
-function tr_swap_arrow_down()
+function tr_swap(current_tr, other_tr)
 {
-	$(".fa-caret-down").click( function () {
+	// Получаем данные из строк
+	var current_tr_img = current_tr.find("img");
+	var current_tr_name = current_tr.find("[data-img='image_name']").html();
 
-		// Получение номера строки текущей
-		current_tr = $(this).parent().parent();
-		var current_tr_img = current_tr.find("img");
-		var current_tr_name = current_tr.find("[data-img='image_name']").html();
+	var other_tr_img = other_tr.find("img");
+	var other_tr_name = other_tr.find("[data-img='image_name']").html();
 
-		// Проверка на положение строки
-		if (current_tr.is(':last-child') == false)
-		{
-			// Получение номера строки следующей
-			next_tr = current_tr.next();
-			var next_tr_img = next_tr.find("img");
-			var next_tr_name = next_tr.find("[data-img='image_name']").html();
+	// Меняем местами содержимое ячеек
+	var div_other_img = other_tr_img.parent();
+	current_tr.find("img").replaceWith($(other_tr_img));
+	div_other_img.append($(current_tr_img));
 
-			// Меняем местами содержимое ячеек
-			var div_next_img = next_tr_img.parent();
-			current_tr.find("img").replaceWith($(next_tr_img));
-			div_next_img.append($(current_tr_img));
+	current_tr.find("[data-img='image_name']").html(other_tr_name);
+	other_tr.find("[data-img='image_name']").html(current_tr_name);
 
-			current_tr.find("[data-img='image_name']").html(next_tr_name);
-			next_tr.find("[data-img='image_name']").html(current_tr_name);
-		}
-	});
 }
 
 
 
-// Ф-ия меняет местами строки строки таблицы изображений
-function tr_swap_arrow_up()
+// // Ф-ия меняет местами строки строки таблицы изображений
+// function tr_swap_arrow_down()
+// {
+// 	$(".fa-caret-down").click( function () {
+
+// 		// Получение номера строки текущей
+// 		current_tr = $(this).parent().parent();
+// 		// var current_tr_img = current_tr.find("img");
+// 		// var current_tr_name = current_tr.find("[data-img='image_name']").html();
+
+// 		// Проверка на положение строки
+// 		if (current_tr.is(':last-child') == false)
+// 		{
+// 			next_tr = current_tr.next();
+
+// 			tr_swap(current_tr, next_tr);
+
+// 		}
+// 	});
+// }
+
+
+
+// // Ф-ия меняет местами строки строки таблицы изображений
+// function tr_swap_arrow_up()
+// {
+// 	$(".fa-caret-up").click( function () {
+
+// 		// Получение номера строки текущей
+// 		current_tr = $(this).parent().parent();
+
+// 		// Проверка на положение строки
+// 		if (current_tr.is(':first-child') == false)
+// 		{
+// 			// Получение номера строки следующей
+// 			prev_tr = current_tr.prev();
+
+// 			tr_swap(current_tr, prev_tr);
+
+// 		}
+
+// 	});
+// }
+
+
+
+
+// Ф-ия обрабатывает клики пользователя по стрелкам строк таблицы изображений
+function tr_swap_arrows()
 {
-	$(".fa-caret-up").click( function () {
+	$(".arrows_in_table").click( function () {
 
 		// Получение номера строки текущей
 		current_tr = $(this).parent().parent();
-		var current_tr_img = current_tr.find("img");
-		var current_tr_name = current_tr.find("[data-img='image_name']").html();
 
-		// Проверка на положение строки
-		if (current_tr.is(':first-child') == false)
-		{
-			// Получение номера строки следующей
-			prev_tr = current_tr.prev();
+		if ($(this).hasClass("fa-caret-up")) {
 
-			var prev_tr_img = prev_tr.find("img");
-			var prev_tr_name = prev_tr.find("[data-img='image_name']").html();
-			console.log(prev_tr.html());
-	
-			// Меняем местами содержимое ячеек
-			var div_prev_img = prev_tr_img.parent();
-			current_tr.find("img").replaceWith($(prev_tr_img));
-			div_prev_img.append($(current_tr_img));
-	
-			current_tr.find("[data-img='image_name']").html(prev_tr_name);
-			prev_tr.find("[data-img='image_name']").html(current_tr_name);
+			// Проверка на положение строки
+			if (current_tr.is(':first-child') == false)
+			{
+				// Получение номера строки следующей
+				prev_tr = current_tr.prev();
+
+				tr_swap(current_tr, prev_tr);
+			}
 		}
 
+		if ($(this).hasClass("fa-caret-down")) {
+
+			// Проверка на положение строки
+			if (current_tr.is(':last-child') == false)
+			{
+				next_tr = current_tr.next();
+
+				tr_swap(current_tr, next_tr);
+
+			}
+		}
 	});
 }
 
