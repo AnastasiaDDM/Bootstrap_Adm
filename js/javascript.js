@@ -185,8 +185,6 @@ function table_tr_worker_remove()
 // Инициализируем все события с изображениями
 function tr_image_init() 
 {
-	// tr_swap_arrow_down();
-	// tr_swap_arrow_up();
 	tr_swap_arrows();
 	modal_tr_image_add();
 	modal_tr_image_remove();
