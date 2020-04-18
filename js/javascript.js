@@ -895,7 +895,7 @@ function tr_swap(current_tr, other_tr)
 // Ф-ия обрабатывает клики пользователя по стрелкам строк таблицы изображений
 function tr_swap_arrows()
 {
-	$(".arrows_in_table").click( function () {
+	$(".arrows_in_table").off().click( function () {
 
 		// Получение номера строки текущей
 		current_tr = $(this).parent().parent();
